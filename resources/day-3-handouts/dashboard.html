@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Workshop Reference Dashboard</title>
+<style>
+  :root {
+    --bg: #1a1a2e;
+    --surface: #16213e;
+    --surface-hover: #1a2745;
+    --border: #2a3a5c;
+    --text: #e0e0e0;
+    --text-muted: #8892a4;
+    --accent: #e2884d;
+    --accent-dim: #c47340;
+    --code-bg: #0f1626;
+    --code-text: #c8d6e5;
+    --heading: #f0f0f0;
+    --tag-bg: #2a3a5c;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  header h1 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--heading);
+  }
+
+  header .subtitle {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .tab-bar {
+    display: flex;
+    gap: 0.25rem;
+    background: var(--surface);
+    padding: 0 2rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    position: sticky;
+    top: 52px;
+    z-index: 99;
+  }
+
+  .tab-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 6px 6px 0 0;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+  }
+
+  .tab-btn:hover {
+    color: var(--text);
+    background: var(--surface-hover);
+  }
+
+  .tab-btn.active {
+    color: var(--accent);
+    border-color: var(--border);
+    border-bottom-color: var(--bg);
+    background: var(--bg);
+  }
+
+  .tab-btn .match-count {
+    display: inline-block;
+    background: var(--accent-dim);
+    color: var(--heading);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.1rem 0.4rem;
+    border-radius: 8px;
+    margin-left: 0.35rem;
+    vertical-align: middle;
+  }
+
+  .tab-btn.has-matches {
+    color: var(--text);
+  }
+
+  .tab-content {
+    display: none;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin: 2rem 0 0.75rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  h2:first-child {
+    margin-top: 0;
+  }
+
+  h3 {
+    font-size: 0.95rem;
+    color: var(--heading);
+    margin: 1.25rem 0 0.5rem;
+  }
+
+  p, li {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
+
+  ul, ol {
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  pre {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    overflow-x: auto;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .code-line {
+    display: block;
+    padding: 2px 4px;
+    margin: 0 -4px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+
+  .code-line:hover {
+    background: var(--surface-hover);
+  }
+
+  .code-line.copied {
+    background: rgba(226, 136, 77, 0.15);
+  }
+
+  .search-hit {
+    background: rgba(226, 136, 77, 0.2);
+    border-radius: 3px;
+    outline: 1px solid var(--accent-dim);
+    outline-offset: 1px;
+  }
+
+  .copy-toast {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--accent-dim);
+    color: var(--accent);
+    padding: 0.4rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    z-index: 200;
+  }
+
+  .copy-toast.visible {
+    opacity: 1;
+  }
+
+  code {
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    color: var(--code-text);
+  }
+
+  p code, li code, td code {
+    background: var(--code-bg);
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.82rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.75rem 0 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border);
+  }
+
+  th {
+    background: var(--surface);
+    color: var(--heading);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  td {
+    background: var(--code-bg);
+  }
+
+  .note {
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 0;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.85rem;
+  }
+
+  .note strong {
+    color: var(--accent);
+  }
+
+  .warning {
+    border-left-color: #e74c3c;
+  }
+
+  .warning strong {
+    color: #e74c3c;
+  }
+
+  .search-box {
+    position: relative;
+  }
+
+  .search-box input {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.35rem 0.75rem;
+    color: var(--text);
+    font-size: 0.85rem;
+    width: 200px;
+    outline: none;
+  }
+
+  .search-box input:focus {
+    border-color: var(--accent);
+  }
+
+  .search-box input::placeholder {
+    color: var(--text-muted);
+  }
+
+  mark {
+    background: var(--accent-dim);
+    color: var(--heading);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 700px) {
+    .tab-bar { padding: 0 1rem 0.5rem; }
+    .tab-content { padding: 1rem; }
+    .tab-btn { padding: 0.4rem 0.75rem; font-size: 0.8rem; }
+    header { padding: 0.75rem 1rem; }
+  }
+
+  @media print {
+    header, .tab-bar { position: static; }
+    .tab-content { display: block !important; page-break-before: always; }
+    .tab-content:first-of-type { page-break-before: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Workshop Reference Dashboard</h1>
+    <div class="subtitle">Quick lookup for terminal, git, Claude, and setup</div>
+  </div>
+  <div class="search-box">
+    <input type="text" id="search" placeholder="Search all tabs..." autocomplete="off">
+  </div>
+</header>
+
+<div style="max-width: 900px; margin: 0 auto; padding: 0.75rem 2rem;">
+  <div class="note" style="margin: 0; font-size: 0.82rem;">
+    <strong>This is a starting point, not a fixed document.</strong> It covers the terminal commands, git workflows, Claude setup, and troubleshooting you're most likely to need &mdash; but tools change and your needs will differ. You can give this file to Claude and ask it to add sections, update commands, restyle it, or build you a completely different version from scratch. That's part of the point: learning to make your own resources is as valuable as the resources themselves.
+  </div>
+</div>
+
+<nav class="tab-bar" id="tabBar">
+  <button class="tab-btn active" data-tab="terminal">Terminal</button>
+  <button class="tab-btn" data-tab="git">Git</button>
+  <button class="tab-btn" data-tab="github">GitHub Setup</button>
+  <button class="tab-btn" data-tab="claude">Claude</button>
+  <button class="tab-btn" data-tab="mac-setup">Mac Setup</button>
+  <button class="tab-btn" data-tab="install-run">Install &amp; Run</button>
+</nav>
+
+<!-- ===================== TERMINAL ===================== -->
+<div class="tab-content active" id="terminal">
+
+  <h2>Navigate and inspect</h2>
+  <pre><code>pwd                        # where am I?
+ls                         # what's here?
+ls -la                     # hidden files, sizes, permissions
+cd directory-name          # move into a directory
+cd ..                      # up one level
+cd ~                       # home directory</code></pre>
+
+  <h2>Read files</h2>
+  <pre><code>cat filename               # print file contents
+cat -n filename            # print with line numbers
+head -20 filename          # first 20 lines
+cat -n file | head -20     # first 20 lines with line numbers</code></pre>
+  <div class="note">
+    <strong>Pager:</strong> if output fills the screen and you're stuck, press <code>q</code> to exit. <code>Ctrl+C</code> cancels a running command.
+  </div>
+
+  <h2>Find files</h2>
+  <pre><code>find . -name "*.py"            # all Python files from here down
+find . -name "CLAUDE.md"       # specific filename</code></pre>
+  <div class="note">
+    <strong>Tip:</strong> <code>find</code> searches everything including <code>node_modules/</code> and <code>.next/</code>. Those are dependency files, not files you wrote.
+  </div>
+
+  <h2>Search inside files (grep)</h2>
+  <pre><code>grep -r "search term" .                  # recursive search
+grep -rn "search term" .                 # with line numbers
+grep -ri "search term" .                 # case-insensitive
+grep -rn "def " . --include="*.py"       # only Python files</code></pre>
+
+  <h2>Create and manage files</h2>
+  <pre><code>touch filename.txt             # create an empty file
+mkdir directory-name           # create a directory
+mkdir -p path/to/nested/dir    # create nested directories
+mv old-name new-name           # rename or move
+cp source destination          # copy
+rm filename                    # delete a file (no undo!)
+rm -r directory-name           # delete a directory and contents</code></pre>
+
+  <h2>If you lose the cursor</h2>
+  <div class="note">
+    <strong>Symptoms:</strong> typing does nothing, the prompt disappeared, or you see something weird like <code>dquote&gt;</code> or <code>&gt;</code> or <code>:</code>.
+  </div>
+  <table>
+    <tr><th>What you see</th><th>What happened</th><th>Fix</th></tr>
+    <tr><td><code>dquote&gt;</code> or <code>quote&gt;</code></td><td>Unclosed quote — terminal is waiting for the closing <code>"</code> or <code>'</code></td><td><code>Ctrl+C</code> to cancel</td></tr>
+    <tr><td><code>&gt;</code> at the start of a line</td><td>Unclosed command (backslash, pipe, etc.)</td><td><code>Ctrl+C</code> to cancel</td></tr>
+    <tr><td>Colon <code>:</code> at the bottom of the screen</td><td>You're in the pager (less) — git log, man pages, long output</td><td>Press <code>q</code> to exit</td></tr>
+    <tr><td>Nothing happens when you type</td><td>A process is running in the foreground</td><td><code>Ctrl+C</code> to cancel it</td></tr>
+    <tr><td>Screen looks garbled or frozen</td><td>Output messed up the display</td><td>Type <code>reset</code> and press Enter (even if you can't see it)</td></tr>
+    <tr><td><code>(END)</code> at the bottom</td><td>Pager showing the end of output</td><td>Press <code>q</code></td></tr>
+  </table>
+  <div class="note">
+    <strong>The universal escape hatch:</strong> <code>Ctrl+C</code> cancels almost anything. If that doesn't work, <code>Ctrl+D</code> closes the shell session entirely. Worst case: close the terminal window and open a new one.
+  </div>
+
+  <h2>Other shortcuts</h2>
+  <pre><code>q                              # exit the pager (git log, man pages)
+Ctrl+C                         # cancel / exit running process
+Ctrl+D                         # end input / exit shell session</code></pre>
+
+</div>
+
+<!-- ===================== GIT ===================== -->
+<div class="tab-content" id="git">
+
+  <h2>Day-to-day</h2>
+  <pre><code>git status                         # what's changed?
+git diff                           # unstaged changes (working vs staging)
+git diff --staged                  # staged changes (staging vs last commit)
+git add filename                   # stage a specific file
+git commit -m "message"            # commit with message
+git log --oneline                  # compact history
+git log --oneline --graph          # history with branch visualization
+git restore filename               # discard working changes
+git restore --staged filename      # unstage a file</code></pre>
+
+  <div class="note">
+    <strong>The two diffs:</strong> <code>git diff</code> shows what's changed but not staged. <code>git diff --staged</code> shows what's staged but not committed. Two sides of the same coin — <code>git add</code> moves changes from one to the other.
+  </div>
+
+  <h2>Branches</h2>
+  <pre><code>git branch                         # list local branches
+git switch branch-name             # switch to a branch
+git switch -c branch-name          # create and switch in one step
+git merge branch-name              # merge into current branch
+git branch -d branch-name          # delete a branch (safe)
+git push origin --delete branch    # delete a remote branch</code></pre>
+
+  <h2>Push and pull</h2>
+  <pre><code>git push                           # push to tracked remote
+git push -u origin branch-name     # push new branch + set tracking (-u = "remember this link")
+git pull                           # fetch and merge from remote
+git pull origin branch-name        # pull a specific branch into current</code></pre>
+
+  <div class="note">
+    <strong>What <code>-u</code> does:</strong> short for <code>--set-upstream</code>. It tells git "from now on, when I say <code>git push</code> or <code>git pull</code> on this branch, I mean this remote." You only need it the first time you push a new branch. After that, bare <code>git push</code> and <code>git pull</code> just work.
+  </div>
+
+  <div class="note">
+    <strong>The reflex:</strong> pull before you push. If the remote has commits you don't have, git rejects the push.
+  </div>
+
+  <h2>Collaboration spectrum</h2>
+  <table>
+    <tr><th>Situation</th><th>Right tool</th></tr>
+    <tr><td>Solo project, just backing up</td><td>Push to <code>main</code> directly</td></tr>
+    <tr><td>2-3 trusted people, low stakes</td><td>Branch + Slack message</td></tr>
+    <tr><td>Contributing to someone else's repo</td><td>Formal PR</td></tr>
+    <tr><td>Want a record of why a change was made</td><td>Formal PR</td></tr>
+    <tr><td>Team rule: "don't merge your own stuff"</td><td>Formal PR with reviewers</td></tr>
+  </table>
+
+  <h2>Pull requests (terminal)</h2>
+  <pre><code># Full PR workflow
+git switch -c my-feature
+# ... make changes ...
+git add .
+git commit -m "describe changes"
+git push -u origin my-feature
+gh pr create --title "Title" --body "Description"
+
+# Merge a PR
+gh pr merge 12
+
+# After merge, clean up
+git switch main
+git pull
+git branch -d my-feature</code></pre>
+
+  <div class="note">
+    <strong>Why "pull request"?</strong> The name is from the reviewer's perspective. You're requesting that they <em>pull</em> your changes into their branch. You push (logistics), then open a PR (social act).
+  </div>
+
+</div>
+
+<!-- ===================== GITHUB SETUP ===================== -->
+<div class="tab-content" id="github">
+
+  <h2>New repo from a local project</h2>
+  <h3>The clean path (with gh CLI)</h3>
+  <pre><code># 1. Make sure work is committed
+git add -A
+git commit -m "describe the state you're saving"
+
+# 2. Create empty repo, wire up origin, push — all at once
+gh repo create my-project --private --source=. --remote=origin --push</code></pre>
+
+  <table>
+    <tr><th>Flag</th><th>What it does</th></tr>
+    <tr><td><code>--private</code> / <code>--public</code></td><td>Visibility</td></tr>
+    <tr><td><code>--source=.</code></td><td>Use current directory's git history</td></tr>
+    <tr><td><code>--remote=origin</code></td><td>Name the remote "origin"</td></tr>
+    <tr><td><code>--push</code></td><td>Push immediately after creating</td></tr>
+  </table>
+
+  <div class="warning note">
+    <strong>The snafu:</strong> if you create the repo on GitHub's website and check "Add README" or "Add .gitignore," GitHub makes an initial commit. Your local repo has never seen it. The push will fail with "diverged histories." Fix: always create the remote empty.
+  </div>
+
+  <h3>Push to an organization</h3>
+  <pre><code>gh repo create org-name/repo-name --private --source=. --push</code></pre>
+
+  <h3>The website fallback (no gh CLI)</h3>
+  <pre><code># On GitHub.com: New repo, leave ALL checkboxes unchecked
+git remote add origin https://github.com/USERNAME/repo.git
+git push -u origin main</code></pre>
+
+  <h2>Pre-push checklist</h2>
+  <pre><code>git log --oneline          # at least one commit exists?
+git branch                 # branch named main?
+git remote -v              # origin points to right repo?</code></pre>
+
+  <h2>Create PR from Claude Code desktop</h2>
+  <ol>
+    <li>Be on a branch (not <code>main</code>) with commits</li>
+    <li>The <strong>Create PR</strong> tab in the top-right becomes active</li>
+    <li>Click it — it pushes the branch and opens a PR form</li>
+    <li>Write a title and description, create</li>
+    <li>Review and merge on GitHub</li>
+    <li>After merge: <code>git switch main && git pull</code></li>
+  </ol>
+
+  <div class="note">
+    <strong>If the Create PR tab is missing:</strong> check <code>git log main..HEAD --oneline</code> — if it's empty, there's nothing to PR (you're on main or have no commits ahead).
+  </div>
+
+</div>
+
+<!-- ===================== CLAUDE ===================== -->
+<div class="tab-content" id="claude">
+
+  <h2>Claude Code commands</h2>
+  <table>
+    <tr><th>Command</th><th>What it does</th></tr>
+    <tr><td><code>/init</code></td><td>Generate a starter CLAUDE.md for a repo so Claude understands the project</td></tr>
+    <tr><td><code>/compact [instructions]</code></td><td>Summarize conversation to free up context. Optionally focus the summary</td></tr>
+    <tr><td><code>/context [all]</code></td><td>Visualize where your context window is going, with optimization tips</td></tr>
+    <tr><td><code>/rewind</code></td><td>Roll code and/or conversation back to an earlier checkpoint</td></tr>
+    <tr><td><code>/resume [session]</code></td><td>Return to an earlier conversation by ID/name</td></tr>
+    <tr><td><code>/branch [name]</code></td><td>Fork the conversation, preserving the original</td></tr>
+    <tr><td><code>/btw &lt;question&gt;</code></td><td>Quick side question without bloating main conversation</td></tr>
+    <tr><td><code>/usage</code></td><td>Session cost, plan limits, and activity stats</td></tr>
+    <tr><td><code>/exit</code></td><td>Close Claude Code</td></tr>
+  </table>
+
+  <h2>Three interfaces: Chat / Cowork / Code</h2>
+  <p><strong>Chat</strong> — ask Claude something, get an answer. <strong>Cowork</strong> — give Claude access to your files, work on them together. <strong>Code</strong> — build workflows that run on your files automatically, repeatedly, at scale.</p>
+  <table>
+    <tr><th>Interface</th><th>Best for</th><th>Key difference</th></tr>
+    <tr><td><strong>claude.ai</strong> (browser)</td><td>Conversation, attached files, artifacts</td><td>Files stay inside the chat</td></tr>
+    <tr><td><strong>Cowork</strong> (desktop app)</td><td>Working on a folder of files via GUI</td><td>Reads/edits real files, but how stays hidden</td></tr>
+    <tr><td><strong>Claude Code</strong> (terminal/IDE)</td><td>Full visibility, multi-file projects, automation</td><td>Every file read, command run, and edit is visible</td></tr>
+  </table>
+
+  <h3>Decision grid: which interface for which task?</h3>
+  <table>
+    <tr><th>Task</th><th>Chat</th><th>Cowork</th><th>Code</th></tr>
+    <tr><td>Quick question or brainstorm</td><td>&#9989; ideal</td><td>&mdash;</td><td>&mdash;</td></tr>
+    <tr><td>Draft an email, abstract, or paragraph</td><td>&#9989; ideal</td><td>&#9989; good if referencing files</td><td>&mdash;</td></tr>
+    <tr><td>Get feedback on a document</td><td>&#9989; good</td><td>&#9989; better (reads file directly)</td><td>&mdash;</td></tr>
+    <tr><td>Work iteratively on a syllabus or grant</td><td>&#12316; context gets lost</td><td>&#9989; ideal</td><td>&mdash;</td></tr>
+    <tr><td>Analyze a folder of readings</td><td>&#9989; one at a time</td><td>&#9989; ideal</td><td>&#9989; better at scale</td></tr>
+    <tr><td>Generate discussion questions from materials</td><td>&#9989; paste in</td><td>&#9989; ideal</td><td>&#9989; if repeatable</td></tr>
+    <tr><td>Build a problem bank from past exams</td><td>&#12316; one at a time</td><td>&#9989; for a folder</td><td>&#9989; ideal</td></tr>
+    <tr><td>Process 100+ student submissions</td><td>&#10060;</td><td>&#12316; possible but slow</td><td>&#9989; ideal</td></tr>
+    <tr><td>Repeatable workflow (same task every semester)</td><td>&#10060; no memory</td><td>&#12316; re-explain each time</td><td>&#9989; CLAUDE.md remembers</td></tr>
+    <tr><td>Connect to Drive, GitHub, databases</td><td>&#10060;</td><td>&#10060;</td><td>&#9989; via MCPs</td></tr>
+    <tr><td>Interactive visualization or course website</td><td>&#10060;</td><td>&#10060;</td><td>&#9989;</td></tr>
+  </table>
+
+  <h3>What each interface knows about you</h3>
+  <table>
+    <tr><th></th><th>Chat</th><th>Cowork</th><th>Code</th></tr>
+    <tr><td>Your files</td><td>Only what you paste</td><td>Any folder you connect</td><td>Any folder you connect</td></tr>
+    <tr><td>Your preferences</td><td>Resets each session</td><td>Per project if set up</td><td>CLAUDE.md persists</td></tr>
+    <tr><td>Past conversations</td><td>No memory</td><td>No memory</td><td>Can be designed in</td></tr>
+    <tr><td>External services</td><td>No</td><td>No</td><td>MCPs (Drive, GitHub, etc.)</td></tr>
+  </table>
+
+  <h3>When to upgrade</h3>
+  <p><strong>Chat &rarr; Cowork</strong> when you're pasting the same document repeatedly, want Claude to read files directly, or the task spans multiple sessions.</p>
+  <p><strong>Cowork &rarr; Code</strong> when you're doing the same task more than a few times, need to operate on many files at once, want to connect external services, or want to build something a colleague can use.</p>
+
+  <h3>Faculty use case examples</h3>
+  <table>
+    <tr><th>Who</th><th>Task</th><th>Interface</th></tr>
+    <tr><td>Historian</td><td>"Help me think through this argument"</td><td>Chat</td></tr>
+    <tr><td>Historian</td><td>"Read my draft chapter and suggest cuts"</td><td>Cowork</td></tr>
+    <tr><td>Historian</td><td>"Process 40 primary sources and extract named entities"</td><td>Code</td></tr>
+    <tr><td>Course developer</td><td>"Write discussion questions for next week"</td><td>Chat</td></tr>
+    <tr><td>Course developer</td><td>"Read my syllabus and flag outdated readings"</td><td>Cowork</td></tr>
+    <tr><td>Course developer</td><td>"Generate a problem bank from all past exams by topic"</td><td>Code</td></tr>
+    <tr><td>Writing instructor</td><td>"Give feedback on this student paragraph"</td><td>Chat</td></tr>
+    <tr><td>Writing instructor</td><td>"Read all 25 submissions, summarize common issues"</td><td>Cowork or Code</td></tr>
+    <tr><td>Lab PI</td><td>"Help me draft the methods section"</td><td>Chat</td></tr>
+    <tr><td>Lab PI</td><td>"Keep lab website and CV in sync as I add publications"</td><td>Code + MCP</td></tr>
+  </table>
+
+  <div class="note">
+    <strong>The honest tradeoff:</strong> more powerful interfaces require more setup. Chat is available in 30 seconds. Cowork takes an afternoon. Code takes longer and rewards sustained investment. The right interface is the one you'll actually use.
+  </div>
+
+  <h2>CLAUDE.md</h2>
+  <p>A plain-text file in a project's root that gives Claude persistent instructions. Claude reads it automatically when working in that folder.</p>
+  <h3>Good things to put in it</h3>
+  <ul>
+    <li>Your role and the audience you write for</li>
+    <li>Conventions for file naming, formatting, style</li>
+    <li>Things you've corrected Claude on more than twice</li>
+    <li>"Always ask before deleting files"</li>
+    <li>Project-specific context (what the inputs are, what the goal is)</li>
+  </ul>
+
+  <h2>Claude Code setup (Mac)</h2>
+  <pre><code># Install Claude Code
+curl -fsSL https://claude.ai/install.sh | bash
+
+# Close and reopen terminal, then verify
+claude --version
+
+# Health check — verifies CLAUDE.md, settings, hooks, and MCP servers are loading correctly
+claude doctor
+
+# Start Claude Code (from inside a project folder)
+claude
+
+# If "command not found":
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc</code></pre>
+
+  <h2>VS Code integration</h2>
+  <ol>
+    <li>Open Extensions (<code>Cmd+Shift+X</code>), search "Claude Code"</li>
+    <li>Install the one published by <strong>Anthropic</strong> (check publisher)</li>
+    <li>Click the spark icon in the Activity Bar to open the Claude panel</li>
+    <li>Sign in when prompted</li>
+  </ol>
+  <div class="note">
+    <strong>Pin the panel:</strong> VS Code settings &rarr; <code>claudeCode.preferredLocation</code> &rarr; <code>sidebar</code>. Without this it can disappear on restart.
+  </div>
+
+  <h2>Cowork setup</h2>
+  <ol>
+    <li>Open Claude desktop app, confirm you see your plan indicator (bottom-left)</li>
+    <li>Click the <strong>Cowork</strong> tab</li>
+    <li>Create a new project &rarr; name it &rarr; dock a folder to it</li>
+    <li>Test: "Can you list the files in this folder?"</li>
+  </ol>
+  <div class="note">
+    <strong>One folder per project.</strong> Scope each project to the smallest folder that holds what it needs. Start a new task inside the same project (instead of a new project) when context rots in a long thread.
+  </div>
+
+  <h2>Permissions: Allow Once vs Always</h2>
+  <p>Claude Code asks permission before reading files, running commands, or editing code. Each prompt gives you two options:</p>
+  <table>
+    <tr><th>Option</th><th>What it means</th><th>How long it lasts</th></tr>
+    <tr><td><strong>Allow Once</strong></td><td>Approve this specific action right now</td><td>This one action only — Claude asks again next time</td></tr>
+    <tr><td><strong>Always Allow</strong></td><td>Approve this <em>type</em> of action for this project</td><td>Persists across sessions — saved to your project settings file</td></tr>
+  </table>
+  <div class="note">
+    <strong>"Always" means always</strong> (for this project). It doesn't reset at the end of a session. It's saved in <code>.claude/settings.json</code> in the project folder. To revoke an "Always" permission, edit that file — or just ask Claude to do it ("remove the always-allow for X").
+  </div>
+  <div class="note">
+    <strong>When to use Always:</strong> common read-only actions you'll do every session (reading files, running <code>git status</code>, running tests). <strong>When to stick with Once:</strong> anything that modifies files, installs packages, or runs unfamiliar commands — at least until you understand what it's doing.
+  </div>
+
+  <h2>Tips and gotchas</h2>
+  <ul>
+    <li><strong>"Command not recognized"</strong> right after installing &rarr; quit terminal fully, open fresh window</li>
+    <li><strong>Context rot:</strong> long conversations drift. Use <code>/compact</code> or start a new task in the same project</li>
+    <li><strong>Check what changed:</strong> when Claude edits files, glance at the diff before moving on</li>
+    <li><strong>@ to attach files:</strong> in the Claude panel prompt, type <code>@</code> to fuzzy-search project files</li>
+    <li>Type <code>/context</code> to see what's filling your context window</li>
+  </ul>
+
+</div>
+
+<!-- ===================== MAC SETUP ===================== -->
+<div class="tab-content" id="mac-setup">
+
+  <h2>What you're installing and why</h2>
+  <table>
+    <tr><th>Tool</th><th>What it is</th><th>Why you need it</th></tr>
+    <tr><td><strong>Command Line Tools</strong></td><td>Apple's basic developer tools (git, compilers, etc.)</td><td>Foundation that everything else depends on. Without this, Homebrew can't install.</td></tr>
+    <tr><td><strong>Homebrew</strong></td><td>A package manager &mdash; like an app store you drive with text</td><td>Lets you install developer tools with one command instead of hunting for downloads. How you'll install git, Node, VS Code, Python.</td></tr>
+    <tr><td><strong>Git</strong></td><td>Version control &mdash; tracks changes to files over time</td><td>How you copy the workshop repo onto your computer (<code>git clone</code>), and how Claude Code tracks changes.</td></tr>
+    <tr><td><strong>Node.js</strong></td><td>JavaScript runtime (also includes <code>npm</code>)</td><td>Required by many development tools behind the scenes, even if you're not writing JavaScript.</td></tr>
+    <tr><td><strong>VS Code</strong></td><td>A code editor &mdash; the app where you'll see files and talk to Claude</td><td>Your workspace. Files on the left, editor in the middle, Claude on the right.</td></tr>
+    <tr><td><strong>Python</strong></td><td>Programming language</td><td>Needed for Python-based projects. macOS used to include it; newer Macs don't.</td></tr>
+    <tr><td><strong>Claude Code</strong></td><td>Anthropic's CLI tool for working with Claude</td><td>The thing you came here to use. Runs in the terminal or inside VS Code.</td></tr>
+  </table>
+
+  <h2>The sequence (in order)</h2>
+  <div class="note">
+    Each step depends on the one before it. Don't skip ahead.
+  </div>
+
+  <h3>1. Open Terminal</h3>
+  <p><code>Cmd+Space</code> &rarr; type "Terminal" &rarr; Enter. They may have never opened it before.</p>
+
+  <h3>2. Install Command Line Tools</h3>
+  <pre><code>xcode-select --install</code></pre>
+  <p>Click "Install" in the dialog. Wait 5-15 minutes. If it says "already installed," skip to step 3.</p>
+
+  <h3>3. Install Homebrew</h3>
+  <pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+  <ul>
+    <li>Password prompt shows nothing as they type &mdash; that's normal</li>
+    <li><strong>Don't let them scroll past the output!</strong> It prints PATH commands they need to run</li>
+  </ul>
+  <p>The PATH commands look like:</p>
+  <pre><code>echo >> /Users/username/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/username/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"</code></pre>
+  <div class="warning note">
+    <strong>They must copy their own output</strong>, not a generic version. The path includes their username.
+  </div>
+
+  <h3>4. Verify Homebrew</h3>
+  <pre><code>brew --version</code></pre>
+  <p>If "command not found": the PATH step was missed. Go back to step 3.</p>
+
+  <h3>5. Install core tools</h3>
+  <pre><code>brew install git
+brew install node
+brew install --cask visual-studio-code
+brew install python@3.13</code></pre>
+  <div class="note">
+    After all four finish: <strong>Cmd+Q Terminal, open a fresh window</strong>. New installs aren't visible to an already-open terminal.
+  </div>
+
+  <h3>6. Verify everything</h3>
+  <pre><code>git --version
+node --version
+npm --version
+python3 --version
+code --version</code></pre>
+
+  <h2>Common issues</h2>
+  <table>
+    <tr><th>Symptom</th><th>Cause</th><th>Fix</th></tr>
+    <tr><td><code>command not found: brew</code></td><td>PATH not set</td><td>Run the two lines from Homebrew output; or <code>eval "$(/opt/homebrew/bin/brew shellenv)"</code></td></tr>
+    <tr><td><code>command not found: code</code></td><td>VS Code CLI not on PATH</td><td>Open VS Code &rarr; <code>Cmd+Shift+P</code> &rarr; "Shell Command: Install 'code' command in PATH"</td></tr>
+    <tr><td><code>python</code> not found but <code>python3</code> works</td><td>macOS only ships python3</td><td>Use <code>python3</code> everywhere (it's the correct name on macOS)</td></tr>
+    <tr><td>Password shows nothing</td><td>Normal terminal behavior</td><td>Just type and press Enter</td></tr>
+    <tr><td>"Permission denied"</td><td>Not an admin user</td><td>Need admin access or admin password</td></tr>
+    <tr><td><code>git --version</code> triggers Xcode dialog</td><td>First time using git on this Mac</td><td>Click Install, wait 5-10 min, then re-run</td></tr>
+    <tr><td>Intel vs Apple Silicon confusion</td><td>Different Homebrew paths</td><td>Intel: <code>/usr/local/</code>. Apple Silicon: <code>/opt/homebrew/</code>. Install script handles it</td></tr>
+  </table>
+
+</div>
+
+<!-- ===================== INSTALL & RUN ===================== -->
+<div class="tab-content" id="install-run">
+
+  <h2>Install packages</h2>
+
+  <h3>JavaScript / Node</h3>
+  <pre><code>pnpm install                   # install all from package.json
+pnpm add package-name          # add a new package
+pnpm add -D package-name       # add as dev dependency
+npm install                    # same thing, different manager</code></pre>
+
+  <h3>Python</h3>
+  <pre><code>pip install package-name
+pip install -r requirements.txt    # install from requirements file
+pip freeze > requirements.txt      # save environment to file</code></pre>
+  <div class="note">
+    <strong>What's a package?</strong> A package is code someone else wrote that you can add to your project. <code>package-name</code> is a placeholder &mdash; you replace it with the actual name of what you need (e.g., <code>pip install requests</code> or <code>pip install pandas</code>). You'll usually find the name in a project's README, a tutorial, or an error message that says something is missing.
+  </div>
+
+  <h2>Start a project</h2>
+
+  <h3>Next.js app</h3>
+  <pre><code>pnpm create next-app@latest directory-name</code></pre>
+  <p>Scaffolds a full project with prompts for TypeScript, Tailwind, etc. Don't <code>mkdir</code> first.</p>
+
+  <h3>Python project (with virtual environment)</h3>
+  <pre><code>mkdir project-name
+cd project-name
+python3 -m venv .venv
+source .venv/bin/activate      # prompt changes to (.venv)</code></pre>
+
+  <h3>Plain folder + git</h3>
+  <pre><code>mkdir project-name
+cd project-name
+git init</code></pre>
+
+  <h2>Run a project</h2>
+
+  <h3>Next.js / Node</h3>
+  <pre><code>pnpm dev          # start dev server (usually localhost:3000)
+pnpm build        # production build
+pnpm start        # run the production build</code></pre>
+
+  <h3>Python</h3>
+  <pre><code>python3 script.py
+python3 -m module_name    # run a module (e.g., python3 -m pytest)</code></pre>
+
+  <h2>GitHub authentication</h2>
+  <pre><code>gh auth login     # interactive login flow — opens browser
+gh auth status    # check if you're logged in</code></pre>
+
+</div>
+
+<script>
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabContents.forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(target).classList.add('active');
+      document.getElementById('search').value = '';
+      clearHighlights();
+    });
+  });
+
+  const searchInput = document.getElementById('search');
+  let searchTimeout;
+
+  searchInput.addEventListener('input', () => {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => {
+      const query = searchInput.value.trim().toLowerCase();
+      clearHighlights();
+      if (query.length < 2) return;
+
+      let firstMatch = null;
+      const matchCounts = {};
+
+      tabContents.forEach(content => {
+        let count = 0;
+        const els = content.querySelectorAll('p, li, td, th, h2, h3, .note, .code-line');
+        els.forEach(el => {
+          if (el.textContent.toLowerCase().includes(query)) {
+            if (!firstMatch) firstMatch = content.id;
+            el.classList.add('search-hit');
+            count++;
+          }
+        });
+        matchCounts[content.id] = count;
+      });
+
+      // Show match counts on tab buttons
+      tabBtns.forEach(btn => {
+        const count = matchCounts[btn.dataset.tab] || 0;
+        const existing = btn.querySelector('.match-count');
+        if (existing) existing.remove();
+        if (count > 0) {
+          const badge = document.createElement('span');
+          badge.className = 'match-count';
+          badge.textContent = count;
+          btn.appendChild(badge);
+          btn.classList.add('has-matches');
+        }
+      });
+
+      if (firstMatch) {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+        document.getElementById(firstMatch).classList.add('active');
+        document.querySelector(`[data-tab="${firstMatch}"]`).classList.add('active');
+        const hit = document.querySelector(`#${firstMatch} .search-hit`);
+        if (hit) hit.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 300);
+  });
+
+  function clearHighlights() {
+    document.querySelectorAll('.search-hit').forEach(el => el.classList.remove('search-hit'));
+    tabBtns.forEach(btn => {
+      const badge = btn.querySelector('.match-count');
+      if (badge) badge.remove();
+      btn.classList.remove('has-matches');
+    });
+  }
+
+  // Keyboard shortcut: Cmd+K or Ctrl+K focuses search
+  document.addEventListener('keydown', e => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      searchInput.focus();
+      searchInput.select();
+    }
+  });
+
+  // Line-level click-to-copy
+  const toast = document.createElement('div');
+  toast.className = 'copy-toast';
+  toast.textContent = 'Copied!';
+  document.body.appendChild(toast);
+
+  let toastTimeout;
+  function showToast(text) {
+    const display = text.length > 50 ? text.slice(0, 47) + '...' : text;
+    toast.textContent = 'Copied: ' + display;
+    toast.classList.add('visible');
+    clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(() => toast.classList.remove('visible'), 1200);
+  }
+
+  document.querySelectorAll('pre code').forEach(code => {
+    const lines = code.textContent.split('\n');
+    code.textContent = '';
+
+    lines.forEach(line => {
+      const span = document.createElement('span');
+      span.className = 'code-line';
+      span.textContent = line;
+      code.appendChild(span);
+      code.appendChild(document.createTextNode('\n'));
+
+      if (line.trim() === '' || line.trim().startsWith('#')) return;
+
+      span.addEventListener('click', () => {
+        // Strip trailing comments for a clean copy
+        const command = line.replace(/#.*$/, '').trim();
+        if (!command) return;
+
+        navigator.clipboard.writeText(command).then(() => {
+          span.classList.add('copied');
+          showToast(command);
+          setTimeout(() => span.classList.remove('copied'), 1200);
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
