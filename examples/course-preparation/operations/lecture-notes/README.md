@@ -6,6 +6,10 @@ Limitations** (Harvard) into clean, readable **lecture-notes** documents —
 materials you can hand students or reuse when you next teach the course.
 Contributed by a collaborator from the larger CS 1200 project.
 
+This is a common **before-class** move when a course is handed off between years
+or instructors: take last year's recordings — even from a different professor —
+and turn them into clean notes you can adapt for your own version of the course.
+
 The instructor teaches entirely on a blackboard — no slides. This pipeline
 reconstructs notes from two sources: **what was written on the board** (recovered
 from video frames) and **what was said** (recovered from the transcript). The

@@ -171,16 +171,16 @@ table.glance td b { color:var(--ink); font-weight:800; }
 .sheet { width:10in; height:16in; padding:0.55in 0.6in 0.8in; display:flex; flex-direction:column; }
 .footer { bottom:0.34in; }
 /* handout-specific tweaks */
-ol.top10 { list-style:none; counter-reset:take; margin:14px 0 0; padding:0; }
-ol.top10 > li { position:relative; padding-left:40px; margin:0 0 13px; font-size:13.5px; line-height:1.48; font-weight:500; counter-increment:take; }
-ol.top10 > li::before { content:counter(take) "."; position:absolute; left:0; top:-2px; font-size:19px; font-weight:900; color:var(--accent); width:34px; }
+ol.top10 { list-style:none; counter-reset:take; margin:11px 0 0; padding:0; }
+ol.top10 > li { position:relative; padding-left:36px; margin:0 0 8px; font-size:12.3px; line-height:1.4; font-weight:500; counter-increment:take; }
+ol.top10 > li::before { content:counter(take) "."; position:absolute; left:0; top:-1px; font-size:17px; font-weight:900; color:var(--accent); width:30px; }
 ol.top10 > li b { color:var(--ink); font-weight:800; }
 ol.top10 > li i, ol.top10 > li em { font-style:italic; }
-ol.top10 > li code { font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace; font-size:12px; font-weight:600; background:#f0f0f0; padding:0 4px; border-radius:3px; }
-.provenance { font-size:12.5px; line-height:1.45; font-style:italic; font-weight:500; color:var(--muted); margin:14px 0 0; }
+ol.top10 > li code { font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace; font-size:11.3px; font-weight:600; background:#f0f0f0; padding:0 4px; border-radius:3px; }
+.provenance { font-size:11.5px; line-height:1.4; font-style:italic; font-weight:500; color:var(--muted); margin:10px 0 0; }
 .provenance a { color:var(--muted); text-decoration:underline; }
-ul.sec { list-style:none; margin:10px 0 0; padding:0; }
-ul.sec > li { position:relative; padding-left:18px; margin:0 0 6px; font-size:12.5px; line-height:1.42; font-weight:500; }
+ul.sec { list-style:none; margin:8px 0 0; padding:0; }
+ul.sec > li { position:relative; padding-left:17px; margin:0 0 4px; font-size:11.2px; line-height:1.34; font-weight:500; }
 ul.sec > li::before { content:""; position:absolute; left:2px; top:8px; width:8px; height:2px; background:var(--accent); }
 ul.sec > li b { color:var(--ink); font-weight:800; }
 ul.sec > li code { font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace; font-size:11.5px; font-weight:600; background:#f0f0f0; padding:0 4px; border-radius:3px; }
@@ -208,7 +208,7 @@ ul.sec > li code { font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace; 
     <li><b>The recipe mental model — ingredients (context) + instructions (prompt) → dish (output).</b> The day's closing analogy and the take-home homework: list the ingredients you'd hand a "brilliant student who hasn't done the reading" (syllabus, readings, P-sets, course videos), specify the output precisely (a new file? slides plus a lecture script?), and write the prompts that connect them. Skills, scripts, and tools — coming on later days — are just ways of packaging the same recipe so you stop copy-pasting.</li>
   </ol>
 
-  <p class="beat-h" style="margin-top:18px;">Secondary points worth keeping</p>
+  <p class="beat-h" style="margin-top:12px;">Secondary points worth keeping</p>
   <ul class="sec">
     <li><b>Model tiers.</b> Opus 4.8 (most capable, slowest, priciest); Sonnet 4.6 (workhorse); Haiku (cheapest). Dial reasoning effort high → low for speed during demos.</li>
     <li><b>Markdown is the lingua franca</b> for feeding context — also HTML and other structured formats. Matthew Schwartz's online interactive physics textbook is the scale-up example.</li>

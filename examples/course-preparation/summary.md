@@ -4,7 +4,7 @@ The **before-class** counterpart to [class-processor](../class-processor/). `cla
 
 It folds in the former `recentering-academics` example as its first fully worked path: turn three layers of source material — the Bok Center's published guidance, Harvard's own institutional case for change, and external empirical research on grading — into **concrete, source-grounded curricular recommendations** for a department or an individual instructor, built around the Bok Center's *Recentering Academics* initiative (engaged classroom sessions + rigorous, AI-resilient assessment). The canonical before-class move is **running a draft syllabus through the framework to improve it.**
 
-A second prep operation, contributed from the CS 1200 project, turns blackboard **lecture recordings** into clean **lecture-notes** documents you can hand students or reuse next term — board content (read from video frames with vision) merged with the spoken narration (the transcript) into a three-layer document. See [operations/lecture-notes/](operations/lecture-notes/).
+A second prep operation, contributed from the CS 1200 project, turns blackboard **lecture recordings** into clean **lecture-notes** documents you can hand students or reuse next term — board content (read from video frames with vision) merged with the spoken narration (the transcript) into a three-layer document. This is the classic course-handoff move: take last year's recordings (even from a different instructor) and turn them into notes you adapt for your own version. See [operations/lecture-notes/](operations/lecture-notes/).
 
 ---
 
