@@ -1,187 +1,301 @@
-%% handout.sty
-%% ---------------------------------------------------------------------------
-%% Recreated worksheet/problem-set style package, modeled on a provided
-%% "template to follow" whose own custom style package was never shipped.
-%%
-%% The original template referenced a custom package (../Documents/handout)
-%% that was never included, so this file reconstructs that package AND folds
-%% in the visual preamble that the Template repeated inline. Each document now
-%% only needs a short preamble:  \usepackage[<options>]{../handout}
-%%
-%% Package options:
-%%   sols     -- reveal \begin{solution}...\end{solution} blocks
-%%   grading  -- reveal \begin{grading}...\end{grading} blocks
-%%   plan     -- reveal \begin{plan}... and \begin{note}... blocks
-%% With no options you get the clean student handout (problems only, with
-%% working space).
-%%
-%% Accessibility (institution digital accessibility policy -> WCAG 2.1 AA):
-%%   * PDF metadata + document language are set for screen readers.
-%%   * axessibility (if available) embeds the LaTeX source of every equation
-%%     as actual/alt text so equations are not lost to assistive tech.
-%%   * Status of each version (Student / Solutions / etc.) is conveyed in
-%%     TEXT, never by color alone.
-%%   * Link and header colors are chosen to meet WCAG AA contrast on white.
-%%   NOTE: fully *tagged* PDF output requires lualatex + tagpdf and is out of
-%%   reach with the xetex-based Tectonic engine; see ACCESSIBILITY.md.
-%% ---------------------------------------------------------------------------
+%% File: handout.sty
+%% -----------------
+%% Provides a package handout, which can either be called as
+%% \usepackage{handout} or \usepackage[sols]{handout}.  The package
+%% defines two environments, problem and solution.  When called as
+%% \usepackage{handout}, the solution environments will not be displayed.
+%% When called as \usepackage[sols]{handout}, the solutions will be
+%% displayed.  Also, the problems will be displayed in a different font,
+%% namely \problemfont.
+
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{handout}[2026/06/10 Accessible DE worksheet/PSet style]
+\ProvidesPackage{handout}
+\RequirePackage{verbatim}
 
-% ---- option flags ----------------------------------------------------------
-\newif\ifhandout@sols     \handout@solsfalse
-\newif\ifhandout@grading  \handout@gradingfalse
-\newif\ifhandout@plan     \handout@planfalse
-\DeclareOption{sols}{\handout@solstrue}
-\DeclareOption{grading}{\handout@gradingtrue}
-\DeclareOption{plan}{\handout@plantrue}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{bm}
+
+\usepackage{enumitem}
+\setlist{parsep=8pt}
+
+% create the solution environment, which is really just verbatim's
+% comment environment 
+\let\solution=\comment
+\let\endsolution=\endcomment
+
+% same thing for grading
+\let\grading=\comment
+\let\endgrading=\endcomment
+
+% and for workshop notes
+\let\workshop=\comment
+\let\endworkshop=\endcomment
+
+% and for notes
+\let\note=\comment
+\let\endnote=\endcomment
+% \newcommand{\note}[1]{}
+
+% and finally, the lesson plan
+\let\plan=\comment
+\let\endplan=\endcomment
+
+\let\problem=\comment
+\newcommand{\probspace}{}
+\newlength{\problemspace}
+\def\@firstchar#1#2\EndMark{\string#1}
+\newcommand{\firstChar}[1]{\@firstchar#1\EndMark}
+
+\newcommand{\probspaceFirstChar}{Null}
+\renewenvironment{problem}[1][0pt]{%
+  \renewcommand{\probspace}{#1}%
+  \renewcommand{\probspaceFirstChar}{\firstChar{#1}}%
+}{%
+  \pspace{\probspace}%
+}
+\newcommand{\pspace}[1]{%
+  \ifthenelse{\equal{\probspaceFirstChar}{Null}}{\renewcommand{\probspaceFirstChar}{\firstChar{#1}}}{}%
+  \ifthenelse{\equal{\probspaceFirstChar}{\firstChar{\vfill}}\OR\equal{\probspaceFirstChar}{\firstChar{\newpage}}}{#1}{\vspace{#1}}%
+  \renewcommand{\probspaceFirstChar}{Null}%
+}
+
+\newenvironment{problemonly}{}{}
+\newcommand{\htitle}[1]{\begin{center} \large\textbf{#1} \end{center}}
+\newcommand{\stitle}[1]{}
+\newcommand{\probonly}[1]{#1}
+\newcommand{\solonly}[1]{}
+\newcommand{\answer}[1]{\solonly{{\fontshape{n}\textbf{#1}}}}
+\newlength{\framemargin}
+\usepackage{framed}
+\renewenvironment{framed}{
+  \setlength{\framemargin}{\textwidth-\linewidth}
+  \advance\@totalleftmargin-\framemargin
+  %% \advance\width\framemargin
+  \def\FrameCommand{\hspace{\framemargin}\fbox}%
+  \advance\linewidth\framemargin
+  \MakeFramed {\advance\hsize-\width \FrameRestore}%
+  %% \MakeFramed {\advance\linewidth-\width \FrameRestore}%
+}
+{\endMakeFramed}
+
+\usepackage[skins,breakable]{tcolorbox}
+
+\newcommand{\continueproblem}[1]{%
+  \probonly{\begin{framed}%
+      #1%
+    \end{framed}%
+  }%
+}
+
+\newenvironment{warmup}{}{}
+
+% for fill in the blank things: arguments are width of the blank and the answer
+\newcommand{\@fitbans}{}
+\newcommand{\@fitbblank}{}
+%% \newcommand{\fitb}[2]{%
+%%   \ifmmode%
+%%   \renewcommand{\@fitbans}{$\bm{#2}$}%
+%%   \else%
+%%   \renewcommand{\@fitbans}{\textbf{#2}}%
+%%   \fi%
+%%   \underline{\parbox[t]{#1}{\probonly{\ }\solonly{\@fitbans}}}%
+%% }
+\newcommand{\fitb}[3][\ ]{%
+  \ifmmode%
+  \renewcommand{\@fitbans}{$\bm{#3}$}%
+  \renewcommand{\@fitbblank}{$#1$}%
+  \else%
+  \renewcommand{\@fitbans}{\textbf{#3}}%
+  \renewcommand{\@fitbblank}{#1}%
+  \fi%
+  \underline{\parbox[t]{#2}{\probonly{\@fitbblank}\solonly{\@fitbans}}}%
+}
+% fill in the blank with answer centered
+\newcommand{\cfitb}[3][\ ]{%
+  \ifmmode%
+  \renewcommand{\@fitbans}{\centering$\bm{#3}$}%
+  \renewcommand{\@fitbblank}{$#1$}%
+  \else%
+  \renewcommand{\@fitbans}{\centering\textbf{#3}}%
+  \renewcommand{\@fitbblank}{#1}%
+  \fi%
+  \underline{\parbox[t]{#2}{\probonly{\@fitbblank}\solonly{\@fitbans}}}%
+}
+
+\let\solutiononly=\comment
+\let\endsolutiononly=\endcomment
+
+% allow circling of items
+\usepackage{fancybox}
+
+\provideboolean{doCircle}
+\setboolean{doCircle}{false}
+\cornersize{1}
+
+\newcommand{\circleitem}{\setboolean{doCircle}{true}\item}
+\newcommand{\plainitem}{\setboolean{doCircle}{false}\item}
+
+\newcommand{\maybecircle}[2][\boolean{doCircle}]{\probonly{#2}\solonly{\ifthenelse{#1}{\ovalbox{#2}\hspace{-\fboxrule}\hspace{-\fboxsep}}{#2}}}
+
+% multiple choice
+\newenvironment{mc}[1]{%
+  \underline{\parbox[t]{0.5in}%
+    {\centering\probonly{\ }{\solonly{\textbf{#1}}}}}
+  \hspace{6pt} \begin{minipage}[t]{\linewidth-47pt} \setlength{\parskip}{8pt}}
+  {\end{minipage}\bigskip}
+
+% true-false
+
+\newlength{\@tfwidth}
+\settowidth{\@tfwidth}{\hspace{0.1in} True \hspace{0.2in} False \hspace{0.1in}}
+\provideboolean{answerTrue}
+\newenvironment{tf}[1]{%
+  \ifthenelse%
+  {\(\equal{\firstChar{#1}}{\firstChar{T}}\)\OR\(\equal{\firstChar{#1}}{\firstChar{t}}\)}%
+  {\setboolean{answerTrue}{true}}%
+  {\setboolean{answerTrue}{false}}%
+  \parbox[t]{\@tfwidth}{\hspace{0.1in}%
+    \maybecircle[\boolean{answerTrue}]{True} \hspace{0.2in}%
+    \maybecircle[\NOT\boolean{answerTrue}]{False}%
+  }%
+  \begin{minipage}[t]{\linewidth-\@tfwidth} \setlength{\parskip}{8pt}}%  
+{\end{minipage}\bigskip}
+
+\newcommand\problemfont{} % \fontshape{it} to italicize
+
+% if the nospace option is used, don't show problem space
+\DeclareOption{nospace}{%
+  \renewenvironment{problem}[1][0pt]{}{}
+  \renewcommand{\pspace}[1]{}
+  \renewcommand{\continueproblem}[1]{}
+  \PassOptionsToPackage{\CurrentOption}{exam}
+}
+
+% if the option sols is used, display solutions and hide problem spacing
+\DeclareOption{sols}{%
+  \renewenvironment{problem}[1][0in]%
+  {\def\c@encoding{\f@encoding}% save current encoding in \c@encoding
+    \def\c@family{\f@family}%
+    \def\c@series{\f@series}%
+    \def\c@shape{\f@shape}%
+    \problemfont\selectfont% change font
+  }%
+  {\usefont{\c@encoding}{\c@family}{\c@series}{\c@shape}\selectfont}% restore original shape
+  %
+  \definecolor{titlecolor}{RGB}{0, 99, 178}
+  \definecolor{backcolor}{RGB}{193, 228, 242}
+  \renewenvironment{solution}{\begin{tcolorbox}[enhanced, breakable, parbox=false, colback=backcolor, colframe=titlecolor, fonttitle=\bf, boxrule=0pt, toptitle=4pt, bottomtitle=4pt, title=Solution, sharp corners]}{\end{tcolorbox}}%
+  \let\problemonly=\comment
+  \let\endproblemonly=\endcomment
+  \renewcommand{\pspace}[1]{}
+  \renewenvironment{solutiononly}{}{}
+  \renewcommand{\probonly}[1]{}
+  \renewcommand{\solonly}[1]{#1}
+}
+
+% if the option showprobonly is used, probonly stuff will be displayed 
+\DeclareOption{showprobonly}{%
+  \renewenvironment{problemonly}{\ding{100}}{\ding{100}}
+  \renewcommand{\probonly}[1]{\ding{100} #1 \ding{100}}
+}
+
+% if the solsonly option is used, no problems will be displayed
+\DeclareOption{solsonly}{%
+  \let\problem=\comment
+  \let\endproblem=\endcomment
+  \let\problemonly=\comment
+  \let\endproblemonly=\endcomment
+  \renewcommand{\pspace}[1]{}
+  \renewenvironment{solutiononly}{}{}
+  \renewcommand{\probonly}[1]{}
+  \renewcommand{\solonly}[1]{#1}
+  \renewenvironment{solution}{}{}
+  \renewcommand{\htitle}[1]{}
+  \renewcommand{\stitle}[1]{\begin{center} \large\textbf{#1} \end{center}}
+}
+  
+\DeclareOption{grading}{%
+  \definecolor{gradingcolor}{RGB}{193, 228, 242}
+  \renewenvironment{grading}{\begin{tcolorbox}[enhanced, parbox=false, colback=white, colframe=gradingcolor, coltitle=black, fonttitle=\bf, boxrule=2pt, toptitle=4pt, bottomtitle=4pt, title=Grading Notes, sharp corners]}{\end{tcolorbox}}
+  % \newsavebox{\gradingbox}
+  % \definecolor{shadecolor}{rgb}{0.6,0.8,1}
+  % \makeatletter%
+  % \renewenvironment{grading}{%
+  %   \leavevmode%
+  %   \begin{lrbox}{\gradingbox}\begin{minipage}[t]{\linewidth-2\fboxsep}%
+  %       \setlength{\parskip}{8pt}%
+  %       \textbf{Grading Notes.} \ignorespaces}%
+  %     {\end{minipage}\end{lrbox}%
+  %   \colorbox{shadecolor}{\usebox{\gradingbox}}%
+  % }%
+  % \makeatother%
+  \PassOptionsToPackage{\CurrentOption}{exam}
+}
+
+% \newcommand{\workshopnote}{Problem Session Notes.}
+% \DeclareOption{workshop}{%
+%   \newsavebox{\workshopbox}
+%   \definecolor{wshadecolor}{rgb}{1,1,0}
+%   \makeatletter%
+%   \renewenvironment{workshop}{%
+%     \leavevmode%
+%     \begin{lrbox}{\workshopbox}\begin{minipage}[t]{\linewidth-2\fboxsep}%
+%         \setlength{\parskip}{8pt}%
+%         \textbf{\workshopnote} \ignorespaces}%
+%       {\end{minipage}\end{lrbox}%
+%     \colorbox{wshadecolor}{\usebox{\workshopbox}}%
+%   }%
+%   \makeatother%
+% }
+
+\renewcommand{\sfdefault}{cmbr}
+\DeclareOption{notes}{%
+  % \DeclareMathVersion{notes}
+  % \SetSymbolFont{operators}{notes}{OT1}{cmbr}{m}{n}
+  % \SetSymbolFont{letters}{notes}{OML}{cmbrm}{m}{it}
+  % \SetSymbolFont{boldletters}{notes}{OML}{cmbr}{bx}{it}
+  % \SetSymbolFont{symbols}{notes}{OMS}{cmbrs}{m}{n}
+  % \SetMathAlphabet{\mathit}{notes}{OT1}{cmbr}{m}{sl}
+  % \SetMathAlphabet{\mathbf}{notes}{OT1}{cmbr}{bx}{n}
+  % \SetMathAlphabet{\mathtt}{notes}{OT1}{cmtl}{m}{n}
+  % \newlength{\notewidth}
+  % \renewcommand{\note}[1]{\setlength{\notewidth}{\linewidth}%
+  %   \addtolength{\notewidth}{-7pt}%
+  %   \fbox{\begin{minipage}[t]{\notewidth} \setlength{\parskip}{8pt} \sffamily\mathversion{notes} #1 \end{minipage}}}
+  \definecolor{notecolor}{RGB}{193, 228, 242}
+  \renewenvironment{note}{\leavevmode \vspace*{-\baselineskip-\parskip} \begin{tcolorbox}[enhanced, breakable, parbox=false, baseline={\tcb@height-2\kvtcb@boxsep+\baselineskip-2\lineskip}, colback=notecolor, boxrule=0pt, coltitle=black, sharp corners]}{\end{tcolorbox}}
+}
+
+% if the plan option is used, show the lesson plan and notes and hide problem spacing
+\DeclareOption{plan}{%
+    \renewenvironment{plan}{}{}
+    \ExecuteOptions{notes}
+    \ExecuteOptions{nospace}
+}
+
+\let\Example=\comment
+\renewenvironment{Example}
+{\refstepcounter{equation}\normalfont\normalsize\textbf{Example \theequation.}}
+{\exend}
+\renewcommand{\theequation}{\arabic{equation}}
+
+\makeatletter
+
+% \shortintertext is like \intertext{...} but for very short comments 
+\def\shortintertext#1{%
+  \ifvmode\else\\\@empty\fi
+  \noalign{%
+    \penalty\postdisplaypenalty% \vskip\belowdisplayskip
+    \vbox{\normalbaselines
+      \ifdim\linewidth=\columnwidth
+      \else \parshape\@ne \@totalleftmargin \linewidth
+      \fi
+      \noindent#1\par}%
+    \penalty\predisplaypenalty% \vskip\abovedisplayskip%
+  }%
+}
+\makeatother
+
 \ProcessOptions\relax
-
-% ---- core packages (formerly inline in the Template preamble) ---------------
-\RequirePackage{amsmath, amssymb}
-\RequirePackage[margin=1in]{geometry}
-\RequirePackage{enumitem}
-\RequirePackage{tikz}
-\usetikzlibrary{shapes.geometric, backgrounds, calc}
-\RequirePackage{calc}
-\RequirePackage{multicol}
-\RequirePackage{comment}
-\RequirePackage{xcolor}
-
-% Accessibility-minded color choices.
-% color1 on white = 5.4:1 contrast (passes WCAG AA for normal & large text);
-% color2 is a pale fill always paired with black text (very high contrast).
-\definecolor{color1}{RGB}{0, 99, 178}   % Electric Blue (headers, links)
-\definecolor{color2}{RGB}{193, 228, 242} % Sky Blue (callout fills)
-
-\setlength{\parskip}{1ex}
-\setlength{\parindent}{0pt}
-
-\newlength{\topedge}
-\newlength{\bottomedge}
-
-% ---- section / subsection styling (blue banners) ---------------------------
-\RequirePackage{titlesec, titletoc}
-\titleformat{\section}[display]{}{}{0pt}{%
-    \bfseries\Large\color{white}%
-    \setlength{\topedge}{0.9\baselineskip}%
-    \setlength{\bottomedge}{-0.4\baselineskip}%
-    \begin{tikzpicture}[overlay, x=1in, y=1in]
-        \fill[color1] (-1, \bottomedge) -- (6.5, \bottomedge) -- (6.2, \topedge) -- (-1, \topedge) -- cycle;
-    \end{tikzpicture}%
-}[]
-\titlespacing*{\section}{0pt}{-3ex}{1ex}
-
-\titleformat{\subsection}[display]{}{}{0pt}{%
-    \bfseries\large\color{white}%
-    \setlength{\topedge}{0.9\baselineskip}%
-    \setlength{\bottomedge}{-0.4\baselineskip}%
-    \begin{tikzpicture}[overlay, x=1in, y=1in]
-        \fill[color1] (-1, \bottomedge) -- (2.75, \bottomedge) -- (2.5, \topedge) -- (-1, \topedge) -- cycle;
-    \end{tikzpicture}%
-}[]
-\titlespacing*{\subsection}{0pt}{-2ex}{0pt}
-
-% ---- pgfplots defaults ------------------------------------------------------
-\RequirePackage{pgfplots}
-\pgfplotsset{compat=1.16}
-\pgfplotsset{
-    cycle list=black,
-    every axis plot/.style={no marks, thick},
-    tick label style = {font=\footnotesize, inner sep=0pt},
-    scaled ticks=false,
-    samples=101,
-    width=3in,
-}
-
-% ---- hyperlinks + PDF metadata (accessibility) ------------------------------
-\RequirePackage[colorlinks, linkcolor=color1, urlcolor=color1, citecolor=color1]{hyperref}
-\hypersetup{
-    pdflang={en-US},
-    pdfdisplaydoctitle=true,
-}
-
-% Equation-level alt text (axessibility) requires the LaTeX PDF management
-% layer / lualatex and fails under the xetex-based Tectonic engine, so it is
-% intentionally NOT loaded here. To embed LaTeX-source alt text on equations,
-% compile with lualatex and uncomment the next line. See ACCESSIBILITY.md.
-% \RequirePackage{axessibility}
-
-% ---- list styling -----------------------------------------------------------
-\RequirePackage{fdsymbol}
-\setlist{itemsep=1ex, parsep=1ex, topsep=1ex}
-\setlist[itemize]{label={\color{color1} $\smallblackdiamond$}}
-
-% ---- fancy trapezoid problem numbers ---------------------------------------
-\DeclareRobustCommand{\numbox}[1]{\tikz[overlay, baseline=-10pt, trapezium stretches=true] \node[trapezium, trapezium left angle=45, trapezium right angle=90, shape border rotate=90, anchor=north, text depth=1cm, inner ysep=8pt, fill=color1, text=white, font=\Large]{#1}; \,}
-\DeclareRobustCommand{\shortnumbox}[1]{\tikz[overlay, baseline=-10pt, trapezium stretches=true] \node[trapezium, trapezium left angle=45, trapezium right angle=90, shape border rotate=90, anchor=north, inner ysep=8pt, fill=color1, text=white, font=\Large]{#1}; \,}
-
-% ===========================================================================
-%  Title block + callout helper macros
-% ===========================================================================
-% \handouttitle{<subject>}{<kind, e.g. Class 1 / Problem Set 1>}{<date>}
-\newcommand{\handouttitle}[3]{%
-    \begin{center}
-        \begin{tikzpicture}
-            \node (title) [trapezium, trapezium left angle=60, trapezium right angle=120, align=center, inner sep=10pt, fill=color1, text=white] at (0, 0) {\bfseries\LARGE #1};
-            \node[trapezium, trapezium left angle=120, trapezium right angle=60, align=center, inner sep=6pt, fill=color2, text=black]
-                at ($(title.top left corner) + (0,0.2)$) {\large #2};
-            \node[trapezium, trapezium left angle=120, trapezium right angle=60, align=center, inner sep=6pt, fill=color2, text=black]
-                at ($(title.bottom right corner) + (0,-0.2)$) {\large #3};
-        \end{tikzpicture}
-    \end{center}%
-}
-
-% \calloutbox{<heading>}{<body>} -- the "Today's Goals" / "PSet Tips" box
-\newcommand{\calloutbox}[2]{%
-    \begin{center}
-        \hspace*{-1in}
-        \begin{tikzpicture}
-            \node (cb) [trapezium, trapezium left angle=100, trapezium right angle=80, align=center, inner sep=8pt, fill=color2, text=black] at (0, 0)
-                {\begin{minipage}{\textwidth}#2\end{minipage}};
-            \node[trapezium, trapezium left angle=60, trapezium right angle=120, align=center, anchor=bottom left corner, inner sep=6pt, fill=color1, text=white] at ($(cb.top left corner) + (0.8, -0.15)$) {\bfseries #1};
-        \end{tikzpicture}
-        \hspace*{-1in}
-    \end{center}%
-}
-
-% ===========================================================================
-%  Conditional content environments
-% ===========================================================================
-% problem: always shown. Optional arg is trailing working-space (e.g. \vfill),
-% inserted ONLY in the student handout (suppressed when solutions are shown).
-\newenvironment{problem}[1][]%
-    {\def\handout@probtrail{#1}\ignorespaces}%
-    {\ifhandout@sols\else\handout@probtrail\fi\par}
-
-% solution: shown only with [sols]. Labeled in text (not color alone).
-\ifhandout@sols
-    \newenvironment{solution}{\par\nobreak{\color{color1}\bfseries Solution.}\enspace\ignorespaces}{\par}
-\else
-    \excludecomment{solution}
-\fi
-
-% grading: shown only with [grading].
-\ifhandout@grading
-    \newenvironment{grading}{\par\nobreak{\color{color1}\bfseries Grading.}\enspace\itshape\ignorespaces}{\par}
-\else
-    \excludecomment{grading}
-\fi
-
-% note + plan: teacher-facing, shown only with [plan].
-\ifhandout@plan
-    \newenvironment{note}{\par\nobreak{\color{color1}\bfseries Note.}\enspace\itshape\ignorespaces}{\par}
-    \newenvironment{plan}{}{}
-\else
-    \excludecomment{note}
-    \excludecomment{plan}
-\fi
-
-% problemonly: content for the student handout; hidden once solutions show.
-\ifhandout@sols
-    \excludecomment{problemonly}
-\else
-    \newenvironment{problemonly}{}{}
-\fi
-
 \endinput

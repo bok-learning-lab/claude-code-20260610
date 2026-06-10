@@ -21,7 +21,8 @@ A folder map. Start with [summary.md](summary.md) for the story;
 
 ## operations/ (the process)
 
-- [operations/handout.sty](operations/handout.sty) — the reconstructed, accessible style package.
+- [operations/handout.sty](operations/handout.sty) — the provided environment package (used as-is).
+- [operations/coursestyle.sty](operations/coursestyle.sty) — the companion visual + accessibility layer.
 - [operations/prompts/convert-worksheet-prompt.md](operations/prompts/convert-worksheet-prompt.md) — worked notes to a worksheet.
 - [operations/prompts/convert-homework-prompt.md](operations/prompts/convert-homework-prompt.md) — problem list to a problem set.
 - [operations/prompts/accessibility-audit-prompt.md](operations/prompts/accessibility-audit-prompt.md) — audit and adapt for WCAG 2.1 AA.
@@ -32,7 +33,7 @@ A folder map. Start with [summary.md](summary.md) for the story;
 - [outputs/Worksheets/](outputs/Worksheets/) — converted worksheets (`.tex` + `.pdf`).
 - [outputs/Homework/](outputs/Homework/) — converted problem sets (`.tex` + `.pdf`).
 - [outputs/ACCESSIBILITY.md](outputs/ACCESSIBILITY.md) — the accessibility audit and gap.
-- `outputs/handout.sty` — build-time copy of the style package (source of truth is in `operations/`).
+- `outputs/handout.sty`, `outputs/coursestyle.sty` — build-time copies of the style packages (sources of truth are in `operations/`).
 
 ## To run end-to-end
 

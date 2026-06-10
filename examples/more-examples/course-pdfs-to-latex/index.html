@@ -25,10 +25,10 @@
 the template. Read <a href="summary.md">summary.md</a> for the full story, or
 <a href="CLAUDE.md">CLAUDE.md</a> for session instructions.</p>
 
-<p class="note"><strong>The move worth noticing:</strong> adopting someone's
-template often means first reconstructing the missing machine underneath it — and
-that reconstruction is the right place to fix accessibility once, for everything
-built from it.</p>
+<p class="note"><strong>The move worth noticing:</strong> reconstruct a missing
+dependency from how it is used so you stay unblocked — then keep the provided
+package untouched and own your additions (the visual layer and accessibility) in
+a companion file, so each concern has one source of truth.</p>
 
 <h2>inputs/ (read-only source)</h2>
 <ul>
@@ -41,7 +41,8 @@ built from it.</p>
 
 <h2>operations/ (the process)</h2>
 <ul>
-  <li><a href="operations/handout.sty">handout.sty</a> — the reconstructed, accessible style package.</li>
+  <li><a href="operations/handout.sty">handout.sty</a> — the provided environment package (used as-is).</li>
+  <li><a href="operations/coursestyle.sty">coursestyle.sty</a> — the companion visual + accessibility layer.</li>
   <li><a href="operations/prompts/convert-worksheet-prompt.md">convert-worksheet-prompt.md</a></li>
   <li><a href="operations/prompts/convert-homework-prompt.md">convert-homework-prompt.md</a></li>
   <li><a href="operations/prompts/accessibility-audit-prompt.md">accessibility-audit-prompt.md</a></li>

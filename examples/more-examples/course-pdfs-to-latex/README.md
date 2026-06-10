@@ -11,17 +11,20 @@ that makes it legible. It works when copied out on its own.
 
 ## The move worth noticing
 
-Adopting someone's template often means **first reconstructing the missing machine
-underneath it.** Here the template depended on a custom style package that was
-never shipped, so nothing compiled. Rebuilding that package — and folding the
-accessibility fixes into it — is what makes every later conversion cheap,
-consistent, and compliant.
+Two transferable ideas. First, when a template depends on a piece you were not
+given (here a custom style package that was missing, so nothing compiled),
+**reconstruct it from how it is used** so you stay unblocked — and when the real
+one arrives, it drops straight in. Second, **keep the provided package untouched
+and own your additions in a companion file**: the visual layer it expects inline
+and the accessibility fixes live in `coursestyle.sty`, so one source of truth
+governs each concern and the author's package can be updated without losing your
+work.
 
 ## The workflow
 
 | Step | What happens | Where |
 | --- | --- | --- |
-| 1. Reconstruct | Rebuild the missing style package from how the template *used* it; bake in accessibility. | [operations/handout.sty](operations/handout.sty) |
+| 1. Set up the style | Use the provided [handout.sty](operations/handout.sty) as-is for environments; put the visual layer + accessibility in a companion [coursestyle.sty](operations/coursestyle.sty). (If the package is missing, reconstruct it from usage to stay unblocked.) | the two `.sty` files |
 | 2. Extract | `pdftotext -layout` each source PDF to recover its text + Unicode math. | (scratch) |
 | 3. Convert | Worked notes become problems with work-space + worked solutions; bare problem lists become spaced problem sets. | [operations/prompts/](operations/prompts/) |
 | 4. Compile | `tectonic <file>.tex`; reconstruct any scattered math and fix until it builds. | [outputs/](outputs/) |
@@ -36,8 +39,9 @@ a solutions key, or a teacher version by toggling a package option (`[]`,
 - **[inputs/](inputs/)** (read-only source) — the [anonymized request](inputs/handoff.md),
   the [template to follow](inputs/template-to-follow/), and representative
   [source PDFs](inputs/source-materials/) (the "before").
-- **[operations/](operations/)** (the process) — the reconstructed
-  [handout.sty](operations/handout.sty), the conversion/audit
+- **[operations/](operations/)** (the process) — the provided
+  [handout.sty](operations/handout.sty), the companion
+  [coursestyle.sty](operations/coursestyle.sty), the conversion/audit
   [prompts](operations/prompts/), and [build.sh](operations/scripts/build.sh).
 - **[outputs/](outputs/)** (rebuildable) — converted worksheets and homework as
   `.tex` plus compiled `.pdf` (the "after"), and the

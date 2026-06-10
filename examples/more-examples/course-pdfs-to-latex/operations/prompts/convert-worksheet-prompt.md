@@ -11,12 +11,20 @@ This is an idealized prompt, not a transcript. Fill in the bracketed parts.
 You are converting a Differential Equations lecture-note PDF into a
 template-styled LaTeX worksheet.
 
-**Style package:** the documents use `handout.sty` (see
-[operations/handout.sty](../handout.sty)), referenced as `../handout`. Read it
-first to learn the available macros: `\handouttitle`, `\calloutbox`, the
-`problem` environment (with an optional trailing work-space argument like
-`[\vspace{4cm}]`), and the `solution` and `note` environments. `\section{...}`
-renders as a blue banner; `\numbox` is the trapezoid list label.
+**Style packages (two of them):**
+
+- [operations/handout.sty](../handout.sty) (referenced as `../handout`) is the
+  *provided* environment package. It defines `problem`, `solution`, `note`,
+  `grading`, `problemonly` and the option switches `sols`, `plan`, `grading`,
+  `nospace`. Note its conventions: the `problem` environment takes an optional
+  trailing work-space argument that is a **bare length** like `[4cm]` (or
+  `[\vfill]` / `[\vfill \newpage]`) -- not `[\vspace{...}]`. The `note`
+  environment is **teacher-only**: it is hidden unless the `plan` (or `notes`)
+  option is passed.
+- [operations/coursestyle.sty](../coursestyle.sty) (referenced as
+  `../coursestyle`) is the *visual layer*: it provides `\handouttitle`,
+  `\calloutbox`, `\numbox` (the trapezoid list label), the blue `\section`
+  banners, the `color1`/`color2` palette, and the PDF accessibility metadata.
 
 **Read the approved example first:**
 [outputs/Worksheets/03-First-Order-Linear-Differential-Equations.tex](../../outputs/Worksheets/03-First-Order-Linear-Differential-Equations.tex).
@@ -27,8 +35,10 @@ Match its structure exactly.
 1. Extract text: `pdftotext -layout "<FILE>.pdf" -`.
 2. Build the worksheet with this skeleton:
    - `\documentclass[10pt]{article}`
-   - `\usepackage[sols]{../handout}` (so solutions show; drop `sols` for the
-     student handout)
+   - `\usepackage{../coursestyle}`
+   - `\usepackage[sols,plan]{../handout}` -- the key version (shows solutions and
+     teacher notes). Use `[]` for the blank student handout (problems +
+     work-space), or `[sols]` for solutions without the teacher notes.
    - `\hypersetup{pdftitle={<Topic> -- Worksheet <N>}}`
    - `\handouttitle{<Topic>}{Worksheet <N>}{}` where `<N>` is the leading number
      in the filename.
@@ -39,7 +49,7 @@ Match its structure exactly.
    - Each worked "Ex." becomes:
      ```latex
      \item
-       \begin{problem}[\vspace{<N>cm}]
+       \begin{problem}[<N>cm]
          <problem statement>
        \end{problem}
        \begin{solution}
@@ -47,8 +57,7 @@ Match its structure exactly.
        \end{solution}
      ```
      inside `\begin{enumerate}[leftmargin=*, label=\numbox{\arabic*}]`. Group
-     related problems under `\section{...}` banners. Size `\vspace` (4-6cm) to
-     the problem.
+     related problems under `\section{...}` banners. Size the bracket (4-6cm) to the problem.
 3. **Reconstruct the math carefully.** `pdftotext` scatters exponents,
    fractions, integrals, and subscripts into loose fragments and Unicode (e.g.
    `dy/dx`). Reassemble into correct LaTeX (`\dfrac`, `^{...}`, `_{...}`,

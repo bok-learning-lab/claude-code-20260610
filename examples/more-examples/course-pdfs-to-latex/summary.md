@@ -8,12 +8,14 @@ versions, solution keys, and teacher notes coming from one source — and they
 want the result to actually be accessible.
 
 The interesting part is not the typesetting. It is that the "template" you are
-told to follow is incomplete: it leans on a custom style package that was never
-handed over, so it does not compile for anyone. **The move worth noticing is
-that adopting someone's template often means first reconstructing the missing
-machine underneath it — and that reconstruction is exactly the right place to
-fold in the improvements (here, accessibility) that should apply to everything
-built from it.**
+told to follow is incomplete: it leans on a custom style package that was not
+handed over at first, so it does not compile for anyone. **The move worth
+noticing is twofold: when a template depends on a piece you were not given,
+reconstruct it from how it is used so you stay unblocked; and keep the provided
+"house style" package untouched, putting your own additions — the visual layer
+it expects inline, plus accessibility — in a separate companion file, so one
+source of truth governs each concern and the original can be dropped in (or
+updated) without clobbering your work.**
 
 ## What it is
 
@@ -30,8 +32,13 @@ built from it.**
     [homework](inputs/source-materials/Homework/03-First-Order-Linear-Differential-Equations.pdf) (a bare
     numbered problem list).
 - **Operations** (the process):
-  - [operations/handout.sty](operations/handout.sty) — the reconstructed,
-    accessibility-enhanced style package. The heart of the recipe.
+  - [operations/handout.sty](operations/handout.sty) — the provided environment
+    package (`problem`, `solution`, `note`, `grading`, `problemonly` + option
+    switches), used as handed over.
+  - [operations/coursestyle.sty](operations/coursestyle.sty) — the companion
+    visual layer (colors, blue banners, `\numbox`, the `\handouttitle` /
+    `\calloutbox` macros) plus the PDF accessibility metadata. This is the part
+    we own; `handout.sty` stays untouched.
   - [operations/prompts/](operations/prompts/) — the conversion prompts for
     [worksheets](operations/prompts/convert-worksheet-prompt.md) and
     [homework](operations/prompts/convert-homework-prompt.md), and the
@@ -50,17 +57,22 @@ built from it.**
 
 Two instructions carry the whole recipe:
 
-1. **Rebuild the missing piece first.** Before converting a single document,
-   reconstruct the style package the template assumed. Inferring its environments
-   (`problem`, `solution`, `note`, `grading`, `problemonly`) and option switches
-   (`sols`, `plan`, `grading`) from how the template *used* them turns a
-   non-compiling template into a working one — and gives one lever that controls
-   student / solutions / teacher versions of every document.
+1. **Reconstruct a missing dependency from its usage so you stay unblocked.**
+   The template assumed a style package that was not shipped. Inferring its
+   environments (`problem`, `solution`, `note`, `grading`, `problemonly`) and
+   option switches (`sols`, `plan`, `grading`) from how the template *used* them
+   turned a non-compiling template into a working one immediately. When the real
+   `handout.sty` arrived later, it dropped straight in and matched — because the
+   reconstruction had been faithful to the usage.
 
-2. **Fix it once, in the machine, not in the documents.** Accessibility is a
-   property of the template, so the fixes live in `handout.sty`: text labels
-   instead of color-only cues, AA-contrast colors, PDF language and title
-   metadata. Every converted document inherits them for free.
+2. **Keep the provided package untouched; own your additions in a companion.**
+   The visual layer the template kept inline (colors, banners, title block,
+   `\numbox`) and the accessibility work (text labels instead of color-only
+   cues, AA-contrast colors, PDF language and title metadata) live in
+   `coursestyle.sty`. `handout.sty` is used exactly as provided. One source of
+   truth governs each concern, so the author's package can be updated without
+   losing the styling or the accessibility, and every document inherits both for
+   free.
 
 ## How we built it
 
@@ -71,9 +83,16 @@ Two instructions carry the whole recipe:
   `article` LaTeX — faithful to the math, wrong on the assignment, which was to
   follow the provided template. Re-reading the brief reset the target to the
   template's style and a dedicated output tree.
-- **The blocker.** The template would not compile: it loaded a custom package
-  that was never shipped. Reconstructing [handout.sty](operations/handout.sty)
-  was the real first step.
+- **The blocker, and the swap.** The template would not compile: it loaded a
+  custom package that was not shipped. We reconstructed it from how the template
+  used it, which unblocked all conversion and let us prove the look. When the
+  author's real `handout.sty` arrived later, we dropped it in as
+  [operations/handout.sty](operations/handout.sty) (it matched), moved our visual
+  additions into [operations/coursestyle.sty](operations/coursestyle.sty), and
+  adjusted two of our conventions to the author's: the `problem` work-space
+  argument is a bare length like `[4cm]` (not `[\vspace{...}]`), and `note` is
+  teacher-only (shown via the `plan` option). We also confirmed the package by
+  compiling the author's *original* template with it.
 - **A content mismatch, resolved by a decision.** The "worksheet" sources were
   worked lecture notes, not blank problem lists. We render each worked example as
   a `problem` (with `\vspace` work-space) plus a worked `solution`, so one source
@@ -85,9 +104,10 @@ Two instructions carry the whole recipe:
 - **Compile-verify loop.** Every file is compiled with `tectonic` and rendered to
   an image to confirm it looks right; nothing is "done" until it builds.
 - **Accessibility, baked in.** Audited the template against WCAG 2.1 AA (the
-  institution's adopted standard), applied the achievable fixes in the style
-  package, and documented the one gap the build engine cannot close (fully
-  tagged PDF / equation alt text, which need `lualatex` + `tagpdf`). See
+  institution's adopted standard), applied the achievable fixes in the companion
+  `coursestyle.sty` (so `handout.sty` stays untouched), and documented the one
+  gap the build engine cannot close (fully tagged PDF / equation alt text, which
+  need `lualatex` + `tagpdf`). See
   [outputs/ACCESSIBILITY.md](outputs/ACCESSIBILITY.md).
 
 ## What you could translate this to
