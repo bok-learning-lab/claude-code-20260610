@@ -1,6 +1,6 @@
 # Day 2 (9 June 2026) — Top 10 Key Takeaways
 
-_Distilled from the diarized session transcript ([`20260609-transcript.md`](../../transcripts/20260609-transcript.md)), Chunks 1–9 (~14:03–15:26). Instructors: Marlon Kuzmick (MK) and Madeleine Woods (MW), with Adam leading the repo tour and Becca — the Learning Lab's executive director — giving the conceptual Git explainer. Faculty projects from Jordan, Jungyoon, Lindsay, and others._
+_Distilled from the diarized session transcript ([`20260609-transcript.md`](../day-2-recap/20260609-transcript.md)), Chunks 1–9 (~14:03–15:26). Instructors: Marlon Kuzmick (MK) and Madeleine Woods (MW), with Adam leading the repo tour and Becca — the Learning Lab's executive director — giving the conceptual Git explainer. Faculty projects from Jordan, Jungyoon, Lindsay, and others._
 
 ---
 
