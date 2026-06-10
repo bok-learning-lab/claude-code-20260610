@@ -50,6 +50,11 @@ And because the Zettelkasten API also returns the archive's *own* transcription,
 you can close the loop: fetch a slip, transcribe its scan with a vision model,
 and compare your output to the human transcription — a built-in answer key.
 
+## Worked outputs (real runs)
+
+- [`outputs/apis-and-vision/zettel-9-8-gemini-vs-claude.md`](../../outputs/apis-and-vision/zettel-9-8-gemini-vs-claude.md) — slip 9/8 read by **both** Gemini and Claude, side by side, with the archive's own transcription as the answer key. The downloaded facsimile is at [`inputs/zettelkasten/facsimiles/`](../../inputs/zettelkasten/facsimiles/).
+- [`outputs/apis-and-vision/sample-board-transcription.md`](../../outputs/apis-and-vision/sample-board-transcription.md) — the transference: the same script reading a CS 1200 **blackboard** frame.
+
 ## Files
 
 ```
