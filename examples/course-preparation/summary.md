@@ -4,6 +4,8 @@ The **before-class** counterpart to [class-processor](../class-processor/). `cla
 
 It folds in the former `recentering-academics` example as its first fully worked path: turn three layers of source material — the Bok Center's published guidance, Harvard's own institutional case for change, and external empirical research on grading — into **concrete, source-grounded curricular recommendations** for a department or an individual instructor, built around the Bok Center's *Recentering Academics* initiative (engaged classroom sessions + rigorous, AI-resilient assessment). The canonical before-class move is **running a draft syllabus through the framework to improve it.**
 
+A second prep operation, contributed from the CS 1200 project, turns blackboard **lecture recordings** into clean **lecture-notes** documents you can hand students or reuse next term — board content (read from video frames with vision) merged with the spoken narration (the transcript) into a three-layer document. See [operations/lecture-notes/](operations/lecture-notes/).
+
 ---
 
 ## What it is
@@ -33,6 +35,11 @@ Three **reference layers** that ground every recommendation, plus the **target**
 
 - [linguistics-concentration-recommendations.md](outputs/linguistics-concentration-recommendations.md) — the concentration-level worked example.
 - [sample-syllabus-redesign.md](outputs/sample-syllabus-redesign.md) — the syllabus-level worked example.
+- [lecture-notes/](outputs/lecture-notes/) — the CS 1200 worked lecture: `slides.md`/`.pdf` (transcribed board) and `notes.md`/`.pdf` (the three-layer deliverable).
+
+### The lecture-notes operation (CS 1200)
+
+A self-contained second operation, contributed by a collaborator, for instructors who teach on a blackboard with no slides. It reconstructs lecture notes from two sources — **what was written** (recovered from video frames) and **what was said** (the transcript) — and merges them into a three-layer document that visually distinguishes captured board content (blue boxes) from spoken narration (structured bullets) from best-effort reconstructions of boards the camera missed (red "GENERATED" boxes). Scripted steps (`operations/lecture-notes/scripts/`) fetch the video and transcript, extract frames, and perceptual-hash-dedupe them to a handful of distinct board states; two agent steps then transcribe the board (`outputs/lecture-notes/slides.md`) and merge it with the narration (`outputs/lecture-notes/notes.md`). Full recipe in [operations/lecture-notes/WORKFLOW_PROMPT.md](operations/lecture-notes/WORKFLOW_PROMPT.md); overview in its [README](operations/lecture-notes/README.md). The discipline that makes it trustworthy: **the board is ground truth, and every reconstruction is visually flagged** so a reader never mistakes a guess for what was actually written.
 
 ### The move worth noticing
 

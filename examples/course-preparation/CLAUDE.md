@@ -8,7 +8,7 @@ The **before-class** counterpart to [class-processor](../class-processor/). Wher
 
 The fully worked path today folds in the former `recentering-academics` example: running a draft **syllabus** (or a whole **concentration** profile) through the Bok Center's *Recentering Academics* framework — backed by Harvard's institutional grade data and the external research on grading — to get concrete, source-grounded recommendations back. The headline before-class move: **point Claude at your draft syllabus and the Recentering Academics docs, and have it improve the draft** before the term starts.
 
-See [summary.md](summary.md) for the move worth noticing and what you can translate it to; [index.md](index.md) maps the folder. The Recentering path is worked end-to-end; treat it as the first prep operation, with room for more (assignment design, rubric drafting, reading lists) to join the same `inputs/ → operations/ → outputs/` shape.
+See [summary.md](summary.md) for the move worth noticing and what you can translate it to; [index.md](index.md) maps the folder. Two prep operations are worked end-to-end today: **Recentering recommendations** (syllabus & concentration, detailed below) and the **lecture-notes pipeline** (CS 1200 blackboard recordings → three-layer notes, in [operations/lecture-notes/](operations/lecture-notes/)). Both share the same `inputs/ → operations/ → outputs/` shape; more (assignment design, rubric drafting, reading lists) can join it.
 
 ## Inputs
 
@@ -19,6 +19,7 @@ The Recentering evidence is organized into three reference layers plus the targe
 - [inputs/research/](inputs/research/) — the external evidence base on grading, synthesized in [overview.md](inputs/research/overview.md) and backed by four papers (Sadler 2005; Jonsson & Svingby 2007; Butcher et al. 2014; Bar et al. 2009). The **what works**.
 - [inputs/fields-of-concentration/](inputs/fields-of-concentration/) — Harvard College Fields of Concentration (AY 2026–2027), one Markdown file per concentration under `primary/` and `secondary/`.
 - [inputs/syllabus/](inputs/syllabus/) — your draft course syllabus. `sample-syllabus.docx` (LING 5312, Language & Politics) is the worked example; **drop your own draft here** to improve it.
+- [inputs/lecture-recordings/](inputs/lecture-recordings/) — *(for the lecture-notes operation, not Recentering)* the captured material for one worked lecture: the deduped blackboard `frames_deduped/` and the `transcript.srt`.
 
 ## The two operations
 
@@ -31,7 +32,23 @@ Two **separate** operations with **separate** outputs. They share the three refe
 
 The worked example for both is **Linguistics**: the concentration operation runs on [inputs/fields-of-concentration/primary/linguistics.md](inputs/fields-of-concentration/primary/linguistics.md), and the syllabus operation runs on the LING 5312 syllabus. The syllabus operation is the canonical "improve your draft before class" move.
 
+## Lecture-notes pipeline (CS 1200)
+
+A second, independent prep operation, contributed from the CS 1200 project: turn blackboard **lecture recordings** into clean **lecture-notes** documents you can hand students or reuse next term. The instructor uses no slides, so notes are reconstructed from two sources — the **board** (read from video frames with vision) and the **narration** (the transcript) — and merged into a three-layer document: captured board in blue boxes, spoken narration as structured bullets, camera-missed board reconstructed in red "GENERATED" boxes.
+
+It ships its own recipe and tools; see [operations/lecture-notes/README.md](operations/lecture-notes/README.md) and [operations/lecture-notes/WORKFLOW_PROMPT.md](operations/lecture-notes/WORKFLOW_PROMPT.md) for the end-to-end steps.
+
+| Stage | Where | Output |
+|---|---|---|
+| Fetch + extract + dedupe frames (scripted) | [operations/lecture-notes/scripts/](operations/lecture-notes/scripts/) | `inputs/lecture-recordings/frames_deduped/` |
+| Transcribe board from frames (agent, vision) | WORKFLOW_PROMPT Step 2 | `outputs/lecture-notes/slides.md` (+ PDF) |
+| Merge board + transcript into notes (agent) | WORKFLOW_PROMPT Step 3 | `outputs/lecture-notes/notes.md` (+ PDF) |
+
+The board content is always ground truth; reconstructions are visually flagged so a reader never mistakes a guess for what was actually written. PDF rendering uses pandoc plus the helpers in [operations/lecture-notes/render-helpers/](operations/lecture-notes/render-helpers/).
+
 ## How to work in this project
+
+The guidance in this section is for the **Recentering recommendations** operation; the lecture-notes pipeline has its own recipe in [operations/lecture-notes/](operations/lecture-notes/).
 
 You are acting as a curricular consultant for the Director of Harvard's Bok Center Learning Lab, advising a department or instructor preparing to teach. The job is to translate the Recentering Academics principles — backed by Harvard's institutional case and the external research — into recommendations **specific to this discipline or this course**, grounded in its actual requirements, intellectual character, and assessment structure, not generic boilerplate.
 

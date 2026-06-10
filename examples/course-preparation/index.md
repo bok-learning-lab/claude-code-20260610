@@ -19,11 +19,13 @@ Three shared **reference layers** plus the **target** you're improving.
 - [inputs/research/](inputs/research/) — the grading-research evidence base (`overview.md` + Sadler 2005, Jonsson & Svingby 2007, Butcher et al. 2014, Bar et al. 2009). What-works
 - [inputs/fields-of-concentration/](inputs/fields-of-concentration/) — Harvard College Fields of Concentration (AY 2026–2027), `primary/` and `secondary/`, one file per concentration
 - [inputs/syllabus/](inputs/syllabus/) — your draft syllabus; the demo is LING 5312 (`sample-syllabus.docx`). Drop your own draft here
+- [inputs/lecture-recordings/](inputs/lecture-recordings/) — *(lecture-notes operation)* one worked lecture's captured material: deduped blackboard `frames_deduped/` + `transcript.srt`
 
 ## operations/
 
 - [operations/01-concentration-recommendations-prompt.md](operations/01-concentration-recommendations-prompt.md) — concentration-level recommendations from one Fields-of-Concentration profile
 - [operations/02-syllabus-redesign-prompt.md](operations/02-syllabus-redesign-prompt.md) — syllabus-level redesign from one course syllabus (the "improve your draft before class" move)
+- [operations/lecture-notes/](operations/lecture-notes/) — *(second operation)* the CS 1200 lecture-notes pipeline: [WORKFLOW_PROMPT.md](operations/lecture-notes/WORKFLOW_PROMPT.md) (the recipe), [README.md](operations/lecture-notes/README.md) (overview), `scripts/` (fetch/extract/dedupe frames), `render-helpers/` (pandoc boxes)
 
 ## outputs/
 
@@ -31,6 +33,7 @@ One Markdown file per operation.
 
 - [outputs/linguistics-concentration-recommendations.md](outputs/linguistics-concentration-recommendations.md)
 - [outputs/sample-syllabus-redesign.md](outputs/sample-syllabus-redesign.md)
+- [outputs/lecture-notes/](outputs/lecture-notes/) — *(lecture-notes operation)* `slides.md`/`.pdf` (transcribed board) and `notes.md`/`.pdf` (three-layer deliverable)
 
 ---
 

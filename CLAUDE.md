@@ -20,7 +20,7 @@ Each example is a standalone project sharing the same structure — `inputs/` (r
 | Example | The move it demonstrates |
 |---|---|
 | [class-processor](examples/class-processor/) | Live course materials (transcripts, board work, audio, papers) processed into teaching artifacts (key takeaways, handouts, outlines) in one house style. Folds in the former `class-summarizer` (transcript → Top 10 Key Takeaways → portable HTML) as its first worked path |
-| [course-preparation](examples/course-preparation/) | The **before-class** counterpart: sharpening syllabi, assignments, and curricula before you teach. Folds in the former `recentering-academics` — run a draft syllabus or a concentration profile through the Bok Recentering Academics framework (plus Harvard grade data and the grading research) for source-grounded recommendations |
+| [course-preparation](examples/course-preparation/) | The **before-class** counterpart: sharpening syllabi, assignments, and curricula before you teach. Two prep operations — Recentering recommendations (run a draft syllabus or concentration profile through the Bok Recentering Academics framework + Harvard grade data + grading research) and a CS 1200 lecture-notes pipeline (blackboard recordings → frames + transcript → three-layer notes) |
 
 **[more-examples/](examples/more-examples/)** — the gallery of single-purpose examples:
 
