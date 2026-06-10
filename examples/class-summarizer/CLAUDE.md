@@ -32,7 +32,7 @@ Two passes, in order:
 |---|---|---|
 | 1 | Drop the session transcript at `inputs/<day>_transcript.md` | (input) |
 | 2 | Invoke [operations/key-takeaways-prompt.md](operations/key-takeaways-prompt.md) pointing at that transcript | `outputs/<day>-key-takeaways.md` |
-| 3 | Invoke the [md-to-deepthoughts-html](operations/skills/md-to-deepthoughts-html/) skill on the markdown | `outputs/<day>-key-takeaways.html` |
+| 3 | Invoke the [handout-house-style](operations/skills/handout-house-style/) skill on the markdown | `outputs/<day>-key-takeaways.html` |
 
 ## Conventions
 

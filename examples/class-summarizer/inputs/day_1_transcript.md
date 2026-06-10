@@ -1,748 +1,734 @@
 ## Chunk 1
 
-**[14:25:12 --> 14:25:40]** **1-A:**  have done. So one thing that I worked on quite a bit this year was A_I_ resilience in my course, um really trying to make sure that the students understood all of the work that they were submitting on their written problem sets. One um effective that was that I was doing a lot more in class hand-written assignments which produced some grading um some grading challenges. And I started to work on whether I could get some help from Claude, uh
-**[14:25:40 --> 14:26:02]** **1-A:**  uh in just categorising this work that students were doing. So I'm gonna give you an example which actually comes from getting advice from Claude, kind of in uh advisory help from Claude on grading my final exam. So um let's see if I don't know if we can zoom in or we have have f uh not got quite
-**[14:26:02 --> 14:26:02]** **1-B:**  Oh my
-**[14:26:02 --> 14:26:04]** **1-A:**  the video help we had before.
-**[14:26:04 --> 14:26:04]** **1-B:**  Oh my God.
-**[14:26:04 --> 14:26:05]** **1-A:** 
-**[14:26:08 --> 14:26:11]** **1-A:**  Okay, great. Um so I I worked with
-**[14:26:12 --> 14:26:40]** **1-A:**  Claude on uh the skill to draft a grading rubric collaboratively with me for problems. Um so this is a little bit out of the file that I produced with Claude on uh how to draft a grading rubric, giving it it this is its instructions for itself on how to do this. Um and it's gonna write a candidate grading instructions file for a particular problem. It's gonna take in a uh a prompt and a solution. So for me it's a
-**[14:26:41 --> 14:27:04]** **1-A:**  uh in this case my final exam file with solutions that it takes in as the prompt and the solution, it can also look for sample student work and additional rubric references. So I have my own rubrics that I've already written for these that it might take in as its uh guidance for drafting the rubric. Um then it goes ahead and actually
-**[14:27:09 --> 14:27:35]** **1-A:**  a rubric, which I then have to go in and edit myself to make sure that it's correct. And so here is the uh actual rubric that was drafted for problem four on my final exam um and I've just taken a snip out of it uh but what it goes ahead and does is describes the whole problem, describes the solution, works with me to generate the point values that would be given for each of the different categories of uh responses and here
-**[14:27:35 --> 14:27:51]** **1-A:**  um is the rubric for a correct answer on part A. Uh which is a basic counting problem where students are counting up how many ways there are to traverse of a particular grid. How many different paths could be taken through the the grid.
-**[14:27:51 --> 14:28:01]** **1-A:**  Um and because this is an exam, it knows that I wanted to um give some leniency for formality in the write-up, not the same way that I would grade a
-**[14:28:01 --> 14:28:11]** **1-A:**  a problem set problem where I'm going to expect real perfection in the way that the problem is written up. So you can see that if you read in here. Um so let's see.
-**[14:28:12 --> 14:28:23]** **1-A:**  what it actually does. So here is an actual student answer from the exam, and you might think, how is it possible going to be able to grade this?
-**[14:28:23 --> 14:28:40]** **1-A:**  This is the the actual thing that I would be grading myself, because they do grade from a scan of the students submitted answers. So it comes out looking just like this. The handwriting is not great. There's crossed out things, there's diagrams. Um and based on our grading rubric that we put together,
-**[14:28:40 --> 14:28:59]** **1-A:**  uh um Claude produced uh this result for part A_ So Claude points out that the student first sketches an initial attempt um and then crosses it out. And then uh identifies that the student uh finds the correct
-**[14:29:00 --> 14:29:26]** **1-A:**  set of steps, uh right and up, it identifies their their um U_U_U_R_R_R_R_ that's ups and rights. Um and then follows through uh the students' reasoning to find that the student has written a correct answer without giving the correct numeric answer. So they've written an answer which they've left in a factorial format without calculating it out and uh references my grading rubric and says that's okay actually, I'm gonna give it
-**[14:29:26 --> 14:29:50]** **1-A:**  we get full credit for that because that's what she said is the thing to do um in that situation. So pretty impressive um with these inputs for each student, the amount of time it takes me to go then side by side with the student answer and what I've gotten from Claude and look and see is it doing the right thing, do I agree or disagree with what it's done is vastly speed it up.
-**[14:29:51 --> 14:29:52]** **1-A:**  Yes.
-**[14:29:53 --> 14:30:03]** **1-C:**  I'm sorry to be rather stupid here, but in the uh in the prompt that you gave it, first of all, what is a straw man answer? Is that that I got a rough first draft of a rubric?
-**[14:30:04 --> 14:30:20]** **1-A:**  Yes. So actually this kind of a it's a a great question. Claude has a tendency to use these kind of cutesy or jargony terms. And so yes straw man is the word it came up with for a draft. So it drafts the rubric for me and then I go through and edit it myself.
-**[14:30:20 --> 14:30:25]** **1-C:**  So the straw man is its first attempt or your crude first draft?
-**[14:30:25 --> 14:30:26]** **1-A:**  It's its first attempt.
-**[14:30:26 --> 14:30:28]** **1-C:**  Its first attempt, okay.
-**[14:30:28 --> 14:30:37]** **1-A:**  Yes, and it te does that based on inputs that I've given it, so that its first attempt is not just it making up things, it's based on my own solution to the problem and whatever I want to tell it.
-**[14:30:38 --> 14:30:40]** **1-C:**  But and the inputs you give it are
-**[14:30:40 --> 14:30:45]** **1-C:**  and do those consist of an ideal answer you generate or is it in verbal description?
-**[14:30:47 --> 14:30:56]** **1-A:**  I actually did both in this case, several things. So I gave it a solution write-up, which is not it's only one way to solve the problem. Um I
-**[14:30:56 --> 14:30:58]** **1-C:**  It's an example of a good uh answer.
-**[14:30:59 --> 14:31:03]** **1-A:**  Yes. Uh and uh sometimes I also gave it sample student
-**[14:31:04 --> 14:31:31]** **1-A:**  work um when I was working on problem sets, not for the exam, because I didn't have sample student work. I also gave it the any previous rubric that I had written for that problem. So that would have point values and I also would tell it things that I thought were important about this problem. This is the key thing, this is what I expect students to get wrong, just by typing it. And then it would put all of that together to make its draft. And then it doesn't wanna use the draft until
-**[14:31:31 --> 14:31:48]** **1-A:**  I go back and edit the draft and that's because I've told it that. I don't m I want it to be my grading, not its grading. And so I've made it a keep me honest that way and not want to actually use it until I've gone in and read through it and make sure that I agree with everything that's in there.
-**[14:31:50 --> 14:31:52]** **1-C:**  more specific, would you say you give a piece
-**[14:31:53 --> 14:32:03]** **1-C:**  So the student answers, are those also labelled? This is a good answer, this is a mediocre answer, this is a bad answer. Do you, does it have that information from you in addition to the actual content?
-**[14:32:03 --> 14:32:20]** **1-A:**  It would be great if I did that, but that d no actually, that isn't generally what I did. So when I was getting these in class written assignments, I would just give it a few to say take a look at this and figure out what you can figure out about what are likely to be the common mistakes, and it was very good at that actually.
-**[14:32:21 --> 14:32:43]** **1-A:**  Um so a second quick example I wanted to show you is that um I have many years of uh of materials from teaching. So this summer I decided to try to turn some of my old course materials into an asynchronous online module that I could use with students in the summer school, um so I don't have to have
-**[14:32:44 --> 14:33:05]** **1-A:**  three hour long Zoom classes um over the summer. I could have shorter uh Zoom classes. So I downloaded all my videos and I downloaded the export of my Canvas site and all of my problems over many years and uh put those all together and then told Claude how I wanted to structure things in an online course with
-**[14:33:06 --> 14:33:21]** **1-A:**  videos that are no more than seven minutes and interactive activities and when in the video it sees that I stopped class and I ask the students a question and, you know, talk in your groups, it should use that as a moment to break the video and put an activity for the students and um so
-**[14:33:23 --> 14:33:43]** **1-A:**  Based on that, uh it was able to generate for me in the fancy new L_X_P_ platform sequences of activities like what we see here. So here I'm teaching um Bayes rule in the Monty Hall problem and it pulled out an excerpt of the video where I introduced the problem um then after the introduction
-**[14:33:44 --> 14:34:12]** **1-A:**  It's created a quiz where the student has to sort of take a guess about what's the best strategy, they have to make a commitment themselves uh as to the best strategy because that's what I asked the students to do in the class when I stopped. Um and then using Claude I was able to write an interaction um that lets the students actually play the game in a couple of different ways repeatedly. So this was just me prompting Claude and saying I'd like to have this kind of
-**[14:34:11 --> 14:34:31]** **1-A:**  kind of playable interactive thing that's in the middle of the site. Five minutes later I have uh this interactive that they can use to simulate the uh the Monte Hall game um with varying numbers of doors and prizes and goats, um and then it finishes up with a uh
-**[14:34:31 --> 14:34:55]** **1-A:**  a next part of the video where I talk about the solution to the problem. Um so just taking all this context that I have and uh putting it together into something new. So I'm sorry I went on much longer than I was supposed to, but these are just supposed to be kind of teasers of anything you think of, something you might be able to do, especially with the really wonderful help of this team who can help you all get to
-**[14:34:55 --> 14:34:56]** **1-A:**  What are we doing?
-**[14:34:56 --> 14:35:11]** **1-C:**  And we're excited to do it. We got feedback from week one that people needed light at the end of the tunnel. So they knew why they were learning how to get this thing installed on the computer and struggle through the steps of and and so Becca is the light at the end of the tunnel. She's made this amazing set of machines that are really helping her in in her teaching.
+**[13:24:51 --> 13:25:18]** **1-A:**  Alright everyone, so we're gonna get started in observance of ye olde Harvard time, a thing that is dead but very much alive in my heart. Uh we still might have people coming through, uh but num there will also be a staff members from the learning lab and we'll just introduce ourselves really quickly. So hello everyone, my name is Madeline Woods uh and I'm the assistant director of the learning lab for AI initiatives and I'll be kind of co-presenting very often with this guy.
+**[13:25:19 --> 13:25:23]** **1-B:**  Hey all, I'm Marlan Kuzmak. I'm the director of the Learning Lab, that's this place. Thanks for coming.
+**[13:25:24 --> 13:25:32]** **1-A:**  And then we are doing like kind of a lightning round of other people that we'll have floating around to kind of help you for the rest of the day. So my first, if I'm going through the room, is we got Jonah.
+**[13:25:32 --> 13:25:36]** **1-C:**  I guess I'm Jonah, I teach here and I in the first year writing programme.
+**[13:25:38 --> 13:25:42]** **1-C:**  I I'm Ian. Uh I do uh I work for Hewlett-Packard.
+**[13:25:52 --> 13:25:57]** **1-A:**  And then there's oh there's me. Time Christine, I'm one of the Assistant Directors of that early.
+**[13:25:58 --> 13:26:07]** **1-B:**  And you should really ask any of us questions at any moment, like some things we do will uh we're trying not to go too fast. Oh, oh, it's a one more person came out.
+**[13:26:07 --> 13:26:08]** **1-A:**  Hi I'm Jordan.
+**[13:26:10 --> 13:26:25]** **1-B:**  And again to really just grab one of us, the whole point we ha the reason we're almost outnumbering you is what we wanna be able to catch you up if anything ever doesn't makes sense or your s your computer glitches. So really really just reach out um or just look visibly confused and we will come round and and help you out.
+**[13:26:26 --> 13:26:38]** **1-A:**  Amazing. Uh so you all have kind of three handouts. One more will join you uh kind of at the end. But really quickly, uh the first one, if it were to be considered a series, is this summer of
+**[13:26:38 --> 13:26:52]** **1-A:**  of cloth sheets. Uh this is our run of show, if you think of this theatrically. Uh this will just cover what we're doing today, but this is a multi-day series. Uh there's no expectation that you can you w like
+**[13:26:52 --> 13:27:05]** **1-A:**  have to come all of the other days, they do stack on top of one another. So if you get through today and you're just wondering what's the content of the days after this and how does it all fit together uh there's a little description down here.
+**[13:27:05 --> 13:27:13]** **1-A:**  So that's the first handout to kinda help orient you as we continue. Uh but now we're gonna get into it. So we are going to be
+**[13:27:14 --> 13:27:33]** **1-A:**  Uh presenting a little bit uh while you guys do a lot. Uh so we want this to be as applied as possible, and for you guys to be uh practising and kind of doing a lot of the activities and moves as we go. Uh so the next sheet we have is this uh Claude three interfaces.
+**[13:27:34 --> 13:28:02]** **1-A:**  So this is a map of all the different interfaces that we're going to cover over the course of this four day series. Uh for the first day we're just going to cover two. Uh we're going to cover the web UI, so just the web interface. So if you go into Chrome or Safari or whatever your web browser is, uh and we'll discuss chat, just to go through uh some really basic learnings about large language models, but it'll help us build really
+**[13:28:02 --> 13:28:26]** **1-A:**  really clear intuitions about what comes later when, for instance, we scale up to something like Quadcode. Uh then we're gonna have you guys move into the desktop app that you guys all downloaded. So the app is uh really great, uh it's very new, so there will be some quirks that we're covering. But it was made to give you access to all of the things essentially. So within the app you can access chat.
+**[13:28:27 --> 13:28:53]** **1-A:**  You can also access this kind of intermediatory mode called co-work that is something kind of between a chat and code and then of course you can get into the code panel. Uh once we get a few day like tomorrow, for those of you who are used to working in terminal, you have an IDE, maybe you have Visual Studio code, uh we will have you get into that IDE and CLI. But if none of these words make sense to you right now,
+**[13:28:53 --> 13:29:08]** **1-A:**  you right now. That's okay. Uh because there is just a panel of cloud code within the app uh that w kind of black boxes a lot of the um kind of tricky things about using the I_D_E_ or C_L_I_ and there's some trade-offs to that, but really you do get
+**[13:29:08 --> 13:29:10]** **1-A:**  almost all of the access to all of the tools.
+**[13:29:10 --> 13:29:11]** **1-B:**  Ninety
+**[13:29:11 --> 13:29:11]** **1-A:**  And they evil
+**[13:29:11 --> 13:29:11]** **1-B:**  five
+**[13:29:11 --> 13:29:11]** **1-A:**  through
+**[13:29:11 --> 13:29:11]** **1-B:**  percent.
+**[13:29:11 --> 13:29:11]** **1-A:**  total.
+**[13:29:11 --> 13:29:14]** **1-B:**  So you you should not feel like you're missing out if
+**[13:29:14 --> 13:29:14]** **1-A:**  You
+**[13:29:14 --> 13:29:14]** **1-B:**  you're not
+**[13:29:14 --> 13:29:14]** **1-A:**  are not.
+**[13:29:14 --> 13:29:15]** **1-B:**  a developer.
+**[13:29:15 --> 13:29:34]** **1-A:**  You are not. Nope. So that's kind of the state of play. So again today we're going to be starting in the web interface and then we're going to be moving into the app. We have some considerations here of why you'd want to move into each and we will continue to hit this, but there are security implications.
+**[13:29:34 --> 13:29:48]** **1-A:**  So as you give Claude more access, of course there are risks. So we're gonna help you mitigate those risks. Those risks aren't necessarily high, but this is also just kind of an overview of the ways in which uh these things click together.
+**[13:29:49 --> 13:30:10]** **1-A:**  So first, as I said, we're gonna start in the web interface. I know you guys downloaded this app, we're gonna get there soon, but if everyone on your computer open Chrome, open Safari, uh whatever kind of web browser you prefer and get into klaud.ai
+**[13:30:19 --> 13:30:23]** **1-A:**  So behold the web interface.
+**[13:30:25 --> 13:30:25]** **1-A:**  Alright.
+**[13:30:27 --> 13:30:40]** **1-A:**  So the first thing we're gonna talk about before we get into our first activity is just tokens. So does anyone know what a token is or does anyone want to share kind of what a token is or or like
+**[13:30:40 --> 13:30:43]** **1-A:**  like tokens are in the case of large language models.
+**[13:30:43 --> 13:30:44]** **1-D:**  Yes.
+**[13:30:44 --> 13:30:54]** **1-A:**  So when we think about in linguistics what morphemes are, it's the smallest bits of language and tokens take language and process it into mathematical bits.
+**[13:30:54 --> 13:31:00]** **1-A:**  Well that and I can see Cheng-Yuan in the back uh as a linguistics PhD very happily kind of
+**[13:31:01 --> 13:31:23]** **1-A:**  um going around. So we will share this later. This is a a website you guys can visit later. It's called Tick Tokenizer. But it shows you the ways in which language has been tokenized according to certain models. So this is GPT-4.0. Uh but if you type something into this box, you get like hello and you can now see the ways in which language, natural language, has been broken up
+**[13:31:24 --> 13:31:37]** **1-A:**  by this model. So this happens during the training phase when language is being first processed by a model and it's kind of learning the patterns within it. But once a model is trained, it continues to view language this way.
+**[13:31:38 --> 13:31:39]** **1-A:**  So every time you put in a prompt,
+**[13:31:40 --> 13:31:48]** **1-A:**  what the large language model is seeing and processing is not the words in some kind of human way.
+**[13:31:48 --> 13:32:12]** **1-A:**  It's viewing it also not necessarily as little chunks of text, but it's seeing it as strings of numbers. And the ways in which it splits up the text is very strange. So for some of you, Marlon is typing unhappily, unhappily, unhappily. If he hovers over parts of this word, you'll see unlike in language, it's split very strangely.
+**[13:32:13 --> 13:32:16]** **1-A:**  Unhappily is split into app
+**[13:32:16 --> 13:32:44]** **1-A:**  Ili and then unna with the uh H_ kind of being pulled away. So there are many reasons for this. Humans did not decide how this language was split up. Unlike in linguistics there's no kind of natural rules to this. And so hopefully what we pull from this is this is a very inhuman sort of knowledge. It's an inhuman sort of machine. So it's very good at mimicking patterns of what human knowledge is, but just as a constant reminder, we're gonna keep coming back to this motif.
+**[13:32:45 --> 13:33:12]** **1-A:**  LLMs at their base are just machines that take in strings of numbers and output new strings of numbers. They do this very well but strings in and strings out is this constant pattern. We're just gonna learn how to improve the strings going in to get better strings out and then also how to stack those processes to make you know kind of more complex outputs or more complex machines.
+**[13:33:13 --> 13:33:20]** **1-A:**  So, the decision between like blue, yellow, blue green, like is not actually related to your content of the word.
+**[13:33:20 --> 13:33:34]** **1-A:**  It's not related to the content of the word and in fact this is just a view to help you delineate between these chunks. Uh the chunks, if you hover Marlin like over numbers, um so that number is what relates to one ha.
+**[13:33:35 --> 13:33:40]** **1-B:**  We can see it a bunch of times. One three seven five hundred. Every time it shows up, there's my one three seven five hundred.
+**[13:33:41 --> 13:33:42]** **1-A:**  So that's not a like
+**[13:33:45 --> 13:33:47]** **1-A:**  It doesn't mean anything that that is the chunk of it.
+**[13:33:47 --> 13:34:11]** **1-A:**  No, no. The chunk um that has been chosen uh and we won't get too far into this. We have lots of articles available in uh the GitHub repository uh that was sent to you and we'll pull that up in a minute and walk through it uh because we want you guys to investigate this. So we won't get too much into the technicalities. But almost certainly when this model was being trained uh it ran into uh the word app.
+**[13:34:11 --> 13:34:25]** **1-A:**  before it ran into the word unhappily. So it decided apt is a chunk. This is a really important unit of meaning, of information. Ily, it probably ran into quite quickly, 'cause that's very common in English.
+**[13:34:25 --> 13:34:37]** **1-A:**  So when it finally came across the word unhappily, it had this leftover chunk, unhap, and it had to turn that into a new token. Uh, so that's how it kind of goes through and starts to split language.
+**[13:34:37 --> 13:34:45]** **1-A:**  So looking at this, it's all numbers, uh you know turtles all the way down, it's numbers all the way down. Uh so you might think it's quite good at math.
+**[13:34:46 --> 13:34:49]** **1-A:**  Well we'll we'll put that to the test. So Marlin, do you wanna do this live?
 
 ## Chunk 2
 
-**[14:35:12 --> 14:35:15]** **2-A:**  Oh, but now we're about to enter the tunnel. So apologies for the technical
-**[14:35:15 --> 14:35:16]** **2-B:**  About to enter the tunnel.
-**[14:35:16 --> 14:35:38]** **2-A:**  difficulties we're about to come, but but we're gonna show you how to you know how to use this app. And so number one is I was just gonna get a show of hands, how many of you managed to get that desktop app installed, the Clawed desktop app? Amazing. And so if you wanna go ahead and open that on your m your machine um w we'll start working with you in it. Um I gonna hand it back over to Madeleine in a sec, but you just wanna take a couple of secs to navigate your way to it.
-**[14:35:38 --> 14:35:53]** **2-A:**  But if you do not have it installed, if you've hit any roadblocks whatsoever, please do raise your hand. All the people that introduced themselves in the beginning, they're insanely excited to help you out. Uh so just just let us know and we'll come and send someone over and then we'll we'll catch you up if you fall behind at all.
-**[14:35:56 --> 14:35:59]** **2-A:**  And so what you'll note at your table, you should have a handout.
-**[14:36:00 --> 14:36:26]** **2-A:**  that has summer of Claude at the top and this is uh an outline this is our summer of Claude that's why this is all this uh and this walks you through what we're gonna be doing today and across the four days of the workshop and so today we're gonna get started with this desktop app. We'll learn all the different ways we can use Claude within it um and outside of it it it gets potentially a little disorienting 'cause there's a web app, there's a desktop app,
-**[14:36:26 --> 14:36:54]** **2-A:**  uh there's the command line tool you might use a terminal um and and we're gonna explain what all those are for you and then we're also gonna do a little bit of um basic uh AI kind of skill building um I know a lot of you have probably been to workshops like this before so we hope this is not too repetitive, but we're gonna show you a couple of the greatest hits that we've you know come up with over the the last two or three years or so of helping students and faculty gain intuitions for what AI gets right, what it gets wrong and how you can use that to create better
-**[14:36:54 --> 14:37:13]** **2-A:**  are possible outputs. And then if you can look down, you can see the other days. You were all invited for all the days of this week, and we wanted to emphasize that um again after feedback in week one we wanted to make sure that all week long, even if you never want to use the command line, I don't know people how many people use the terminal or command line are pretty comfortable comfortable with it.
-**[14:37:14 --> 14:37:40]** **2-A:**  Like it's not not all of us, a small like half of us maybe. Um it uh we're gonna make sure that this week if you're if you wanna remain in the desktop app it's totally fine to do that. I know that in our description of the days we do say that on certain days you're gonna be using terminal um and and an I_D_E_ will explain what one of those is. We're gonna make sure that all week long you can be working in the desktop app, you'll be able to accomplish everything that the people in terminal will be able to accomplish. Um but but for people that wanna get their terminals set up, we're gonna we're gonna have
-**[14:37:40 --> 14:37:50]** **2-A:**  we're going to help you with that as well. So I don't need to blab on and on, but that's what this this week involves. And then I I'm going to hand it over to to Matlin and we'll start to do a uh introduction to the yeah.
-**[14:37:50 --> 14:37:56]** **2-C:**  I don't have a web UI first of all and eventually we might wanna zoom back out. Um alright so
-**[14:37:57 --> 14:38:16]** **2-C:**  What we're going to walk through, and you guys have a second worksheet, uh so we just had the kind of uh state of play, how you'll kind of walk through the week. Uh but then the other sheet you have, Jonah was making this morning, behold, quad, the three instances, if you will. I love a triptych. Uh so
-**[14:38:17 --> 14:38:27]** **2-C:**  We're going to start by doing really basic kind of literacy moves in the web UI. So at first if you guys do want to open Chrome,
-**[14:38:27 --> 14:38:28]** **2-C:**  Safari,
-**[14:38:28 --> 14:38:35]** **2-C:**  Firefox, wherever you access ye olde large language model, we're going to start there.
-**[14:38:36 --> 14:39:04]** **2-C:**  We're going to land by the end of the day in the desktop app. That's why we guys had you guys download this earlier. Uh and through that desktop app um you know, it's a bit Rome all it's a bit of Rome. All Rhodes lead to it. So you can do chat, you can do co-work and you can do code through the desktop app. But as we get to the slightly more advanced days uh we will explore why you might wanna use Cloud code in an IDE, what that means, or a C_L_I_ and what that means, um and just kind of the functionality
-**[14:39:04 --> 14:39:32]** **2-C:**  personality it might give you access to. Uh but this sheet is a good map to keep coming back to. As you start to formulate ideas of how you might want to use AI, how you might uh want to use Quad Code specifically, it'll just help you have a roadmap of which instance um or kind of platform environment that you want to use Quad within. So the first being the web UI. Marlin, do you want to walk us through
-**[14:39:33 --> 14:39:34]** **2-C:**  Here we go. So
-**[14:39:34 --> 14:39:34]** **2-A:**  Yeah.
-**[14:39:34 --> 14:39:35]** **2-C:**  very
-**[14:39:35 --> 14:39:36]** **2-A:**  Yeah. So we're all in
-**[14:39:36 --> 14:39:36]** **2-C:**  simply.
-**[14:39:36 --> 14:39:38]** **2-A:**  here. And we probably used something like this before, right?
-**[14:39:38 --> 14:39:47]** **2-A:**  Chat GPT or Gemini. And we can type messages in here. I could go in and I can ask it, you know, what is the capital of Canada?
-**[14:39:49 --> 14:39:51]** **2-A:**  And I can get, you know, an answer within there.
-**[14:39:53 --> 14:40:21]** **2-A:**  There are also a number of uh settings that we can set in here. Um this is fantastic, thank you Ottawa, got that right. Um if I if I have a relatively simple question, maybe I don't need the most powerful model on earth, I can change the model here from opus four point eight to one of the other models available to us. And so Claude, like a lot of the other L_L_M_ companies, has these different tiers of models and the outputs cost a different amount.
-**[14:40:21 --> 14:40:43]** **2-A:**  Oh, again you're getting this all free from Harvard. So in a sense you don't have to worry about paying actual dollars, but what will happen is you're gonna run out of tokens more quickly if you use the more powerful model. And so the most powerful model is this Opus 4.8, most capable for ambitious work. And then the cheapest model is this Haiku 4.5. Um it it probably would have got that Ottawa um
-**[14:40:43 --> 14:40:47]** **2-A:**  Or a question, but right, just just find another Canadian in the audience. Go Canada.
-**[14:40:48 --> 14:41:04]** **2-A:**  Uh and uh so that that's one of the little toggles for us to to to know about. The other zone where we can change some properties is over here in our user settings. Um if I click on this and I go to settings,
-**[14:41:04 --> 14:41:15]** **2-A:**  what I'll see um is a bunch of general things where I can change my name and things like this. But the most interesting one is over here in capabilities, where I can toggle on search and reference chats.
-**[14:41:17 --> 14:41:45]** **2-A:**  And then I can also toggle off and on memory. Now, the Harvard instance of this doesn't have memory turned on yet, but we it will very soon. Um and when we do this, it's gonna remember all my chats and it's gonna try to learn about my context, who I am, kind of the type of work I do, the types of outputs I like or I don't like and it's gonna start plugging that into every prompt that I that I give it. And so it's probably a good idea to toggle this on. Um Harvard again has signed
-**[14:41:44 --> 14:42:08]** **2-A:**  and uh agreements with these big corporations that we are giving you for free. Uh and that means that they promise not to use any of this data. So it's safe up to what Harvard terms level three data. If anyone knows about the various Harvard uh data tiers, so you can put student work in there, it's totally safe. Uh and uh anthropics promise not to use any of the data that goes in to train the model or to share in any way.
-**[14:42:14 --> 14:42:38]** **2-C:**  The first thing we're gonna do is just discuss the success modes of AI and a bit of the failure modes. Uh but in a way that hopefully builds us intuition, not just in this chat window, but even as you start to use it uh in the code interface, precisely what's happening. So this is very classic. If you guys wanna put in something like this, you may uh but
-**[14:42:39 --> 14:42:45]** **2-C:**  Let's talk about large language models. Let's say you ask for a string of five numbers multiplied by a string of five numbers.
-**[14:42:46 --> 14:42:49]** **2-C:**  You're pretty quickly going to get an answer.
-**[14:42:50 --> 14:43:02]** **2-C:**  However, if you ask oh there you go if you ask can you do it again with Python, you'll get a different answer, which is a bit mysterious.
-**[14:43:03 --> 14:43:16]** **2-C:**  So can anyone tell me kind of some similarities they see between these numbers? What are the things that got right in its first attempt versus the things it got wrong when it had to use uh a specific
-**[14:43:16 --> 14:43:16]** **2-A:**  What comparable
-**[14:43:16 --> 14:43:16]** **2-C:**  tool?
-**[14:43:16 --> 14:43:18]** **2-A:**  would you do if you want to see Oh if you can yeah, spot it?
-**[14:43:18 --> 14:43:20]** **2-C:**  and Marlon has one up as well.
-**[14:43:20 --> 14:43:21]** **2-A:**  Do you keep the both up so we can see?
-**[14:43:25 --> 14:43:26]** **2-A:**  It's like it's
-**[14:43:26 --> 14:43:26]** **2-C:**  So in both
-**[14:43:26 --> 14:43:26]** **2-A:**  normal
-**[14:43:26 --> 14:43:26]** **2-C:**  examples.
-**[14:43:26 --> 14:43:28]** **2-A:**  in the crazy realm, right?
-**[14:43:28 --> 14:43:28]** **2-C:**  Yeah.
-**[14:43:28 --> 14:43:36]** **2-C:**  So anything specific that you guys are seeing between this example and again here's our other example of two numbers.
-**[14:43:38 --> 14:43:42]** **2-C:**  Anything it consistently gets right versus anything it consistently gets wrong?
-**[14:43:43 --> 14:43:44]** **2-A:**  First three digits.
-**[14:43:45 --> 14:43:49]** **2-C:**  Yeah, so the first few digits tend to be right. Anything else?
-**[14:43:52 --> 14:43:53]** **2-A:**  The last few digits.
-**[14:43:53 --> 14:43:57]** **2-C:**  The last two digits tend to be right, exactly. So really quickly
-**[14:43:58 --> 14:44:11]** **2-C:**  Um the first few digits, the last few digits across both answers tend to be similar, as well as the magnitude. It tends to know if you have a string of however many digits by a string of however many digits how many digits that ultimately creates.
-**[14:44:13 --> 14:44:30]** **2-C:**  And this demonstrates that large language models are excellent for certain things, which is to say pattern recognition. It's great at the heuristics of what multiplication does and is as an operation from looking at its training data, where it was undoubtedly fed hundreds if not thousands of pieces of homework.
-**[14:44:31 --> 14:44:32]** **2-C:**  However,
-**[14:44:32 --> 14:44:38]** **2-C:**  it can't actually do the math. In order to do the calculation,
-**[14:44:38 --> 14:44:40]** **2-C:**  you'll see it does a tool call.
-**[14:44:41 --> 14:44:57]** **2-C:**  So this extra little bit is it's looked at the user query and it said ah, I need to use another tool for this. A large language model alone can't help me solve this, so I'm gonna use another capability, uh as a large language model, it has seen a ton of Python.
-**[14:44:58 --> 14:45:11]** **2-C:**  So it very quickly can write a Python script, insert the digits that you've given, and then you're gonna have the correct answer all the time. Uh and this just gets to a very frequent pattern with the use of large language models. If you ask for a
+**[13:34:51 --> 13:35:09]** **2-A:**  So all of you now on your computer in Claude, uh let's just take uh a string of numbers, uh at least kind of five digits by five digits. And if everyone wants to put that in, feel free to just put in something quickly, see what you get.
+**[13:35:20 --> 13:35:25]** **2-A:**  So as you guys go through Marlon, this is one of Marlon's favourite uh exercises.
+**[13:35:25 --> 13:35:52]** **2-B:**  I've stated these two exercises like we do this with all the undergrads that do you know AI literacy things with us, 'cause they're just killer ways of building these foundational intuitions about how these things you know think. Some of you might have encountered stuff like this before. If so you know think about this in a sort of meta way. These are great things to do with your students. So the first one about yeah, it's just number after number, predicting the next number, and then this one it's it's wrong, but it like how wrong is it? I asked it to do with Python and so it did a Python script.
+**[13:35:52 --> 13:36:09]** **2-B:**  um that actually multiplied them together and it got this number. And so everyone, you know, give this a try on your own with any random numbers. And it it makes sense to do this in uh I'll show you in a second. You can switch to the sonnet. If you get too good an answer, you might switch to a worse model to deliberately get the bad answer.
+**[13:36:10 --> 13:36:16]** **2-B:**  But can anyone um note anything they see about the relation between the two answers, the wrong answer and the right answer?
+**[13:36:17 --> 13:36:21]** **2-B:**  Anything we notice uh is it like totally wrong? It's not totally wrong,
+**[13:36:21 --> 13:36:21]** **2-B:**  right?
+**[13:36:22 --> 13:36:25]** **2-B:**  What are the things that gets right? Math people.
+**[13:36:25 --> 13:36:27]** **2-C:**  The order's of magnitude.
+**[13:36:27 --> 13:36:28]** **2-B:**  The order of magnitude
+**[13:36:28 --> 13:36:28]** **2-C:**  The first
+**[13:36:28 --> 13:36:28]** **2-B:**  is right.
+**[13:36:28 --> 13:36:29]** **2-C:**  three buttons.
+**[13:36:29 --> 13:36:33]** **2-B:**  You're the first person ever to notice that the order of magnitude is right first. Like, that doesn't happen. You can't notice.
+**[13:36:35 --> 13:36:39]** **2-C:**  But like the first like two or three buttons, like it takes a while to get into.
+**[13:36:39 --> 13:36:41]** **2-B:**  Yeah. So the first three are right.
+**[13:36:41 --> 13:36:42]** **2-C:**  Yeah.
+**[13:36:42 --> 13:36:51]** **2-B:**  And then the last three are right. Okay. And then the total number of digits or the order of magnitude is right. That's kind of interesting. So it's wrong, this is not
+**[13:36:51 --> 13:37:20]** **2-B:**  you know, given enough your scientific research. But it's true, the it's like close to to being right. Um and in some cases maybe that's okay. Maybe that this is close enough. If I actually just cut it off and I just said, you know, five point five two times, you know, ten to the ninth or whatever it is, I don't ten to the twelve, uh that that that would be that would be okay. Um but it's not actually true. And it's this this is that says a lot about how these models are uh close to truth, capable of persuading you that they they are true if you're not careful.
+**[13:37:20 --> 13:37:22]** **2-B:**  cool. Um but not actually true.
+**[13:37:22 --> 13:37:22]** **2-D:**  Actually,
+**[13:37:22 --> 13:37:46]** **2-B:**  And it gets back to like what m Matthew was saying about the way they are trained and the way they predict. And so it seemed loads and loads and loads of instances of two times two and of maybe twenty two times twenty three or twenty three times twenty three, um and it seems load loads of instances of something that's six digits multiplied by something that's eight digits. And so it picks up on a lot of those patterns and it gets pretty darn close to the real answer just by
+**[13:37:46 --> 13:38:13]** **2-B:**  Predicting patterns, but it's not the real answer essentially. But what it's amazing at is it see millions of intro Python courses online where everyone learns to write a function that multiplies two numbers together. It is never gonna get that thing wrong. And so what it does instead is it it writes that function and then runs that function, it's guaranteed to get the answer right. And so we're really leveraging what it's trained to do well if we say hey write a Python function that does this.
+**[13:38:13 --> 13:38:19]** **2-B:**  Rather than just say, hey, can you vibe this? Just what does it seem to you the answer to this large multiplication question should be.
+**[13:38:20 --> 13:38:21]** **2-B:**  So
+**[13:38:21 --> 13:38:24]** **2-A:**  But this isn't just limited to numbers either.
+**[13:38:24 --> 13:38:34]** **2-A:**  So knowing how to ask the right question and then relying on, and we'll continue to break this down, but tool calls, we're prompting it to trigger a tool call or just to use the proper tool.
+**[13:38:35 --> 13:38:36]** **2-A:**  So in this case, if you understand large language models,
+**[13:38:36 --> 13:38:38]** **2-A:**  you know it can't do these calculations.
+**[13:38:39 --> 13:38:44]** **2-A:**  You need to ask it to use Python or, you know, there are many ways to do this.
+**[13:38:44 --> 13:38:46]** **2-A:**  But let's do another example.
+**[13:38:46 --> 13:38:50]** **2-A:**  in text, uh unless you've got like a live version of
+**[13:38:50 --> 13:38:50]** **2-B:**  I
+**[13:38:50 --> 13:38:51]** **2-A:**  the don't s Marlin.
+**[13:38:51 --> 13:38:52]** **2-B:**  I don't have a Marlin. But uh you Okay. already did.
+**[13:38:52 --> 13:39:12]** **2-A:**  so you may have had this experience, or your students may have had this experience, where they say behold I am hoping to do a close reading of this given text. Uh please do this close reading. Uh well in this case it might say I'm sorry, there is no Act one, Scene nine.
+**[13:39:12 --> 13:39:12]** **2-A:**  I
+**[13:39:12 --> 13:39:14]** **2-A:**  Uh or it might hallucinate and act
+**[13:39:14 --> 13:39:14]** **2-B:**  Did
+**[13:39:14 --> 13:39:14]** **2-A:**  one
+**[13:39:14 --> 13:39:14]** **2-B:**  again.
+**[13:39:14 --> 13:39:14]** **2-A:**  scene nine.
+**[13:39:14 --> 13:39:15]** **2-B:**  It did again.
+**[13:39:15 --> 13:39:16]** **2-A:**  It did it do it again?
+**[13:39:16 --> 13:39:16]** **2-B:**  I love
+**[13:39:16 --> 13:39:16]** **2-A:**  Alright,
+**[13:39:16 --> 13:39:17]** **2-B:**  it when demos
+**[13:39:17 --> 13:39:17]** **2-A:**  go for it
+**[13:39:17 --> 13:39:17]** **2-B:**  actually
+**[13:39:17 --> 13:39:17]** **2-A:**  press.
+**[13:39:17 --> 13:39:19]** **2-B:**  work live and they don't embarrass me in this.
+**[13:39:19 --> 13:39:19]** **2-A:**  Yeah.
+**[13:39:19 --> 13:39:22]** **2-B:**  So it still doesn't think there's an act one scene nine.
+**[13:39:22 --> 13:39:36]** **2-A:**  Well that's which is intriguing. Uh so what can you do? Well I know Marlon doesn't have this copy and pasted ready to go. Um so Huh. Can't do this one live. Uh but uh once you paste in and say are you sure?
+**[13:39:37 --> 13:39:37]** **2-A:**  Uh
+**[13:39:37 --> 13:40:03]** **2-A:**  Uh 'cause here's act one, my friend. Let let's see what we got. And then it goes up, a very uh a Claud classic you might say, um which you'll hear a lot is I apologize. I'm so sorry. You're totally right. Uh and then it will go on and just like with python, once you give access to the right tools, the right grounding, uh you prompt it in a specific way with enough context. Actually we don't we don't have it printed out, but uh Marlin went through this close reading and it
+**[13:40:03 --> 13:40:29]** **2-A:**  and it it wasn't uh a bad close reading. Again, Marlin also hails from X-Pause in another life. Uh and so that's kind of uh again, a motif we're gonna keep hitting. If you ask a question quickly without proper context, the L_L_M_'s gonna go poorly. But sometimes we have this analogy of kind of driving a car. Sometimes people get into a car and if you've never learned how to drive a car, you might put it out of neutral and just immediately roll into a bush. And you'll go
+**[13:40:29 --> 13:40:50]** **2-A:**  Oh, this is this is an awful car. This is an awful technology. I hate this. Uh but if you learn how to kind of take all the steps and prepare it, you'll be able to drive uh to many places and go pretty far. So we're gonna keep covering that. Um so these are the ways do we wanna do um population pyramids while we're kind of waiting for Becca? Uh another example of this is
+**[13:40:52 --> 13:40:57]** **2-A:**  if you're getting to again slightly more complexity, is help me make an interactive data vis.
+**[13:40:58 --> 13:40:59]** **2-A:**  using X_ and X_
+**[13:41:01 --> 13:41:21]** **2-A:**  And earlier this is uh less hard to um less easy to do live now, but back in the day if you said make me a graph, uh really quickly, it would produce something like this instead. Uh so this is using a diffusion model instead of a large language model. See when you would say hey please create me a visual
+**[13:41:22 --> 13:41:29]** **2-A:**  uh create me something, so make me um different population pyramids showing the differences between Japan and Nigeria.
+**[13:41:29 --> 13:41:50]** **2-A:**  It would take that prompt and instead it would make an image pixel by pixel. We won't get too much into the diffusion models, but it just slowly renders based on many, many images it's seen that have been tagged in a certain way what the pixels all arranged should look like. Uh but for those of you who work with data with data you know this is not at all anything close to a population pyramid.
+**[13:41:49 --> 13:42:17]** **2-A:**  pyramid, let alone something you would wanna use in a statistics class. So if you instead pop open something called Claude artifacts, uh and you guys can try this yourselves, you can try it with something right now if you're in your chat window uh what it looks like is just always start a new chat, and we'll get to why in a moment. But if I start a new chat uh and somewhere there it is
+**[13:42:17 --> 13:42:24]** **2-A:**  is usually artifacts. But let me just say um please I put this on Lopez.
+**[13:42:26 --> 13:42:30]** **2-A:**  Please make me an interactive artifact.
+**[13:42:30 --> 13:42:45]** **2-A:**  And it could be anything. If you guys don't have data with you right now, you might wanna say um displaying jump mechanics. And video games. Or some kind of interactive unit. So this will take a moment um to pop through.
+**[13:42:47 --> 13:42:59]** **2-A:**  But while that cooks up, uh we had uh Jungyun did this one actually. If you instead provide the context
+**[13:43:00 --> 13:43:28]** **2-A:**  Hey, please make this for me with this CS V_ uh but please make me an artifact. You'll start to see these tools open up. So it will read a front-end design skill that has access to. This is just text that improves its prompt. It will actually use code uh to look at the CS V_ structure, and it will import it in to actually create an interactive. And you can't see this but normally you can scroll through. If you push play it shows the change over time.
+**[13:43:28 --> 13:43:49]** **2-A:**  Uh so these artefacts are really wonderful, because you can really quickly and I'm not sure it's probably still cooking and yours will cook away too uh but at some point you'll get a nice little window that you can open up, and it'll give you an example of what this looks like. And this is just like multiplication, uh instead of doing kind of a naive one-shot making an image,
+**[13:43:49 --> 13:43:50]** **2-E:**  instead Uh-huh.
+**[13:43:50 --> 13:43:54]** **2-A:**  it's using the tools it has access to that do this work best.
+**[13:43:54 --> 13:44:15]** **2-A:**  which is to say code. So it's seen a lot of GitHub repos, a lot of stack overflow of people creating data visualizations of population pyramids and that's what it uses on the back end of an importing a CSV. So now you're seeing this like jump mechanic game. For instance, just with that one prompt now I have this interactive.
+**[13:44:16 --> 13:44:27]** **2-A:**  which isn't working too great it seems. Uh that's a way that you can kind of start to prompt back and forth. But you'll see there's this view icon.
+**[13:44:28 --> 13:44:36]** **2-A:**  And then there's this code um icon and if you at some point flick, yeah, so it looks like you can kind of change the different attributes down low.
+**[13:44:36 --> 13:44:41]** **2-B:**  Maybe you have less gravity and then I'll really be able to go. There we go, that's so satisfying.
+**[13:44:42 --> 13:44:50]** **2-A:**  Uh but if you want it to then kind of continue with this again, this is what's on the back end in order to create something like this. It's not
 
 ## Chunk 3
 
-**[14:45:12 --> 14:45:24]** **3-A:**  general question, uh you might get a general wrong answer. It might feel right, uh but it won't be. And we don't just see this with mathematics, uh we also see this with
-**[14:45:25 --> 14:45:29]** **3-A:**  close reading as well. So here we're asking for a close reading,
-**[14:45:30 --> 14:45:33]** **3-A:**  act one, scene nine, from Coriolanus.
-**[14:45:34 --> 14:45:41]** **3-A:**  And it says, I am sorry, that does not exist. My apologies. Uh but I can give you a few others.
-**[14:45:44 --> 14:45:44]** **3-A:**  If now
-**[14:45:45 --> 14:46:08]** **3-A:**  you actually give it, act one, uh you'll see this really frequent response. You've probably seen this many times, you may have experienced it yourself. Uh you're right, I'm sorry, it absolutely exists. And then it proceeds to do a close reading. Uh and Marlin, you actually did this example, I believe you used to teach this text in X_Boz in a former life, and you weren't completely upset with a close reading, were you?
-**[14:46:09 --> 14:46:12]** **3-B:**  I did it again and saw it again, it still says there there is no act
-**[14:46:12 --> 14:46:22]** **3-B:**  in a rock nine um in wide wide one. I love it when the demo actually works live. Usually when you do scenes live they don't work, that's why we print everything up basically. But again and again and again, it's just convinced this thing doesn't exist.
-**[14:46:23 --> 14:46:29]** **3-A:**  Hmm. So really quickly, let's look deeply under the hood and keep having a bit of the keys. So
-**[14:46:30 --> 14:46:37]** **3-A:**  when a large language model that's just gonna continue to key, that's alright, when a large language model is
-**[14:46:37 --> 14:46:39]** **3-A:**  Formulating an answer, what's happening.
-**[14:46:41 --> 14:46:53]** **3-A:**  When you put in a query or any amount of text, that text is actually tokenized. So here you can see unsurprisingly they had to cancel the show. The crowd went home unhappily.
-**[14:46:55 --> 14:47:03]** **3-A:**  While over here in specifically GPT-4.0, you can see exactly how this text was tokenized.
-**[14:47:03 --> 14:47:05]** **3-A:**  Again, large language models don't read.
-**[14:47:05 --> 14:47:10]** **3-A:**  They intake large strings of text in a linear fashion.
-**[14:47:10 --> 14:47:15]** **3-A:**  So exactly this input is not even these tokens necessarily,
-**[14:47:15 --> 14:47:16]** **3-A:**  goes in as these numbers.
-**[14:47:17 --> 14:47:31]** **3-A:**  But the way in which it's split up is actually quite strange. So you'll see unhappily, if you were in linguistics or any type of language training and you were teaching someone how to speak English, you certainly would not teach them to split it up unhap-
-**[14:47:32 --> 14:47:36]** **3-A:**  Illy. Uh but this is not a decision made by a human.
-**[14:47:38 --> 14:47:52]** **3-A:**  This type of intelligence is rather inhuman. It's consistently inhuman, in fact, because it's been done at scale. So it'll be able to, you know, stochastically mimic what might seem human, but again, remember it's splitting up unhappily as app,
-**[14:47:52 --> 14:48:03]** **3-A:**  because that's probably one of the first things that saw on its training data on the internet. And then illy, and then at the very end when it finally ran into the word unhappily, unha was the sad orphan left behind.
-**[14:48:04 --> 14:48:08]** **3-A:**  But this box down here is really what we want to focus your attention to.
-**[14:48:09 --> 14:48:17]** **3-A:**  We're going to talk about context windows, we're going to talk about skills and agents and a ton of tools over the course of this workshop. Uh but I cannot emphasize enough how
-**[14:48:18 --> 14:48:27]** **3-A:**  Simplistic large language model processes are at the end of the day. It is just an operation of strings in and strings out of numbers.
-**[14:48:27 --> 14:48:36]** **3-A:**  Now it has happened to see all of the strings ever produced by human eyes and hands on the internet, that's why it gets so good at its outputs.
-**[14:48:37 --> 14:48:44]** **3-A:**  But at the end of the day, it's just strings in, strings out, and occasionally when it needs a little bit of help.
-**[14:48:44 --> 14:49:02]** **3-A:**  a tool call like Python. So we're going to help you guys think through how to assemble these strings of text uh to get the best strings out, as well as all of these surrounding tools like Python, like agents, just all of the other kind of apparatus that you might use as we go.
-**[14:49:03 --> 14:49:08]** **3-C:**  Where it comes you design a little cloud, you should be able to have a similar cloud.
-**[14:49:08 --> 14:49:30]** **3-A:**  Yes, precisely. Yeah, this is not isolated to cloud. Actually the initial example of this uh was done in chat G_P T_ um if you guys have ever seen any Andre Kirpati videos, he's very excellent. Andre is amazing. Yeah. Uh he does like these sorts of examples. But no, this is just a problem with large language models generally. Again, they can't calculate. If however you were to ask what's two times two,
-**[14:49:30 --> 14:49:34]** **3-A:**  it undoubtedly would be able to say four because it's seen that
-**[14:49:34 --> 14:50:00]** **3-A:**  that operation and its training data discretely. But once you start to get up to strings of numbers of about this magnitude, therefore it's random. It has not seen this operation over and over and over again. So it can't consistently get uh to the correct number. But what it can get to is eight and some change by six and some change tends to almost be fifty six.
-**[14:50:00 --> 14:50:20]** **3-A:**  When I have a five and a zero at the end, it tends to end with zero. That's what it can get at. Um but not the actual uh calculation itself. So this in-between middle zone is almost entirely his hallucinated. And that maps pretty well on to the other operations it does. Text as well. It might look really good, the format is really good, it seems to understand
-**[14:50:21 --> 14:50:27]** **3-A:**  uh the basic structure, but sometimes that in-between area, that level of nuance kind of goes out the window.
-**[14:50:27 --> 14:50:34]** **3-B:**  And sometimes that could be okay. I mean it sounds like we're being very critical, that's 'cause some of these are taken from an AI literacy module that we do where we're trying to help students understand,
-**[14:50:34 --> 14:50:35]** **3-A:**  Yes.
-**[14:50:35 --> 14:50:51]** **3-B:**  you know, don't use this stuff just in a naive way to t you know, do all your ho homework or do all your your learning. But but I think we also an accent once you understand these patterns of how it goes wrong and how to constrain it to go right, you can actually create much much better quality outputs again of the sort that that Becca's um creating.
-**[14:50:51 --> 14:50:54]** **3-A:**  Yep. Alright, shall we talk about context windows?
-**[14:50:54 --> 14:50:55]** **3-B:**  Um, yeah. Oh,
-**[14:50:55 --> 14:50:57]** **3-A:**  Or is there any? Alright, so
-**[14:50:58 --> 14:51:06]** **3-A:**  Something you might uh that we wanna talk to when it comes to memory is Marilyn I'm not sure on my computer or I guess we're in a different
-**[14:51:06 --> 14:51:07]** **3-B:**  We can switch yours, sure.
-**[14:51:07 --> 14:51:09]** **3-A:**  Yeah, mine doesn't really have memory.
-**[14:51:10 --> 14:51:17]** **3-A:**  So as you turn on memory, we might even wanna go to So this is one of our new Harvard accounts.
-**[14:51:18 --> 14:51:32]** **3-A:**  So you will be able to turn on memory, this is probably what you'll see, but it's not actually accruing memory over time yet. But let me really quickly show you um moment of vulnerability. Um
-**[14:51:33 --> 14:51:34]** **3-B:**  Oh, your personal memory.
-**[14:51:34 --> 14:51:45]** **3-A:**  well it's not quite my personal memory, this is technically my work account. Uh it's catacomb, so it thinks my name is cat. I turned this on two weeks ago and this is what it has on me so far.
-**[14:51:46 --> 14:51:55]** **3-A:**  So memory. Memory is such an interesting word. We're saying turn on memory. Uh there's also the ability, it gives you a prompt to download the memory from other accounts.
-**[14:51:55 --> 14:52:02]** **3-A:**  Say you use ChatGPT often, and it's saying, ooh, let's get the memory out of your ChatGPT, like import memory from AI providers.
-**[14:52:02 --> 14:52:04]** **3-A:**  Looking at that, you're like,
-**[14:52:04 --> 14:52:04]** **3-A:**  ah,
-**[14:52:04 --> 14:52:10]** **3-A:**  this must be some intense technical process, or something must be happening here that's uh a bit interesting,
-**[14:52:10 --> 14:52:12]** **3-A:**  at the at the very least deterministic.
-**[14:52:13 --> 14:52:39]** **3-A:**  maybe a script of some sort. Uh no, no it's just it's just a text file. So we're gonna keep coming back to this over and over again. Sometimes there are scripts. Most of the time it is just text files. And such is the case with memory as well. Uh so here it's asking you to import memory by pasting these instructions somewhere else. Uh but Marlan if we go back to my memory.
-**[14:52:40 --> 14:52:44]** **3-A:**  Um and you can you look just look at it, there you go. So this is what it remembers about me.
-**[14:52:46 --> 14:52:52]** **3-A:**  Uh and it's pretty accurate. But again, it is just a text file.
-**[14:52:52 --> 14:53:00]** **3-A:**  So we're gonna talk about how this operates in what we call a context window.
-**[14:53:01 --> 14:53:02]** **3-A:**  Okay.
-**[14:53:02 --> 14:53:02]** **3-B:**  Okay.
-**[14:53:08 --> 14:53:13]** **3-A:**  So how many people have seen the movie Memento? I know it's a bit older. Alright, yeah.
-**[14:53:13 --> 14:53:18]** **3-A:**  Nice. Students? Tough crowd. Um but you guys, you know, nice. Oh hey.
-**[14:53:19 --> 14:53:35]** **3-A:**  So uh LLMs are a bit uh like Memento. Every new chat you open. So anyone who uh interacted with like local models or really early versions of chat GPT you've definitely experienced this. Whenever you started a new chat uh something would open up.
-**[14:53:35 --> 14:53:38]** **3-A:**  And it was called a context window.
-**[14:53:40 --> 14:54:02]** **3-A:**  And you would notice it wouldn't remember anything about you, nothing about your projects, and then maybe if you've been using these tools for a while, about two years ago, suddenly it could kind of remember who you were, maybe your past few chats, uh but also another thing, if you're outside of a local um L_L_M_ uh you're dealing now with uh let's say in this case
-**[14:54:03 --> 14:54:05]** **3-A:**  Opus 4.8,
-**[14:54:05 --> 14:54:23]** **3-A:**  uh but today I'll show you something from Opus 4.7. This is a model from Claude. Uh it's been trained on a specific set of training data, maybe there are some fine tuning, there are a lot of processes that go into these frontier labs models. But one of the most important things that dictates its behaviour
-**[14:54:24 --> 14:54:29]** **3-A:**  is a piece of text that enters into your context window that you never see.
-**[14:54:30 --> 14:54:50]** **3-A:**  but controls kind of the rest of your interaction. So just like memento, this is a new day. Every time you open a new thread, it doesn't remember anything about the days previously. So how do you know, companies like ChatJBT and Claude or Anthropic get the memory into every new instance when you hit new chat.
-**[14:54:51 --> 14:54:54]** **3-A:**  So that first thing is what we call a system prompt.
-**[14:54:56 --> 14:55:02]** **3-A:**  Anthropic uh publishes its system prompts. ChatGPT doesn't. Uh they tend to be about
-**[14:55:03 --> 14:55:11]** **3-A:**  ten thousand words, and here's an example from Anthropic's system prompt uh for four point seven. You'll see it has
+**[13:44:51 --> 13:44:54]** **3-B:**  not just asking for a visual, instead it's asking for this entire code package.
+**[13:44:55 --> 13:44:59]** **3-B:**  So I think we have, well you were wondering jump mechanics.
+**[13:44:59 --> 13:44:59]** **3-C:**  So yeah,
+**[13:44:59 --> 13:45:00]** **3-B:**  You just put
+**[13:45:00 --> 13:45:00]** **3-C:**  we had
+**[13:45:00 --> 13:45:00]** **3-B:**  that?
+**[13:45:00 --> 13:45:02]** **3-C:**  a lot of things about the way it goes wrong and this
+**[13:45:02 --> 13:45:02]** **3-B:**  Yeah.
+**[13:45:02 --> 13:45:15]** **3-C:**  week we're gonna help you figure out how to make it go right. Uh but so that there's light at the end of the tunnel and you see where it's headed in very concrete ways for an actual professor that does actual teaching and research um we have Becca, our Executive Director,
+**[13:45:15 --> 13:45:20]** **3-C:**  who will come in and show you some of the cool things you've been making. Do you wanna say hi?
+**[13:45:20 --> 13:45:24]** **3-D:**  Hi everyone, I'm I'm Becca, I'm the Executive Director of the Beck Center. Um
+**[13:45:24 --> 13:45:51]** **3-D:**  Um I have been learning how to use generative AI um from Marlin and Madeline and others on this team for the last bunch of months and uh having an excellent time doing it. And um I just want to show you some of the things that I've come up with and done with it so you can have a sense of what you might do um and probably won't want to do these same things, but just to just to get a few ideas. So
+**[13:45:52 --> 13:45:58]** **3-D:**  One of the things that I wanted to do was in preparation for my summer course at the summer school,
+**[13:45:58 --> 13:46:05]** **3-D:**  typically I've been teaching that course in two three-hour long Zoom sessions each week, which is brutal.
+**[13:46:05 --> 13:46:17]** **3-D:**  And so I thought I would like to transfer a bunch of that into more of an asynchronous online course format and have shorter in-person or in Zoom sessions. So I took all my course materials.
+**[13:46:18 --> 13:46:43]** **3-D:**  I downloaded all of the course videos, I exported my uh canvas course site, um I took all of my problem bank all of uh problems and uh put them into a project in Claude and I used that uh together with some prompting to build an asynchronous online course which I built in the the fancy new LXP uh
+**[13:46:43 --> 13:47:09]** **3-D:**  platform, which I even got it to automatically build for me. So here's just an a lesson that it managed to build out of these materials. Uh this is a lesson where I'm teaching the the Monty Hall uh probability problem. Um and so it started out by uh cutting a segment out of my lecture, a short segment out of the lecture 'cause I told that I didn't want long videos, where I uh oops, that's not the
+**[13:47:09 --> 13:47:13]** **3-D:**  First one. No, that's right, that's right.
+**[13:47:14 --> 13:47:37]** **3-D:**  Um the statement of the problem. So it's cut out a short segment of the video there which uh states the problem. Um and then after that after I stated the problem, I asked all of the students, um what do you think is the right thing to do? Should the contestant in this problem keep the door that they originally chose or should they switch? And so uh the
+**[13:47:39 --> 13:47:58]** **3-D:**  we created a quiz next. And this was all automatically created, a quiz where then the student is going to choose um whether you know sort, take their own position. Do they switch or do they stay? Then after that uh we put in a vibe-coded interactive um that
+**[13:47:59 --> 13:48:05]** **3-D:**  where they get to develop their own intuition for how this works. So um this is something that where
+**[13:48:06 --> 13:48:25]** **3-D:**  it's basically a a JavaScript playable interactive where they can learn about a concept. You could do this for any kind of concept you want, um that then I could insert into this course. Um and then finally followed it with another clip out of my lecture where I reveal the solution.
+**[13:48:25 --> 13:48:41]** **3-D:**  So this whole learning sequence just pulled out of my existing course materials. Um he did this for the entire course. Um it's pretty cool. Um another thing uh that uh I wanted to show is
+**[13:48:46 --> 13:49:10]** **3-D:**  Um in my class this semester I did a lot of uh hand-written assignments, you can imagine there would be reasons for wanting to do a bunch of in-class assessments now that we're all trying to deal with A_I_ and that have uh more things that are happening right in front of our noses. And so I worked actually to um get some help from A_I_ decoding all of the handwriting.
+**[13:49:10 --> 13:49:38]** **3-D:**  So uh here for instance is a student response to an in-class assignment um that I've now scanned in and I'm looking at this student's hand-written uh assessment that I would have to grade. So I have on any given day, sixty five of these that I have to deal with and they're not that easy to decipher. Um and so is there a way I could get A_I_'s help grading something like this?
+**[13:49:37 --> 13:50:04]** **3-D:**  Um and uh I was able to work with Claude, um this in fact act actually comes from my final exam, but I did this mostly with these low stakes in class assessments. Um I worked with Claude to be able to uh draft a rubric so it works from my problem and solution and the existing rubric that I have and my standards for how r writing the solution to the problems.
+**[13:50:04 --> 13:50:21]** **3-D:**  ones. Um and uh we draft uh a rubric, so it's supposed to uh you know ha has rubric items for each of the different point values for this question. Um and uh
+**[13:50:24 --> 13:50:26]** **3-D:**  it has some inputs that it works with.
+**[13:50:27 --> 13:50:51]** **3-D:**  So it takes in the the prob the problem prompt, the solution, uh the sample student work, other rubric references, and it puts together a specific rubric for the the question. It then takes in these uh student answers, anonymized student answers, and uh uses its vision to turn them into actual text and then
+**[13:50:52 --> 13:51:10]** **3-D:**  grades it. And so here's the actual grade that it produced for this student, the comments it produced. Um and it's kind of interesting. It notices uh here that the student starts out with an initial attempt that it that the the student uh crosses out diagonally.
+**[13:51:11 --> 13:51:21]** **3-D:**  Um it recognises the student writing this kind of U_U_U_ R_R_R_ up up right right right for moving through this lattice.
+**[13:51:21 --> 13:51:47]** **3-D:**  And uh then recognises further on that the student gets to a correct but not final answer, where they've left an answer in this kind of factorial notation rather than a complete numerical answer. But recognises that in my rubric I said that answers that are left in that notation should receive full credit, and it properly gives the student full credit for this problem. Um it doesn't do perfectly on all of this,
+**[13:51:48 --> 13:51:55]** **3-D:**  giving commentary on students. So as I go through and review all of these and decide whether this is actually useful to me,
+**[13:51:55 --> 13:52:05]** **3-D:**  um it does get it wrong at various points. But I have to say, it doesn't get it wrong gets it wrong at a uh a lesser rate than my uh T_F_s.
+**[13:52:06 --> 13:52:10]** **3-D:**  Um so that's one example. And uh one other is uh
+**[13:52:11 --> 13:52:15]** **3-D:**  very last one here. So these are all teaching examples. Is um
+**[13:52:17 --> 13:52:39]** **3-D:**  Here's a a video um of uh my co-instructor for CS1200, teaching last semester in a classroom on blackboards, was able to take this video, download the video, have Claude extract the frames from the video, and from it create notes for the course. So in the blue
+**[13:52:40 --> 13:52:42]** **3-D:**  is its transcription of everything that was on
+**[13:52:42 --> 13:52:42]** **3-C:**  the Hmm.
+**[13:52:42 --> 13:52:43]** **3-D:**  board.
+**[13:52:43 --> 13:52:54]** **3-D:**  Um and uh in between are the notes based on the transcript of what Anurag was saying in that class. So given a day of class it can just automatically produce these notes.
+**[13:52:55 --> 13:53:01]** **3-D:**  So just a few examples of kind of cool things. That is that's
+**[13:53:01 --> 13:53:02]** **3-A:**  not.
+**[13:53:02 --> 13:53:02]** **3-D:**  Oh.
+**[13:53:03 --> 13:53:04]** **3-D:**  Thanks.
+**[13:53:04 --> 13:53:04]** **3-E:**  It's quite calm.
+**[13:53:04 --> 13:53:24]** **3-C:**  So uh that is the sort of where we're headed. The light at the end of the tunnel is that we we can get to the point where Becca is at. Uh it and and so uh Madeleine's about to explain to us kind of why we're gonna be using these more complex versions of Claude. I just wanna sh uh ask for a show of hands, how many of you managed to get that desktop app installed though before we go further?
+**[13:53:25 --> 13:53:33]** **3-C:**  And how many people have not managed to get it installed? Anyone? Well amazing, okay. Well I'm not gonna worry about it then. Amazing, amazing. So so if we have that open, then
+**[13:53:33 --> 13:53:48]** **3-C:**  open. That's where we're gonna head next. And the whole reason we're gonna use that app and not just the interface online is so that we can do some of those more complex operations that Becca is doing, uh and we avoid some of those problems that Madeleine kind of outlined uh in the first three activities.
+**[13:53:48 --> 13:53:48]** **3-B:**  Okay.
+**[13:53:48 --> 13:53:49]** **3-C:**  Alright, but sorry, Madeline, who who went?
+**[13:53:49 --> 13:53:55]** **3-B:**  No no no, not at all. Uh well something maybe I'll we'll we'll get into the app, but really quickly
+**[13:53:56 --> 13:54:09]** **3-B:**  Let's just talk about what happens when you open a large language model interface. So we've discussed uh the model quite a bit, uh and once again we'll keep coming back to this. Uh but strings in, strings of numbers,
+**[13:54:09 --> 13:54:24]** **3-B:**  comma separated values, um become strings of numbers out. Uh but when you're having an interaction with the large language model, for those of you who have been using uh one for several years, maybe in an account, could be Chat GPT, it could be Gemini,
+**[13:54:25 --> 13:54:45]** **3-B:**  You might notice it seems to have more information about you and your context in the world than just those strings of numbers you put into the prompt. So it seems to behave in a way that shows more context than just saying this string of five numbers by this string of five numbers. And where does that come from?
+**[13:54:45 --> 13:54:48]** **3-B:**  Uh this comes from what we call the context window.
+**[13:54:50 --> 13:54:50]** **3-B:**  So
 
 ## Chunk 4
 
-**[14:55:12 --> 14:55:15]** **4-A:**  That's a lot of decisions being made here about its output.
-**[14:55:16 --> 14:55:17]** **4-A:**  A lot of these are related to safety.
-**[14:55:18 --> 14:55:44]** **4-A:**  Uh but sometimes they're related to things uh you might want slightly more control over, especially if you're using it for text production, if you have students using it for different activities. Uh so here you can see uh Claude should be wary of producing humour or creative content etcetera that is based on stereotypes uh including of stereotypes of majority groups, um various personal opinions, heavy handed, repetitive,
-**[14:55:44 --> 14:55:53]** **4-A:**  it goes on and on and on. Um you guys can find this online. It's just really interesting to look at the instructions that has for Claude. But again, you don't get to edit this.
-**[14:55:53 --> 14:56:06]** **4-A:**  But this exists in every single chat with Claude. In Claude code, in Claude co-work, in uh the web U_I_ where you are all right now, you just never get to see it.
-**[14:56:06 --> 14:56:20]** **4-A:**  and it eats up some of your context window. And that context window tends to be two hundred K tokens to one million tokens. And those tokens are those little kind of bits of text we saw previously. So before you begin anything, boom,
-**[14:56:20 --> 14:56:32]** **4-A:**  system prompt. The next that goes in is that memory piece. So what you guys just saw, that memory about me and where I work, that goes in every single time.
-**[14:56:33 --> 14:56:51]** **4-A:**  Uh there are also instances in Cloud code where they import memory that's slightly more project specific. So it'll say these are the projects uh in the different repositories Madeline has been working in. This is the text stack uh that she's been using. So probably use an X_J_S_ or a Python even if she hasn't necessarily said that.
-**[14:56:53 --> 14:57:01]** **4-A:**  And so this is about of your two hundred K_ token windows, let's say fifteen K_ tokens that you don't see,
-**[14:57:01 --> 14:57:18]** **4-A:**  in the course of your interaction. Now you can go in and edit memory, but what we're going to do is show you guys various different ways that you can have more control over some of these patterns. There are some ways to kind of hack into the system prompt or at least append the system prompt with CLAWD. It's a little more advanced.
-**[14:57:19 --> 14:57:21]** **4-A:**  But at the very least
-**[14:57:21 --> 14:57:35]** **4-A:**  You can start to think how you want to continue your conversation with Claude in order to get to better and better operations and output. Because when you begin your discussion, this is your first prompt.
-**[14:57:37 --> 14:57:39]** **4-A:**  Hey Claude, please do X, Y, and Z for me.
-**[14:57:40 --> 14:57:46]** **4-A:**  This next chunk is Claude's output. That's also inserted into your context window.
-**[14:57:48 --> 14:57:54]** **4-A:**  Let's say you put in another prompt, oh that wasn't quite right and it goes on and on and on.
-**[14:57:55 --> 14:58:03]** **4-A:**  Eventually you'll run out of room, and it will get what we call compacted or summarized, and it'll open a new context window
-**[14:58:04 --> 14:58:11]** **4-A:**  wherein you still have system prompt memory, but now you have the summary of this last conversation.
-**[14:58:12 --> 14:58:13]** **4-A:**  But hopefully you're seeing a pattern here.
-**[14:58:15 --> 14:58:41]** **4-A:**  It's not just your prompts that are being inserted. In fact, if you looked at this ratio-wise, you've really only inserted about this much compared to how much the A_I_ or Claude has inserted for you. We're going to encourage you guys over time to slowly switch this ratio, to have more and more context that you have personally created or vetted in order to create smaller and smaller A_I_ outputs.
-**[14:58:41 --> 14:58:47]** **4-A:**  Because the more kind of leeway you give AI, let's say in this output AI really goes sideways, it goes wrong,
-**[14:58:47 --> 14:58:51]** **4-A:**  has a hallucination, you can correct that in your next prompt,
-**[14:58:51 --> 14:58:52]** **4-A:**  but it doesn't go away.
-**[14:58:53 --> 14:58:55]** **4-A:**  It is consistently passed forward.
-**[14:58:56 --> 14:59:00]** **4-A:**  This is also why we want you guys to constantly create new chats.
-**[14:59:00 --> 14:59:04]** **4-A:**  So let's say you were earlier having a conversation about,
-**[14:59:04 --> 14:59:07]** **4-A:**  hey, can you please answer this email and then you ask a research question.
-**[14:59:08 --> 14:59:32]** **4-A:**  All those previous chats about emails are now being passed in with your research question. And again, it's not that it's necessarily semantically messing up uh your operation going forward, but now you have a ton of tokens in the back that aren't necessarily high signal towards the ultimate output. If you're doing really high cutting edge research, you probably wanna be very specific about what gets into this context window. And that happens with every single new chat.
-**[14:59:33 --> 14:59:34]** **4-A:**  So what we're gonna do
-**[14:59:35 --> 14:59:58]** **4-A:**  Ooh ooh, sorry, one more thing. I'm almost I'm almost there. Um two other patterns, and again we guys we sent you guys a Google uh drive folder, and over the next few days we're gonna keep sending you folders of information that might be useful uh for what we call context. So if this is the context window, everything you actually get to assemble you can think of as context.
-**[14:59:58 --> 15:00:26]** **4-A:**  So think of documents that you put in, research you put in, anything that might be useful, that's your context. So even Becca used that term when she was up here describing um so precisely to what kind of you guys were asking, what did you p put in? What did you give it? That is context. What you're giving it is context. And it's important to note that these context windows can get really long uh but there tends to be a huge die off for how important the context is.
-**[15:00:27 --> 15:00:43]** **4-A:**  So first of all the pri it has a huge primacy effect. Uh so the information you put in first is the most important. It's what it's going to reference most consistently, as well as the last instruction you gave. So that's why they put the system prompt at the very very beginning.
-**[15:00:43 --> 15:00:53]** **4-A:**  Their words matter the most. But you want to think of what to put immediately next, as well as of course your kind of last instruction as you're having a conversation.
-**[15:00:53 --> 15:01:03]** **4-A:**  Uh and again also the longer your context goes on um you tend to see with context, these are a bit smaller, uh but you tend to see
-**[15:01:05 --> 15:01:17]** **4-A:**  uh a bump of context is really helpful. Maybe another bump like this. So as you go on with your two hundred K_ or one million tokens, adding more context is really good up to a point.
-**[15:01:17 --> 15:01:36]** **4-A:**  But at some point there's something called context rot, and you start to experience a downgrade, because it's just getting, as the kids say, lost in the sauce. Doesn't quite know what to do with that much information. So this context assemblage and management is what we're gonna just gonna keep hitting over and over again. And we'll show the
-**[15:01:36 --> 15:01:43]** **4-B:**  I can say that if you if anyone is really he wants to nerd out on this or anything uh Danny uh sent you all a folder. If you're willing to download that
-**[15:01:43 --> 15:02:05]** **4-B:**  with that. Um that's something that w we have some resources for you to play around with in the second half of the workshop today. And one of the folders in there is called context research and the papers that Madeline is showing you are all in here. The one on context rod, which is like the curve like this, and then the one called lost in the middle, that's the curve that goes goes like this. Those are kind of cool things to to check out. We'll actually show you how to you know get L_
-**[15:02:05 --> 15:02:05]** **4-A:**  Okay.
-**[15:02:05 --> 15:02:06]** **4-B:**  the L_ and to summarise those.
-**[15:02:07 --> 15:02:07]** **4-B:**  Oh.
-**[15:02:08 --> 15:02:33]** **4-A:**  So really quickly, we're just gonna have you guys do one more thing in chat or at least observe something in chat. For many of you what you wanna do with large language models may be serviced by just being in this chat window in the web UI. But we're going to get you into co-work uh for a few reasons uh and we just want you to experience the friction that might push you to something like co-work uh by doing a really quick uh example.
-**[15:02:34 --> 15:02:39]** **4-A:**  So it's one thing to run Python code to do multiplication really quickly, uh but let's say
-**[15:02:41 --> 15:03:02]** **4-A:**  you want to create um some population uh or you wanna make a data-vis of population data. So back in the day, early L_L_M_s, you would say please make me a data visualisation of uh we have two, I think Nigeria versus Japan, and you'd get something very beautiful.
-**[15:03:02 --> 15:03:03]** **4-A:**  but completely non-sensical.
-**[15:03:03 --> 15:03:03]** **4-C:**  Okay.
-**[15:03:03 --> 15:03:07]** **4-A:**  They'd be like here is your data viz. And you're like nice.
-**[15:03:08 --> 15:03:13]** **4-A:**  Yeah, that's that's kind of a population pyramid, my guy. And you'd say could you please make this
-**[15:03:14 --> 15:03:34]** **4-A:**  accurate to the data I gave you, and it say oh yes of course, and it would, you know, change the shape slightly. So what's happening here is it's using a different kind of model. This is a diffusion model. It generates images, so if you've been plagued by A_I_ uh content uh that comes from the image realm, uh deep fakes, etcetera, that comes from diffusion models.
-**[15:03:36 --> 15:03:58]** **4-A:**  So something that comes from context uh management and c and kind of the uh progenitor of that, which is to say prompting correctly, is asking for the right things. You're not asking for an image. You're not asking comparison population pyramids. What you're going to ask is something more specific. Again, help me make an interactive data vis using an artefact, artefact being the key word and claude.
-**[15:04:00 --> 15:04:06]** **4-A:**  Comparing demographic trends in Japan and Nigeria, the artefact should include population pyramids for both countries.
-**[15:04:07 --> 15:04:11]** **4-A:**  And you've attached the C_S_V_ so the comma separated value of the data.
-**[15:04:12 --> 15:04:27]** **4-A:**  So there's a few things going on. It's reading a skill, so we're gonna get into that. But skills are just again these mark down files. Everything is text. Everything is text. And then it's using code, it's using a script to look at the C_S_V_ structure.
-**[15:04:29 --> 15:04:49]** **4-A:**  And in the end, boom, there we go. We have an artifact. And an artifact is, and I think yeah Marlon's drumming it up right now, it creates a window that kind of simulates a little code environment where one it writes the code and then you can actually view the code.
-**[15:04:50 --> 15:05:11]** **4-A:**  Often it will just hard code in some of your C_S_V_ data. Very often it's trying to do it as small as possible, so if you have a truly enormous C_S_V_ it might pick the first hundred entries or some such. But it's giving you a prototype of what a population pyramid um might look like. And we made various interactive ones we can show you uh
+**[13:54:51 --> 13:54:55]** **4-A:**  Whenever you're interacting uh with a large language model,
+**[13:54:56 --> 13:55:03]** **4-A:**  it all happens within this context window. And before you ever even begin a conversation,
+**[13:55:03 --> 13:55:07]** **4-A:**  something is loaded into that context window.
+**[13:55:08 --> 13:55:12]** **4-A:**  And you may have heard this term, but this is the system prompt.
+**[13:55:14 --> 13:55:37]** **4-A:**  So there's things that vary between all of the different companies. Uh the first is the model. So the actual kind of uh you know number kind of pattern creator and seer uh that you're choosing to interact with, and those models continue to improve. But the other thing that impacts the ways models behave is this thing called uh the system prompt.
+**[13:55:37 --> 13:56:03]** **4-A:**  And I've just got a short little extract of the system prompt. Uh Marlin might be able to search for it online because Claude, unlike chat T_P_T_ I'm anthropic rather, uh they do publish their system prompts. They want people to kind of see uh the different system prompts they have available. Uh so if you go, if you just look it up, um you can pick the system prompt for different models. Uh is this for four point eight or four
+**[13:56:03 --> 13:56:03]** **4-B:**  point 4.8.
+**[13:56:03 --> 13:56:04]** **4-A:**  seven? Okay.
+**[13:56:04 --> 13:56:28]** **4-A:**  So this is the newest system prompt, and I do recommend uh just popping through in here at some point, uh because it's really fascinating how many decisions are being made for you uh before you ever interact with the model. Uh a lot of this is related to safety and security, so it's uh how is it behaving, um does it assist with uh self-harm, building a bomb, some of the kind of like ethical situations.
+**[13:56:29 --> 13:56:32]** **4-A:**  And so when you've heard about people jailbreaking a model,
+**[13:56:32 --> 13:56:59]** **4-A:**  model. Uh what they mean is they put in a prompt that somehow circumvents this prompt or kind of tricks the model into ignoring uh this initial most important prompt. And we'll get into the ways in which uh and kind of why this prompt is able to have so much primacy over the conversation. Uh but a lot of it is related to safety, but a lot of it is also related to style of speech. So when you hear people say, oh I prefer
+**[13:57:00 --> 13:57:22]** **4-A:**  How Claude interacts with me over chat. Part of that comes down to training data. Uh so Claude is kind of famous for running a book abattoir. It uh took a bunch of books, ripped the spines off and scanned them. Uh we've had a few faculty come in the past few weeks who got checks from Anthropic for this practice in fact. Uh but also it tends to uh yeah,
+**[13:57:22 --> 13:57:26]** **4-A:**  so here we go. Um keep a natural tone, responds in promin
+**[13:57:26 --> 13:57:28]** **4-C:**  Well, look how many times it has to say no bullet.
+**[13:57:28 --> 13:57:29]** **4-C:**  pull-ups. It's like once
+**[13:57:29 --> 13:57:29]** **4-A:**  No bolts,
+**[13:57:29 --> 13:57:29]** **4-C:**  in each
+**[13:57:29 --> 13:57:29]** **4-A:**  no
+**[13:57:29 --> 13:57:29]** **4-C:**  of
+**[13:57:29 --> 13:57:29]** **4-A:**  bolts.
+**[13:57:29 --> 13:57:31]** **4-C:**  these paragraphs, no pull-ups.
+**[13:57:31 --> 13:57:39]** **4-A:**  And this was a thing uh really associated with chat GPT early on. So you'll also, when you read through this document, if you've been working with large language models for a while,
+**[13:57:39 --> 13:57:50]** **4-A:**  you'll see in this document a direct kind of reactive conversation with both the training data as well as the way it's trying to differentiate itself from some of the other models online.
+**[13:57:51 --> 13:57:53]** **4-A:**  Uh so this is the system prompt.
+**[13:57:53 --> 13:57:56]** **4-A:**  And every single time you interact
+**[13:57:57 --> 13:58:15]** **4-A:**  with a quad, the model, you'll be interacting with a system prompt. Doesn't matter if it's in chat, doesn't matter if it's in a co-work, doesn't matter if you become a really intensive uh kind of developer like user and are using c code and a C_O_I_ this system prompt in is in every single little thing.
+**[13:58:16 --> 13:58:21]** **4-A:**  Now the next thing you might have noticed using these tools for a while is something we call memory.
+**[13:58:23 --> 13:58:26]** **4-A:**  Or they call memory and memory is an interesting word.
+**[13:58:26 --> 13:58:28]** **4-A:**  It might feel like some kind of
+**[13:58:30 --> 13:58:56]** **4-A:**  you know psychological quality or you might think oh it has some kind of like really innate interesting technology that allows it to have memory about me and this is how it knows about your context but also across multiple different chats if you notice you pick up a project in a new thread or a new chat and it seems to kind of remember the information about your last thread this comes from memory but memory again it's not psychological and it's not technically difficult
+**[13:58:56 --> 13:59:16]** **4-A:**  really difficult. All it is, motif is more text. So just like the system prompt is text, if Marlin goes in, and this might look a little different, ah, 'cause it's not the Harvard account. Uh but if you go down to settings, capabilities, you'll get into generate memory from chat history.
+**[13:59:16 --> 13:59:43]** **4-A:**  and you can turn that on. You can also keep it off, and we'll talk about ways to kind of uh still get the same benefits without uh the kind of automated nature of this. But it is really helpful, it's just a way to automatically have more context for the large language model about who you are and what you're doing. Uh so Marlin, I'm not sure if metal has that much uh but yeah, okay, so just based the metal is just one of our various studio accounts.
+**[13:59:43 --> 13:59:50]** **4-A:**  So even based on not that much work, uh you can kind of see uh these memories and how they're structured.
+**[13:59:53 --> 14:00:09]** **4-A:**  So if you turn it on, slowly it'll see, okay what are the projects that this person is interested in. Um brief history, uh the kind of coding languages you use or the human languages you use, uh the sorts of projects you're interested in.
+**[14:00:10 --> 14:00:16]** **4-A:**  And, again this just helps the large language model come up with ultimately a better output.
+**[14:00:17 --> 14:00:26]** **4-A:**  It's just trying to stack these first input strings with as much information as possible, or what entropic and others call high signal tokens,
+**[14:00:27 --> 14:00:31]** **4-A:**  uh that will help draw the response in the correct direction for your context.
+**[14:00:32 --> 14:00:36]** **4-A:**  context used in so many different ways. Uh so system prompt, then memory,
+**[14:00:36 --> 14:00:54]** **4-A:**  but the kind of motif you'll see over and over again, and this is that third handout you guys have, is the it's just, it's all text. It's all text. Uh so the applications for this are very strong in STEM,
+**[14:00:54 --> 14:00:58]** **4-A:**  but for those of you who are in the humanities or pseudo humanities in this room,
+**[14:00:58 --> 14:01:00]** **4-A:**  um and even if you're in STEM uh
+**[14:01:01 --> 14:01:13]** **4-A:**  Text is the heart of this technology. It's the beating heart of this technology. So if you are really strong and thoughtful with how you put together large amounts of text
+**[14:01:14 --> 14:01:42]** **4-A:**  And you can do that in a thoughtful kind of operational way, you will be able to make truly incredible things with this. So just as Becca was showing you, the ways in which you get to that sort of output is just by really uh intentionally arranging this context. And it all becomes tokens no matter what you put in. So again over here, it doesn't matter if it's a PDF, if it's a CS_V_ um even images when you put them in get a vision description of
+**[14:01:41 --> 14:01:48]** **4-A:**  and that's textual for the large language model to interact with. It's turned into tokens and then there's the in and the out.
+**[14:01:49 --> 14:01:57]** **4-A:**  So we've got just a description of the different file types that you can interact with. You'll see very much that we
+**[14:01:58 --> 14:01:59]** **4-A:**  Work a lot with markdown.
+**[14:02:00 --> 14:02:07]** **4-A:**  Markdown is one of the most kind of popular ways to create documents to feed to large language models,
+**[14:02:07 --> 14:02:09]** **4-A:**  especially when you get up to CLAWD code.
+**[14:02:09 --> 14:02:10]** **4-A:**  But eventually,
+**[14:02:11 --> 14:02:12]** **4-A:**  you know, HTML,
+**[14:02:12 --> 14:02:15]** **4-A:**  any of these structured languages are really, really helpful.
+**[14:02:17 --> 14:02:20]** **4-A:**  So as you start to do your projects,
+**[14:02:21 --> 14:02:30]** **4-A:**  Uh this is this is what happens in a context window. So no matter what your system prompt goes in and if you've turned in memory this goes in. Boom.
+**[14:02:32 --> 14:02:40]** **4-A:**  Then you have your first prong. So hey, I would like to make this thing.
+**[14:02:41 --> 14:02:48]** **4-A:**  What happens then is a large language model response, it gives the output, and maybe it's not quite right.
+**[14:02:49 --> 14:02:51]** **4-A:**  So you try to nudge it in a direction.
+**[14:02:52 --> 14:02:53]** **4-A:**  And this goes on and on and on.
+**[14:02:54 --> 14:03:14]** **4-A:**  And then maybe you say, oh, you need it in this direction. Uh also here's my uh P_D_F_ that might assist you with this. Here's a mark-down file. Uh here's the data that might help you. On and on and on. But you'll see at some point you're gonna hit a wall. You're gonna run out of information.
+**[14:03:15 --> 14:03:22]** **4-A:**  So with all the newer models, the size of the context window is one million tokens.
+**[14:03:22 --> 14:03:31]** **4-A:**  So one million of those little pieces that we showed you right at the beginning. For older models it's two hundred K_ Uh so again about the length of a of a novel.
+**[14:03:32 --> 14:03:42]** **4-A:**  But not all tokens within this context window are made equal. So really quickly, just as you guys continue to build things that are more complex like code bases,
+**[14:03:42 --> 14:03:44]** **4-A:**  you're feeding in chapters,
+**[14:03:44 --> 14:03:45]** **4-A:**  huge amounts of context,
+**[14:03:46 --> 14:03:48]** **4-A:**  not just one Shakespeare act,
+**[14:03:48 --> 14:03:49]** **4-A:**  but all of the works of Shakespeare,
+**[14:03:49 --> 14:03:51]** **4-A:**  you'll run out of context.
+**[14:03:52 --> 14:03:55]** **4-A:**  So what will happen is a new context window will spawn,
+**[14:03:55 --> 14:03:57]** **4-A:**  and again,
+**[14:03:57 --> 14:03:59]** **4-A:**  system prompt always.
+**[14:03:59 --> 14:04:12]** **4-A:**  memory always. And then so it can pass on the conversation, a summary of that last context window is passed through. And this happens with Anthropics through something called Compact.
+**[14:04:13 --> 14:04:21]** **4-A:**  This is a again not a special technology though. This compact is created using another document of text.
+**[14:04:22 --> 14:04:27]** **4-A:**  Uh you can also look that up online. We can circulate it later, but it it gives a pretty uh
+**[14:04:28 --> 14:04:41]** **4-A:**  opinionated version of how to summarise information. So I've actually you can make your own slash commands. We'll get to that later. I have a version called M_W_ compact because I just kind of disagree with some of the generalisations they've made here.
+**[14:04:42 --> 14:04:50]** **4-A:**  Uh but again, it's not something technical. It's just another large language model is called in to read your context window and turn it into a summary. Uh
 
 ## Chunk 5
 
-**[15:05:13 --> 15:05:16]** **5-A:**  postdocs made an example of this.
-**[15:05:17 --> 15:05:28]** **5-A:**  But once you have it as an artifact, and we have this with faculty very frequently once they start to work with CLAW all the time, they go great, I've made this wonderful thing, how do I share it with my students?
-**[15:05:28 --> 15:05:46]** **5-A:**  Or where is this? Uh for they say I made a thing last week and now I can't find it. Uh because it just exists in your chats, right? You might find yourself going to your chat, scrolling back up, finding an artifact or even a specific output from an L_L_M_ that you really liked. Now here's one one's example.
-**[15:05:50 --> 15:05:57]** **5-A:**  Which is displaying it in such an interesting way. Uh but what you'll see is you can click on
-**[15:05:57 --> 15:06:24]** **5-A:**  both the disaview feature which lets you see how it would be rendered as a front end, but also shows you the code. So again, it is not good at one-shot using a diffusion model. It's not good at one-shot doing multiplication. What it's really really excellent at is writing code. But even if you don't use code, um for th those of you who are like, ah but nay, I do not use code in my field, fear not.
-**[15:06:24 --> 15:06:45]** **5-A:**  Um the workflows, tools and processes we're going to teach you are frankly adequately useful for even those in the deep humanities. Because code is just text, you might have to provide more context and more instruction uh but exactly these kind of motifs are going to be really really helpful for anyone.
-**[15:06:46 --> 15:06:58]** **5-A:**  Uh but now, getting back to the problem, you've made you've made a thing, you've made an excellent little thing, uh and you wanna get it out into the world. That's why we're gonna teach you guys Co-working, because Co-work has access to your local files,
-**[15:06:59 --> 15:07:09]** **5-A:**  So it won't just be saving it in a weird simulated in between liminal space. Instead, it'll be saving it to a file on your computer that you instructed to save to.
-**[15:07:10 --> 15:07:25]** **5-A:**  It'll save uh a path, an html, a pdf, uh all these different file file types that I'm rattling off to you, but it's saving it locally to your computer so that you can manipulate it. Um and so do we wanna do this?
-**[15:07:26 --> 15:07:26]** **5-B:**  It's into the
-**[15:07:26 --> 15:07:33]** **5-A:**  the recipe. Yeah, it's popped into the app. So everyone, we're gonna have you guys pop into the co-work app now, or the quad app I should say.
-**[15:07:35 --> 15:07:43]** **5-A:**  So is anyone still having issues getting into the quad desktop app? Or did we all hopefully be all fine with that? Nice.
-**[15:07:43 --> 15:07:46]** **5-B:**  It's did everyone manage to download that folder okay?
-**[15:07:47 --> 15:07:49]** **5-B:**  Or maybe I can show you just how I would
-**[15:07:49 --> 15:07:49]** **5-C:**  Yeah.
-**[15:07:49 --> 15:07:51]** **5-B:**  open that folder up.
-**[15:07:51 --> 15:07:51]** **5-A:**  Yeah.
-**[15:07:51 --> 15:07:57]** **5-B:**  The folder on campus seems a little Uh did any email it to you? It should also be on campus. Correct? It's campus announcement.
-**[15:07:57 --> 15:07:59]** **5-A:**  uh announcements and I emailed it to you.
-**[15:07:59 --> 15:07:59]** **5-D:**  Is this the Okay.
-**[15:07:59 --> 15:08:00]** **5-B:**  Oh, I think it is.
-**[15:08:00 --> 15:08:06]** **5-B:**  Um yes exactly. And so if you download that folder as a zip and then unzip it,
-**[15:08:06 --> 15:08:06]** **5-A:**  Could you show
-**[15:08:06 --> 15:08:06]** **5-B:**  you
-**[15:08:06 --> 15:08:07]** **5-A:**  Marlon how to do
-**[15:08:07 --> 15:08:07]** **5-B:**  desperately
-**[15:08:07 --> 15:08:07]** **5-A:**  that?
-**[15:08:07 --> 15:08:09]** **5-B:**  uh need need
-**[15:08:10 --> 15:08:17]** **5-B:**  need exactly this data, but it it will it's there just so if you don't have your own data, we're able to work with it together.
-**[15:08:17 --> 15:08:18]** **5-A:**  Is this the one we downloaded last week?
-**[15:08:19 --> 15:08:20]** **5-B:**  So there's a folder like this.
-**[15:08:20 --> 15:08:23]** **5-A:**  right here if you oh yeah the red
-**[15:08:23 --> 15:08:26]** **5-B:**  And while I'm in here, I can just click download like this.
-**[15:08:26 --> 15:08:28]** **5-A:**  and it'll zip it to your downloads folder.
-**[15:08:29 --> 15:08:41]** **5-A:**  And this will give you a kind of a context folder to work in. And if you want to save it somewhere on your computer, you can make a specific folder somewhere that you do all of your workshop stuff in.
-**[15:08:59 --> 15:08:59]** **5-B:**  Maybe we're so powerful,
-**[15:08:59 --> 15:08:59]** **5-A:**  I mean, that
-**[15:08:59 --> 15:09:00]** **5-B:**  we're hitting
-**[15:09:00 --> 15:09:00]** **5-A:**  there there there
-**[15:09:00 --> 15:09:00]** **5-B:**  Google servers
-**[15:09:00 --> 15:09:00]** **5-A:**  was a
-**[15:09:00 --> 15:09:01]** **5-B:**  and it's too much
-**[15:09:01 --> 15:09:02]** **5-A:**  backup on some of the worksh
-**[15:09:02 --> 15:09:06]** **5-B:**  request energy right now. We cannot keep up with the box center.
-**[15:10:00 --> 15:10:10]** **5-B:**  So do we have some sample images, some sample texts and things? Um ultimately you'll be doing this with your own material. We just wanted to give you files you could mess around with without damaging anything.
-**[15:10:11 --> 15:10:31]** **5-B:**  So the other hand-up we gave you at the very beginning, as well we kind of wait for everything to get downloaded, was about these different ways of using Claude. And Madeline mentioned that there's kind of three apps we might use, we might use the web browser, like Chrome, Safari, Windows Explorer or Edge. Um we might use the desktop app, that's the main one we're gonna be doing in this tutorial.
-**[15:10:31 --> 15:10:31]** **5-A:**  Oh my God.
-**[15:10:31 --> 15:10:38]** **5-B:**  And then there's the command line um and the integrated development environment. You might use it if you're someone that already does a lot of coding.
-**[15:10:38 --> 15:10:38]** **5-A:**  I think we should be in
-**[15:10:38 --> 15:10:49]** **5-B:**  You can just have the model for data analysis and things like that. And then within the desktop app there are three tabs that we should check out here.
-**[15:10:50 --> 15:11:09]** **5-B:**  The first one is chat and this is identical to the web interface. This is essentially just like a I think this is a browser that can only go to one website. It only goes to cloud.ai. Uh and so this chat is actually also gonna have all of the history of everything that you've typed into cloud.ai in the web browser.
-**[15:11:09 --> 15:11:20]** **5-B:**  This is entirely cloud-based. I'm just looking through this UI and all that data that's on the cloud that Anthropic is saving for me and for themselves obviously, but for for me as a service.
-**[15:11:20 --> 15:11:25]** **5-B:**  The next two though, what's different about these is that they work on this machine,
-**[15:11:25 --> 15:11:26]** **5-B:**  the machine you are on right now.
-**[15:11:27 --> 15:11:35]** **5-B:**  And that means if you are working on more than one machine, those chats won't show up on both machines. They're actually just on this local machine you're on.
-**[15:11:36 --> 15:11:42]** **5-B:**  Uh and then I think that one already alluded to it, it said the kind of ki killer feature is that they can access the files on this machine.
-**[15:11:43 --> 15:11:56]** **5-B:**  And that is powerful. But if you flip the over the uh the handout we gave you, you'll see that we have um a note on the security implications of this that I think we are legal legally
-**[15:11:56 --> 15:11:56]** **5-E:**  we're off not
-**[15:11:56 --> 15:12:11]** **5-B:**  obligated to tell you. And I want to make sure that we really hit this point. Um that there there are risks come with this with allowing any of these elements to touch your local files. And so what we'll do is we'll show you how to make sure you point it at a specific folder
-**[15:12:11 --> 15:12:25]** **5-B:**  so it's not just going everywhere on your on your computer. Um and even though like as you use this, you're gonna end up being tempted to just say yes yes either. Has anyone ever seen the Simpsons episode where like Homer has left in charge of the nuclear power plant and stuff is melting and it's hitting the yes key.
-**[15:12:27 --> 15:12:37]** **5-B:**  You will be very tempted to do that because it'll keep saying hey can I change this hey can I change this hey can I change this and it's so much faster to just say yes yes yes yes yes. But um it uh just just be careful with that.
-**[15:12:36 --> 15:12:54]** **5-B:**  what that is uh you you're giving an access to your files. Um and so so again, we'll we'll we'll kinda like show you tips on on how to try to try to avoid that. But I think it's interesting, I think the classes uh culture um we're gonna all be facing this in the coming two to five years, I'm sure, is this tendency to hand things off to the L_L_M_
-**[15:12:55 --> 15:12:59]** **5-B:**  Alright, so co-work and code, both can access your local files. And so
-**[15:13:00 --> 15:13:12]** **5-B:**  It's almost like imagine an X-axis that's going from chat to code, there's kind of greater complexity, greater power, also kind of like more dangerous security-wise. If I'm just operating in the web interface,
-**[15:13:13 --> 15:13:14]** **5-B:**  nothing bad can happen to my local files.
-**[15:13:15 --> 15:13:27]** **5-B:**  Cohort opens up a few more possibilities but not quite as many as code, and then code is really going to allow you to do some powerful things, but that does mean it could create problems for you if you accidentally let it do something that it shouldn't.
-**[15:13:27 --> 15:13:28]** **5-F:**  computer files. Okay.
-**[15:13:28 --> 15:13:28]** **5-G:**  I imagine they do
-**[15:13:28 --> 15:13:48]** **5-B:**  Oh and as I said, we're gonna make sure that the activities we do on uh today for sure, and and on days three and four, can totally be on a co-work uh you don't know need to go into co-work code for that, it's we're gonna show everyone who wants to how to get into co-work code and how to just be aware and try to avoid some of the security problems that that can happen. I and again, I don't need to freak you out, it's it's
-**[15:13:47 --> 15:13:49]** **5-A:**  So we need to freak you out.
-**[15:13:51 --> 15:13:57]** **5-B:**  We we can learn it cannot be controlled. The famous last words before the um I don't know sky might come and support it.
-**[15:13:58 --> 15:14:07]** **5-H:**  Uh how would also have access to the hardware of the machine? Do you have a USB port that isn't working or having trouble connecting to the internet,
-**[15:14:07 --> 15:14:10]** **5-H:**  can it actually look at your devices and your drivers?
-**[15:14:11 --> 15:14:32]** **5-B:**  So uh it can run scripts uh and and plot code definitely can run scripts. So anything the terminal could see through a command line prompt and there are lots of command line prompts that tell you about the system and and external drives and things like that. And so if you gave it permission and you just said yeah go ahead, list all the connected volumes, and then yeah go ahead. Mount this volume, um it it could do that.
-**[15:14:32 --> 15:14:33]** **5-H:**  Yeah, that could by code.
-**[15:14:33 --> 15:14:39]** **5-B:**  Plot code. And code work um can can run some scripts, but it doesn't present those to you as aggressively.
-**[15:14:40 --> 15:14:45]** **5-B:**  time. And so, so I think that like a in in general code is gonna be a little more
-**[15:14:45 --> 15:14:46]** **5-H:**  yeah.
-**[15:14:46 --> 15:14:52]** **5-B:**  connected to those ki kind of command line scripts than Core, but it is true that Core can run them. It just doesn't push you in that direction as quickly.
-**[15:14:52 --> 15:14:54]** **5-H:**  The best of co-working are
-**[15:14:54 --> 15:15:00]** **5-H:**  How come my machine is not seeing my scanner? Does it have the ability to cancel
-**[15:15:00 --> 15:15:03]** **5-B:**  I feel like we should try, that's that is.
-**[15:15:03 --> 15:15:04]** **5-I:**  Just exactly,
-**[15:15:04 --> 15:15:09]** **5-B:**  I'd say let's let's go for it. But let's like TLDR, the thing that that that gets gets back to what Madeleine is saying,
-**[15:15:09 --> 15:15:09]** **5-I:**  Just put this glass.
-**[15:15:09 --> 15:15:11]** **5-B:**  is that we wanna get out of up the
+**[14:04:51 --> 14:05:05]** **5-A:**  that has then passed. And then you can kind of continue your conversation. Uh so that is fully the context window. And all we're going to be doing genuinely for the next few days is
+**[14:05:07 --> 14:05:26]** **5-A:**  Because it's just text-in text-out, coming up with uh better or more sophisticated ways of automatically feeding in this context window. Giving you guys agency over the context window as much as possible, 'cause when you first start prompting with AI, let's say you don't pass in any documents, most context windows end up looking
+**[14:05:27 --> 14:05:42]** **5-A:**  AI dominated. Like you've maybe put in this many tokens in a full conversation and the AI because the responses are so long and if you're not pulling it back this is how much they've interjected into the conversation and instead we're trying to flip that ratio.
+**[14:05:42 --> 14:05:53]** **5-A:**  We want you to put in as much high level context as possible so the AI puts in is creating like smaller more condensed more specific outputs.
+**[14:05:54 --> 14:06:20]** **5-A:**  And last is just think of it like memento. Has anyone seen this movie? Sometimes we do this with students and they're like who's seen memento? And they all go I have no idea what you're talking about. And you go ah I'm dying. Um but uh every context window think of it like memento. You just want to think of how can I write on my arm in as a solid a way as possible to make sure the next version of me does a good job the next day.
+**[14:06:20 --> 14:06:32]** **5-A:**  Okay, so just thinking of that. Um and we'll also talk about ways when things start to go wrong. Later you can end it half-way through, you can go back in time, uh but those powers will come as we continue forth.
+**[14:06:33 --> 14:06:40]** **5-B:**  Another metaphor that no one has seen Memento, it's almost like an insanely smart student who hasn't done the reading for class that day.
+**[14:06:40 --> 14:06:46]** **5-B:**  Um and if you let them fill up the whole context window it'll all sound kind of smart, but it won't be grounded in what you're actually trying to teach them.
+**[14:06:46 --> 14:07:00]** **5-B:**  And so you wanna like kind of teach them in the context window what they need to know to then riff on that context and say smart things towards the end of the context window. So that's another, for people that haven't seen Memento, though I love Memento obviously.
+**[14:07:00 --> 14:07:02]** **5-A:**  And if you're really into research,
+**[14:07:02 --> 14:07:05]** **5-A:**  I know we're not getting too terribly technical,
+**[14:07:05 --> 14:07:07]** **5-A:**  but for those of you who are interested,
+**[14:07:07 --> 14:07:13]** **5-A:**  these documents are in a GitHub repo we're about to turn to. But again, not all context
+**[14:07:14 --> 14:07:39]** **5-A:**  uh is equal either when you're putting it in. So not every single token within that context window is as strong as other tokens uh according to a lot of research. So you might be thinking, ah well my token that's inserted here should be as strong as something inserted here. Alas nay. Um there's a kind of primacy and recency bias.
+**[14:07:41 --> 14:07:46]** **5-A:**  Uh and then there's something called context rot. So the first tokens a
+**[14:07:46 --> 14:07:46]** **5-C:**  I
+**[14:07:46 --> 14:07:53]** **5-A:**  model int like uh kind of sees or interacts with have it follows that the most over everything.
+**[14:07:53 --> 14:08:09]** **5-A:**  And that's why anthropic make sure their system prompt is the first thing that model ever sees along with your memory. But then as you continue a conversation the most recent instruction you've given of no do this also has strength. However that stuff in between you're starting to lose it.
+**[14:08:10 --> 14:08:29]** **5-A:**  Uh and then over the course of this long kind of band of context, uh as you add more context it's really really beneficial. And we're talking again like in the tens of thousands, even hundreds of thousands of tokens, putting in context is going to improve your output.
+**[14:08:30 --> 14:08:37]** **5-A:**  But as you start to go further along uh this uh thing called context rot starts
+**[14:08:37 --> 14:09:03]** **5-A:**  starts to set in and the quality of your output will go down all the way to the very kind of tail end of its memory. So sometimes people do that compact step before you ever get close to the end of your conversation because they just want to keep refreshing. So we'll see this often and you'll start to experience it as we do examples but the first bit, the last bit, and then you want to build context absolutely, but know that there is a drop-off point.
+**[14:09:04 --> 14:09:26]** **5-A:**  Okay, so we're gonna now get into the app, ladies and gentlemen. You downloaded the thing. Let's pop in there and we have a few different examples which are all contained within a GitHub repository. Uh so how many people use GitHub out of curiosity or know of GitHub?
+**[14:09:27 --> 14:09:27]** **5-D:**  Nice.
+**[14:09:27 --> 14:09:28]** **5-B:**  Like a few big different things.
+**[14:09:29 --> 14:09:29]** **5-A:**  Huh?
+**[14:09:29 --> 14:09:30]** **5-B:**  it was two very different questions.
+**[14:09:30 --> 14:09:34]** **5-A:**  Well, there's Git. Okay how many people use GitHub? Or in what way?
+**[14:09:35 --> 14:09:37]** **5-B:**  You said how many use it and then how many know of it.
+**[14:09:37 --> 14:09:39]** **5-A:**  Okay, that's that's true true.
+**[14:09:39 --> 14:09:39]** **5-B:**  But I know how
+**[14:09:39 --> 14:09:51]** **5-A:**  How many of you No, that's totally fair. You got me there. How many of you have heard of GitHub? Let's start there. Very good. How many of you use GitHub? Okay, nice. Um so
+**[14:09:52 --> 14:10:11]** **5-A:**  For those of you who do not, but you've known of it, well now today is your day, you're gonna get in there. It's really not that spooky, uh we're not gonna have you create an account today. Uh it is very simply a way of uh sharing and collaborating on the creation of files.
+**[14:10:11 --> 14:10:13]** **5-A:**  Coding is just reading and writing files.
+**[14:10:13 --> 14:10:16]** **5-A:**  This is the way we're going to share with you a
+**[14:10:16 --> 14:10:16]** **5-B:**  And
+**[14:10:16 --> 14:10:16]** **5-A:**  so whole
+**[14:10:16 --> 14:10:16]** **5-B:**  they were just
+**[14:10:16 --> 14:10:17]** **5-A:**  stack
+**[14:10:17 --> 14:10:17]** **5-B:**  downloading
+**[14:10:17 --> 14:10:17]** **5-A:**  of files.
+**[14:10:17 --> 14:10:18]** **5-B:**  something. We're not even using
+**[14:10:18 --> 14:10:28]** **5-A:**  Oh, we're not even going to use terminal? Alright, perfect. So you were emailed a link to this GitHub uh repository, is what it's called.
+**[14:10:30 --> 14:10:32]** **5-A:**  And once you open it
+**[14:10:38 --> 14:10:49]** **5-A:**  And then you're gonna download, you'll click on this big green code button and there will be a drop down and you're just gonna go to the bottom to download zip.
+**[14:10:50 --> 14:10:59]** **5-A:**  So later we'll show you uh the more usual ways of getting a GitHub repo onto your machine. But today we're just gonna download a zip file.
+**[14:11:01 --> 14:11:06]** **5-A:**  And we're gonna open that file. So another thing uh for those of you who have not
+**[14:11:06 --> 14:11:15]** **5-A:**  done uh development or coding before. Uh the thing about Claude is we're gonna get to these security concerns again. Is
+**[14:11:17 --> 14:11:24]** **5-A:**  it's what's powerful and a bit what's dangerous about it. So when you're in a Claude, the web interface,
+**[14:11:24 --> 14:11:26]** **5-A:**  You make an artifact, you get a really good output.
+**[14:11:26 --> 14:11:51]** **5-A:**  But then it's just in your chats. You're having to go back into your chat, scroll up, look for the thing. It can't really live outside of your chat window. The reason to use the app is that it has access to your local files on your computer. So one, you're copying and pasting less. Uh you're dropping in individual PDFs less. Uh and then it can write to new files directly onto your computer for you to have.
+**[14:11:51 --> 14:12:05]** **5-A:**  Uh but some of you might realise, ooh, that could be quite spooky if it has access to my entire computer. So Claude has thought of this. It is really really siloed to whatever files you give it access to.
+**[14:12:05 --> 14:12:33]** **5-A:**  So one of the safest things to do, and this is the case broadly with development, uh is to create a separate folder on your computer uh the root or just around um where people can kind of do development um or do coding. So just if on your computer if you want to now, create something called development, called code, called Claude, and then drop that zipped folder into it. You can do that, you don't have
+**[14:12:33 --> 14:12:42]** **5-A:**  have to do that today um we'll probably do that tomorrow, but that as well. But that is something if you wanted to have everything organised, you could do. Yes.
+**[14:12:43 --> 14:12:54]** **5-E:**  I just noticed um I don't know if it's yesterday or something, it seems like there is a folder called CLAW that acts like a external disk. Is that in a in one itself?
+**[14:12:55 --> 14:13:00]** **5-A:**  It makes one itself because of the things that's in the folder. So if you wanted if you download CLAW
+**[14:13:00 --> 14:13:09]** **5-A:**  On the desk, uh yes, there are various settings um that are within that folder, but those are not where you would want to
+**[14:13:09 --> 14:13:11]** **5-A:**  builds or continue to put GitHub repositories.
+**[14:13:11 --> 14:13:13]** **5-E:**  Oh, you want to make them separate things.
+**[14:13:13 --> 14:13:20]** **5-A:**  Yes, yeah, that's just holding settings, skills, books and things we'll get into later. Marilyn, is there something you wanted to
+**[14:13:20 --> 14:13:30]** **5-B:**  Yeah, just on one tip, the thing that you download is a zip file. Folks are probably familiar with this, but you just have to unpack that zip file by double clicking on it, and then you get the actual folder.
+**[14:13:30 --> 14:13:30]** **5-A:**  Yes.
+**[14:13:30 --> 14:13:32]** **5-B:**  And then you could copy that somewhere you want.
+**[14:13:33 --> 14:13:35]** **5-B:**  I'm on on a PC, uh we also could
+**[14:13:35 --> 14:13:36]** **5-B:**  Could control you on a Mac.
+**[14:13:37 --> 14:13:37]** **5-A:**  Yeah.
+**[14:13:37 --> 14:13:45]** **5-B:**  This is the one thing that will be a little different today is PCs and Macs will handle this file copying different. The key thing is for today just get it somewhere you can find.
+**[14:13:46 --> 14:13:57]** **5-B:**  That's the main thing. It's unzip that folder and get it somewhere you can find and then we'll help you open it up in Quad. And we'll get into more of the management of, you know, your development structure tomorrow as well once we're in terminal.
+**[14:13:59 --> 14:14:00]** **5-B:**  So should uh
+**[14:14:02 --> 14:14:07]** **5-B:**  Everyone download that thing and then maybe I can just give people a quick tour of the interface of this app.
+**[14:14:07 --> 14:14:07]** **5-A:**  Yep.
+**[14:14:09 --> 14:14:23]** **5-B:**  So give everyone if you're having any issues getting that folder down again please grab one of us we are so insanely happy to help out. Um I'm just gonna give you a quick overview of the interface of the of the desktop app. The chat here
+**[14:14:25 --> 14:14:50]** **5-B:**  there's three tabs across the top. If you're not seeing this, there is a little toggle up here that you can hit. If ever you're not seeing this side bar, I can toggle it on and off up there. Um and in the chat I'm kinda just interacting with Claude.AI, the website, just the same thing we were just looking at in our browser. Um this is kind of like a one site web browser when I hit um chat. I'm just looking at Claude.AI and it actually is gonna
 
 ## Chunk 6
 
-**[15:15:12 --> 15:15:37]** **6-B:**  my answer before if I say these things as though it's a person, it's got this mental skill or this cognitive skill or not, or this set of expertise or not, it's all strings in and strings out. So if there's something that can be done with strings that are typed into a terminal, then it totally can do that. And so if there's a terminal command that can see if your printer's connected or connect your printer, it will totally be able to generate the text that does that and do that. But again, it's just generating that string and then you will be giving it permission.
-**[15:15:37 --> 15:15:40]** **6-B:**  it's a coffee if you see a stack string it's returnable and run it for you.
-**[15:15:42 --> 15:16:06]** **6-B:**  So alright so so those are the three across the top. Chat, co-work and code. Today we're gonna work a only in in co-work. We already worked it in the chat a little bit online. And then tomorrow we're gonna start working in plug code. So today we really wanna work in co-work and just give you a taste of what it means to be able to have it access your local files. And so what we're gonna wanna do is connect it so our project, okay. So in co-work
-**[15:16:07 --> 15:16:22]** **6-B:**  If you click the projects tab, it's gonna invite you to create a project which is basically gonna be a folder and then open up a folder and that's gonna be my project. And what I wanna do is navigate my way to the unzipped folder that I downloaded.
-**[15:16:23 --> 15:16:25]** **6-B:**  So when I go to a new project,
-**[15:16:26 --> 15:16:34]** **6-B:**  I'm going to open an existing folder. So new project, open an existing folder.
-**[15:16:35 --> 15:16:37]** **6-B:**  And then I'm going to select a folder,
-**[15:16:37 --> 15:16:41]** **6-B:**  and here's where I've got to navigate my way to wherever I put my folder.
-**[15:16:42 --> 15:16:44]** **6-B:**  And so I probably put it in Downloads.
-**[15:16:46 --> 15:16:48]** **6-B:**  It looks like I didn't download it on this one.
-**[15:16:49 --> 15:17:05]** **6-B:**  But actually no on this one. Um, so you're gonna have yours in download. What I know is I copied mine over to my development folder and it's here called Claude for faculty and then today's date code essentially. And so and once I get there, this is gonna look different on a Mac,
-**[15:17:05 --> 15:17:07]** **6-B:**  um I'm gonna select it and open it.
-**[15:17:09 --> 15:17:14]** **6-B:**  and I'm gonna create a project from that. And then I'll I'll show everyone that one more one more time. But now I'm in the folder.
-**[15:17:14 --> 15:17:16]** **6-B:**  So again, in projects,
-**[15:17:16 --> 15:17:17]** **6-C:**  Let's see where I save that.
-**[15:17:17 --> 15:17:18]** **6-B:**  I'm gonna go to new project,
-**[15:17:18 --> 15:17:19]** **6-C:**  Is it this team?
-**[15:17:19 --> 15:17:22]** **6-B:**  use an existing folder,
-**[15:17:22 --> 15:17:23]** **6-C:**  And then select folder.
-**[15:17:23 --> 15:17:34]** **6-B:**  select a folder, and then I'm gonna find my way to wherever I downloaded and unzip that folder. I have to unzip it, uh enable it in order to do this properly.
-**[15:17:38 --> 15:17:38]** **6-B:**  If you're getting
-**[15:17:45 --> 15:17:47]** **6-B:**  Yeah, we are here to help. We are here to help.
-**[15:17:48 --> 15:17:49]** **6-D:**  So this is it.
-**[15:17:49 --> 15:17:58]** **6-B:**  So just please grab someone. But but it's worth investing in getting into this folder because we have a few files in there that we'll need to scroll through to write. You can mess around with it.
-**[15:17:59 --> 15:18:00]** **6-E:**  Crap there, snap it up.
-**[15:18:01 --> 15:18:02]** **6-E:**  Um hold on.
-**[15:18:03 --> 15:18:04]** **6-B:**  New folder.
-**[15:18:04 --> 15:18:05]** **6-E:**  Where you at there?
-**[15:18:05 --> 15:18:06]** **6-F:**  Could you check the
-**[15:18:06 --> 15:18:06]** **6-B:**  Where
-**[15:18:06 --> 15:18:06]** **6-F:**  Rhapsody
-**[15:18:06 --> 15:18:06]** **6-B:**  would I put it?
-**[15:18:06 --> 15:18:07]** **6-F:**  on that one? Could you just that's true.
-**[15:18:07 --> 15:18:09]** **6-E:**  That's true. Okay, and there's a check here.
-**[15:18:09 --> 15:18:09]** **6-B:**  I don't know.
-**[15:18:09 --> 15:18:10]** **6-F:**  You can I put you project.
-**[15:18:10 --> 15:18:11]** **6-E:**  project folder up sound.
-**[15:18:11 --> 15:18:11]** **6-F:**  Oh.
-**[15:18:11 --> 15:18:14]** **6-B:**  I'm gonna navigate away the that download.
-**[15:18:14 --> 15:18:14]** **6-E:**  Okay, so you
-**[15:18:14 --> 15:18:15]** **6-F:**  Navigate Oh, I see.
-**[15:18:15 --> 15:18:15]** **6-B:**  away the that download.
-**[15:18:15 --> 15:18:16]** **6-E:**  to your
-**[15:18:16 --> 15:18:16]** **6-B:**  folder.
-**[15:18:16 --> 15:18:16]** **6-E:** 
-**[15:18:16 --> 15:18:16]** **6-F:**  Right.
-**[15:18:16 --> 15:18:17]** **6-E:**  It's a new project,
-**[15:18:17 --> 15:18:17]** **6-F:**  I see.
-**[15:18:17 --> 15:18:18]** **6-B:**  where are you putting
-**[15:18:18 --> 15:18:18]** **6-E:**  music
-**[15:18:18 --> 15:18:18]** **6-B:**  it?
-**[15:18:18 --> 15:18:18]** **6-E:**  in this
-**[15:18:18 --> 15:18:20]** **6-B:**  In your downloads folder probably?
-**[15:18:20 --> 15:18:20]** **6-F:**  Right.
-**[15:18:20 --> 15:18:21]** **6-B:**  Oh, you can add.
-**[15:18:22 --> 15:18:22]** **6-G:**  Oh it's this one.
-**[15:18:24 --> 15:18:24]** **6-B:**  It's
-**[15:18:24 --> 15:18:24]** **6-G:**  It's broken.
-**[15:18:24 --> 15:18:25]** **6-B:**  Yeah, that's the one.
-**[15:18:25 --> 15:18:25]** **6-G:**  Yeah, yeah, just
-**[15:18:25 --> 15:18:26]** **6-H:**  Oh.
-**[15:18:26 --> 15:18:26]** **6-G:**  oh.
-**[15:18:26 --> 15:18:27]** **6-H:**  I'm still wearing
-**[15:18:27 --> 15:18:27]** **6-B:**  Yeah.
-**[15:18:27 --> 15:18:27]** **6-H:**  it.
-**[15:18:27 --> 15:18:27]** **6-G:**  Yes.
-**[15:18:27 --> 15:18:28]** **6-H:**  I did put it on, that's the name.
-**[15:18:28 --> 15:18:28]** **6-G:**  Perfect. Perfect.
-**[15:18:28 --> 15:18:31]** **6-H:**  Okay, uh I would still so maybe just put on the wrong So radio.
-**[15:18:31 --> 15:18:34]** **6-B:**  we're all getting in there. If you're already in there,
-**[15:18:34 --> 15:18:34]** **6-H:**  Oh, give me.
-**[15:18:34 --> 15:18:48]** **6-B:**  um and you just wanna wait while everyone gets uh gets set up, you could ask um can you tell me what's in this folder for instance. Just see what happens just as we get everyone else set up.
-**[15:19:07 --> 15:19:17]** **6-B:**  And then again just so we get everyone set up, this is just sort of a side quest. Anyone who wants to learn about that context research, why don't we just ask it to summarise the context research for me.
-**[15:19:18 --> 15:19:24]** **6-B:**  Hey, can you summarise that context research for me and just
-**[15:19:24 --> 15:19:24]** **6-E:**  see P
-**[15:19:24 --> 15:19:25]** **6-B:**  what happens.
-**[15:19:25 --> 15:19:25]** **6-E:**  how am I supposed to do this?
-**[15:19:25 --> 15:19:29]** **6-B:**  Well, probably do a better job than me and Madeline did in summarising that context research.
-**[15:19:30 --> 15:19:34]** **6-B:**  Uh this is you could definitely imagine this being a thing that your students would do or you would do as a
-**[15:19:34 --> 15:19:36]** **6-B:**  Get these down in the archives of the library.
-**[15:19:37 --> 15:19:37]** **6-E:**  Oh, oh.
-**[15:19:38 --> 15:19:40]** **6-H:**  Oh yeah, that's good. So
-**[15:19:40 --> 15:19:40]** **6-E:**  Oh.
-**[15:19:40 --> 15:19:41]** **6-H:**  it actually is in the latest
-**[15:19:41 --> 15:19:41]** **6-B:**  But
-**[15:19:41 --> 15:19:41]** **6-H:**  technology,
-**[15:19:41 --> 15:19:42]** **6-B:**  the access rate is still open.
-**[15:19:42 --> 15:19:43]** **6-H:**  but that's good.
-**[15:19:43 --> 15:19:43]** **6-B:**  Yep.
-**[15:19:43 --> 15:19:45]** **6-H:**  So we can take it to the archives.
-**[15:19:45 --> 15:19:48]** **6-H:**  So we keep this existing folder. So we can just put this
-**[15:19:48 --> 15:19:48]** **6-A:**  in.
-**[15:19:47 --> 15:19:48]** **6-B:**  So I
-**[15:19:48 --> 15:19:48]** **6-I:**  Oh.
-**[15:19:48 --> 15:19:50]** **6-B:**  told some people this, I gave it a sample to a
-**[15:19:50 --> 15:19:53]** **6-H:**  You won't be able to use that? No, I was just saying when you do I a
-**[15:19:53 --> 15:19:53]** **6-B:**  said
-**[15:19:53 --> 15:19:53]** **6-H:**  task
-**[15:19:53 --> 15:19:53]** **6-B:**  despecified
-**[15:19:53 --> 15:19:54]** **6-E:**  Yeah,
-**[15:19:54 --> 15:19:54]** **6-H:**  and you
-**[15:19:54 --> 15:19:54]** **6-B:**  in the sub-sample.
-**[15:19:54 --> 15:19:54]** **6-H:**  said you just break
-**[15:19:54 --> 15:19:56]** **6-B:**  Let's out at the desktop. Yeah.
-**[15:19:56 --> 15:19:56]** **6-H:**  this task,
-**[15:19:56 --> 15:19:56]** **6-B:**  You it's yeah.
-**[15:19:56 --> 15:19:57]** **6-H:**  just that you did something
-**[15:19:57 --> 15:19:57]** **6-B:**  And so my
-**[15:19:57 --> 15:19:58]** **6-H:**  in a project s
-**[15:19:58 --> 15:19:58]** **6-B:**  it's in my sample,
-**[15:19:58 --> 15:19:58]** **6-H:**  and you can see
-**[15:19:58 --> 15:19:59]** **6-B:**  it's in my sample
-**[15:19:59 --> 15:19:59]** **6-H:**  what but you did.
-**[15:19:59 --> 15:20:00]** **6-B:**  at the desktop, which is that sample.
-**[15:20:00 --> 15:20:01]** **6-I:**  No, but let's make sure you're in the sample.
-**[15:20:01 --> 15:20:03]** **6-B:**  It's like it's in the sample. It's in the sample.
-**[15:20:03 --> 15:20:04]** **6-H:**  Starting a task.
-**[15:20:06 --> 15:20:07]** **6-I:**  Yeah, that's the name of the sample.
-**[15:20:07 --> 15:20:10]** **6-B:**  Yeah, I'm sure it's just sort of it like it's it's gonna look at that sample
-**[15:20:10 --> 15:20:10]** **6-I:**  Right.
-**[15:20:10 --> 15:20:21]** **6-B:**  when you talk to desktop. But that is like a nervousness that you think basically. And so I think it's more like um so when these warnings happen and act it's always for those things that exist at the root of the folder,
-**[15:20:21 --> 15:20:21]** **6-I:**  Right.
-**[15:20:21 --> 15:20:22]** **6-B:**  that the whole folder is down.
-**[15:20:22 --> 15:20:25]** **6-H:**  Because your picture is cut to your picture because it doesn't necessarily present it.
-**[15:20:25 --> 15:20:26]** **6-I:**  Right.
-**[15:20:26 --> 15:20:29]** **6-B:**  So I think it's asks for that when you have even at its own even
-**[15:20:29 --> 15:20:30]** **6-H:**  It's all on a computer.
-**[15:20:30 --> 15:20:32]** **6-B:**  itself you can you can ask it and say what do you see it?
-**[15:20:32 --> 15:20:32]** **6-B:**  You
-**[15:20:32 --> 15:20:33]** **6-E:**  Because I can't take a picture of her
-**[15:20:33 --> 15:20:33]** **6-B:**  said
-**[15:20:33 --> 15:20:35]** **6-E:**  because I'm going to be asking about her mother.
-**[15:20:35 --> 15:20:37]** **6-E:**  Oh, that's not that good.
-**[15:20:37 --> 15:20:42]** **6-E:**  That's kind of a new life. I know it can be sort of a community or you can
-**[15:20:42 --> 15:20:43]** **6-I:**  Okay.
-**[15:20:43 --> 15:20:45]** **6-E:**  not use it, but I think the name is
-**[15:20:45 --> 15:20:45]** **6-I:**  Oh, okay.
-**[15:20:45 --> 15:20:48]** **6-H:**  kind of cool. I sort of just take scene images, but is that right?
-**[15:20:48 --> 15:20:49]** **6-I:**  Uh, for screen.
-**[15:20:49 --> 15:20:52]** **6-H:**  Scene seems to be so good. Oh, Javade yeah? You're the same?
-**[15:20:52 --> 15:20:52]** **6-I:**  Um.
-**[15:20:52 --> 15:20:53]** **6-H:**  People say we can change.
-**[15:20:53 --> 15:20:54]** **6-H:**  Put the four point eight.
-**[15:20:54 --> 15:20:55]** **6-B:**  Oh, that's great. That's great.
-**[15:20:55 --> 15:20:56]** **6-H:**  Let's go. Yeah, this is it.
-**[15:20:56 --> 15:20:57]** **6-E:**  But otherwise, yeah,
-**[15:20:57 --> 15:20:59]** **6-B:**  Okay, you're asking about i yeah, these are the these are the right talks.
-**[15:20:59 --> 15:21:00]** **6-I:**  Yeah, Oh,
-**[15:21:00 --> 15:21:01]** **6-B:**  okay. absolutely absolutely.
-**[15:21:04 --> 15:21:04]** **6-B:**  Yeah.
-**[15:21:05 --> 15:21:12]** **6-H:**  Can um we just need to figure out one more. How many is that? It's like two party and coworker. You can do a four drawer.
-**[15:21:12 --> 15:21:23]** **6-B:**  You don't need to be local. So I think like again, I I'm not an expert at one drive, but I think it syncs it down to your computer. If the local file is on your computer, then it'll be able to access that. But it won't be able to access it in the cloud.
-**[15:21:24 --> 15:21:25]** **6-B:**  Yeah, I think that um
-**[15:21:26 --> 15:21:28]** **6-B:**  There are these connectors that we'll show you where you can connect
-**[15:21:28 --> 15:21:29]** **6-I:**  Well,
-**[15:21:29 --> 15:21:30]** **6-B:**  to your Google drive or Google calendar,
-**[15:21:30 --> 15:21:30]** **6-I:**  aha.
-**[15:21:30 --> 15:21:32]** **6-B:**  which aren't turned on on yet, but if you need to
-**[15:21:32 --> 15:21:32]** **6-I:**  you can turn
-**[15:21:32 --> 15:21:33]** **6-B:**  like turn
-**[15:21:33 --> 15:21:33]** **6-I:**  them
-**[15:21:33 --> 15:21:33]** **6-B:**  them on,
-**[15:21:33 --> 15:21:33]** **6-I:**  on
-**[15:21:33 --> 15:21:34]** **6-B:**  they're just doing a security
-**[15:21:34 --> 15:21:34]** **6-I:**  files after
-**[15:21:34 --> 15:21:34]** **6-B:**  review
-**[15:21:34 --> 15:21:34]** **6-I:**  that.
-**[15:21:34 --> 15:21:36]** **6-B:**  to see whether that's okay. Because
-**[15:21:36 --> 15:21:36]** **6-I:**  Oh.
-**[15:21:36 --> 15:21:41]** **6-B:**  because technically it's totally possible, it's just that our for security purposes they have to make sure that it's
-**[15:21:42 --> 15:21:43]** **6-B:**  it's at the right now,
-**[15:21:43 --> 15:21:43]** **6-I:**  I think I it's have
-**[15:21:43 --> 15:21:43]** **6-B:**  into not
-**[15:21:43 --> 15:21:43]** **6-I:**  that.
-**[15:21:43 --> 15:21:45]** **6-B:**  in the local folder, you just calculate.
-**[15:21:45 --> 15:21:46]** **6-I:**  No, I can't uh
-**[15:21:46 --> 15:21:48]** **6-B:**  If books are asking you if you can add their own files to this,
-**[15:21:48 --> 15:21:53]** **6-B:**  yeah, do anything you want. This is this should just files that we gave you. If you wanna throw some of your own files in here, that's fantastic.
-**[15:21:52 --> 15:21:53]** **6-B:**  Fantastic.
-**[15:21:54 --> 15:22:00]** **6-B:**  So let me give you one quick we're gonna just give you a few demos of the types of things that we can do now that we are, you know, operating on local folders.
-**[15:22:00 --> 15:22:01]** **6-H:**  He's not here.
-**[15:22:01 --> 15:22:15]** **6-B:**  Um there is a folder inside of here, if we're I was over in the um in the folder there is something called recipe photos. And inside of there I have a bunch of uh old recipe card photos.
-**[15:22:16 --> 15:22:43]** **6-B:**  Um and so I think what could be kind of fun is to get it to perform some operation on all of these these uh cards. There are people across a wide variety disciplines that work with data of this sort. Often people work on, you know, manuscripts that um poets wrote, or there's a famous sociologist, that actually wrote on seventy thousand little piece pieces of paper all of his research work. Um sometimes you might be actually working with um I dunno like cards and computer programmes that were made on that all of these
-**[15:22:43 --> 15:22:54]** **6-B:**  giant old machine that was in the science center. Uh there are a lot of reasons you might wanna take in a bunch of image data and process it. What we're gonna ask, let's ask it to go through all the photos in this folder um
-**[15:22:55 --> 15:22:59]** **6-B:**  and then maybe let's create a new text file that has the content of the rest of the year.
-**[15:23:00 --> 15:23:10]** **6-B:**  Um and just and just see what happens there. So if you want you can you just go ahead and type yourself it I'll I'll do it uh here. Can you look at all the recipe
-**[15:23:10 --> 15:23:20]** **6-B:**  Photos, and for each, create a text file that has the text of the recipe in it.
-**[15:23:24 --> 15:23:25]** **6-B:**  Uh yes, that's a beautiful orange, I think.
-**[15:23:26 --> 15:23:26]** **6-H:**  Yeah, but
-**[15:23:26 --> 15:23:27]** **6-I:**  Uh Oh, we that's good.
-**[15:23:27 --> 15:23:27]** **6-H:**  wait.
-**[15:23:27 --> 15:23:32]** **6-B:**  I'll do that next. Madame is reminding me of the thing I wanted to do even before then, but we'll do that next.
-**[15:23:34 --> 15:23:37]** **6-B:**  I'm not gonna I'll give you the a hint. Actually
-**[15:23:37 --> 15:23:37]** **6-I:**  Oh that you all.
-**[15:23:38 --> 15:23:48]** **6-B:**  Their names are bad. Can you rename them with more descriptive names?
-**[15:23:52 --> 15:23:53]** **6-B:**  Let's all, let's give that a shot.
-**[15:23:53 --> 15:23:54]** **6-I:**  I hope Facebook is safe.
-**[15:23:54 --> 15:23:58]** **6-B:**  Ask it to take a look at those recipe cards and see if it can describe
-**[15:23:58 --> 15:23:58]** **6-I:**  I'm
-**[15:23:58 --> 15:23:59]** **6-B:**  them for you.
-**[15:23:59 --> 15:23:59]** **6-I:**  getting cold.
-**[15:24:00 --> 15:24:02]** **6-B:**  If you haven't typed it in yet, you can do what I do
-**[15:24:02 --> 15:24:02]** **6-I:**  I'm just not sure.
-**[15:24:02 --> 15:24:07]** **6-B:**  just give them better names. They all have these random names like screenshot, you know, seventeen twenty seven forty three.
-**[15:24:07 --> 15:24:08]** **6-H:**  Oh yeah.
-**[15:24:08 --> 15:24:10]** **6-B:**  You can ask them to name the recipes,
-**[15:24:10 --> 15:24:13]** **6-B:**  bring in actual recipes. Let's just send them down examples.
-**[15:24:13 --> 15:24:14]** **6-I:**  Maybe that's it.
-**[15:24:23 --> 15:24:31]** **6-B:**  That's once we get the robot's API that we can plug into this. That's like the next next generation. That's you guys across the river, that's what you should be doing.
-**[15:24:33 --> 15:24:34]** **6-H:**  I agree with you my father-in-law.
-**[15:24:34 --> 15:24:35]** **6-I:**  I can't think of a solution.
-**[15:24:36 --> 15:24:37]** **6-I:**  I can't think of a solution.
-**[15:24:39 --> 15:24:43]** **6-H:**  I don't I'm not sure we know where the ladybug came from Marlin where did the recipes come from?
-**[15:24:44 --> 15:24:45]** **6-B:**  Just from the internet.
-**[15:24:46 --> 15:24:49]** **6-B:**  I buy search recipe cards from A big bowl of lettuce and
-**[15:24:49 --> 15:24:49]** **6-I:**  Yeah.
-**[15:24:49 --> 15:24:52]** **6-E:**  I was just thinking the salad one I was actually gonna eat one of these.
-**[15:25:01 --> 15:25:04]** **6-E:**  Now your pass would keep the entire files and then you could email
-**[15:25:04 --> 15:25:04]** **6-I:**  Yes.
-**[15:25:04 --> 15:25:08]** **6-E:**  it to me at any particular time that you want and save it in the entire files. Or you would just repurpose away.
-**[15:25:08 --> 15:25:10]** **6-E:**  So it really should be rather functional,
-**[15:25:10 --> 15:25:11]** **6-E:**  this breakdown.
+**[14:14:51 --> 14:14:58]** **6-A:**  I have my entire chat history too. And this is this is all stuff that Anthropic is saving in the cloud for me. And I can go from machine to machine,
+**[14:14:58 --> 14:15:02]** **6-A:**  I can go from browser to browser. If I'm logged in as me,
+**[14:15:02 --> 14:15:07]** **6-A:**  then I'm gonna see all these chats that are there in the chat tab or in Claude.ai.
+**[14:15:09 --> 14:15:32]** **6-A:**  But then the the things we're gonna focus on today and the rest of the week are the next couple of tabs. And one of them is co-work and one of them is code. We're not gonna start on code today because it actually, especially on PCs, requires you to install a couple of extra things. If you wanna get ahead of the game and install that stuff tonight, um you should go ahead and give it a try if you wanna get in a little early tomorrow, and we'd be totally excited to Or help you.
+**[14:15:32 --> 14:15:33]** **6-B:**  stay after today.
+**[14:15:33 --> 14:15:37]** **6-A:**  Um yet we will get we will get it going. We'll also we'll help everyone um get it running. That's just
+**[14:15:37 --> 14:15:49]** **6-A:**  It's just a little preview tomorrow. It's gonna be a little bit quirky for people that on Windows getting that started. Again, this is like five, ten minutes quirky, not like, you know, losing a hold whole day to it. But so today we're gonna stay in in co-work.
+**[14:15:51 --> 14:15:57]** **6-A:**  And what's kinda cool about co-work and code is that they can affect the local files on my computer.
+**[14:15:58 --> 14:16:05]** **6-A:**  Again, Madeline gave you that security thing. There that there's a danger to that as well, that they can affect my my local files, but that's kind of the game changer here.
+**[14:16:05 --> 14:16:16]** **6-A:**  And so bare minimum means I don't have to do a ton of copying and pasting. If I've got that, you know, Shakespeare's Coriolanus or whatever, and I want Claude to see it, I can have that in a file and just say hey Claude go check this thing out,
+**[14:16:17 --> 14:16:30]** **6-A:**  I don't have to copy paste myself. It's also gonna be able to write files um uh all on its own. Um so what I'm gonna get us all to do today is to work in co-work in that sample folder we gave you, and I'm gonna walk through right now the steps on how to get there.
+**[14:16:30 --> 14:16:34]** **6-A:**  I'm gonna do it once quick, you can take a look at it, and then I'm gonna do it a couple times really slow. So that people
+**[14:16:34 --> 14:16:37]** **6-A:**  so that people can follow me. What we're gonna do is in co-work
+**[14:16:38 --> 14:17:06]** **6-A:**  I'm going to say work in a project, and I'm going to choose a folder, and then I'm going to navigate to wherever I put this folder, and hit select folder, and then I'm going to say go ahead, you can use the files there. Okay? So now we're all we're all going to do that and I I'm going to do it slowly three times so people can follow me, um it because the we're going to take a a break so we all get to that that stage, okay? So again, um I can either I can go into projects and hit new project,
+**[14:17:05 --> 14:17:07]** **6-A:**  Or if I'm under task,
+**[14:17:08 --> 14:17:14]** **6-A:**  what I can do is click here and say create new project or choose a different folder.
+**[14:17:15 --> 14:17:25]** **6-A:**  If I create project, it's going to say do I want to start from scratch, import a project or use an existing folder. I'm going to say using an existing folder because I downloaded that one.
+**[14:17:26 --> 14:17:54]** **6-A:**  I'm gonna select, and then the key thing is I've gotta navigate not to the zip file but to the uncompressed version of it. Okay, so for me I'm going to desktop into my cloud clu project and I'm gonna select that folder and I'm gonna hit select and then go ahead and create the project and say hey no problem, you can start there. Alright? So one more time I'll I'll go I'll do that and maybe um if Madeline wants to i someone had a had a question?
+**[14:17:54 --> 14:17:55]** **6-C:**  Yeah.
+**[14:17:55 --> 14:17:55]** **6-D:**  Yeah.
+**[14:17:55 --> 14:17:55]** **6-C:**  um
+**[14:17:56 --> 14:17:57]** **6-E:**  even the subfolders too?
+**[14:17:58 --> 14:18:16]** **6-A:**  Totally, totally, totally, exactly. So I mean that's a bit of an awesome thing to be aware of is that whatever folder you select, it's going to be able to look at everything else. And that's why I wouldn't give it access to my desktop or, you know, my root drive or something like that. Because whatever folder you give it, um it's going to be able to access to everything underneath, right?
+**[14:18:16 --> 14:18:37]** **6-A:**  So we'll just be a little bit careful about giving it access to desktop or even downloads. It is a killer demo. That's very it's a brave thing to do for sure. And it is magical.
+**[14:18:37 --> 14:18:39]** **6-F:**  It's very effective, yeah.
+**[14:18:39 --> 14:18:42]** **6-A:**  I just uh we're not we're not gonna do that that one here.
+**[14:18:42 --> 14:18:45]** **6-A:**  Uh we've given you a sample folder that we're gonna help you or organize.
+**[14:18:45 --> 14:18:45]** **6-F:**  Yeah.
+**[14:18:45 --> 14:18:48]** **6-A:**  So again um there are a couple ways we can do it.
+**[14:18:48 --> 14:18:49]** **6-F:**  Was there a question though?
+**[14:18:49 --> 14:18:49]** **6-G:**  Like Yeah.
+**[14:18:49 --> 14:18:49]** **6-F:**  uh
+**[14:18:49 --> 14:18:55]** **6-H:**  For manual we need to pick it out of it's just like in the downloads folder thing to do it for manual.
+**[14:18:55 --> 14:19:06]** **6-A:**  You could totally do it in the downloads folder, just gotta make sure you uncompress that. Like a .pkg a .pkg you right click, I think it's uh uncompress or unzip and a you can double click it and then you get the actual folder.
+**[14:19:07 --> 14:19:07]** **6-F:**  Yeah, and then
+**[14:19:07 --> 14:19:15]** **6-F:**  And tomorrow we'll talk about setting up the development folder if you want, but that's also part of it, just if you give it access to have your downloads folder
+**[14:19:15 --> 14:19:17]** **6-A:**  So I create a new project,
+**[14:19:17 --> 14:19:20]** **6-A:**  use existing folder, select a folder,
+**[14:19:21 --> 14:19:23]** **6-A:**  navigate to that folder,
+**[14:19:25 --> 14:19:33]** **6-A:**  and I'm going to select it, and this time I'm going to give it a better name, and I'm going to call it um M_ Clod projects for Monday.
+**[14:19:35 --> 14:19:37]** **6-A:**  Maybe this is actually just a project.
+**[14:19:41 --> 14:19:52]** **6-A:**  And so we all get to a something that looks something like this once we do that. We select a folder, create a project, and again grab one of our folks if anyone has any difficulty getting to the screen. And once we're here
+**[14:20:19 --> 14:20:20]** **6-F:**  What is that camera for? They're
+**[14:20:20 --> 14:20:20]** **6-H:**  Oh, oh, shh.
+**[14:20:20 --> 14:20:22]** **6-F:**  probably not here as well. It's like they're really fancy drawing.
+**[14:20:22 --> 14:20:24]** **6-I:**  Oh, but you're not pushing on the shelf.
+**[14:20:24 --> 14:20:26]** **6-F:**  So if I, I would actually be in that gallery.
+**[14:20:26 --> 14:20:27]** **6-A:**  Absolutely.
+**[14:20:27 --> 14:20:29]** **6-A:**  It'll be a way to be actually talking about it
+**[14:20:29 --> 14:20:29]** **6-F:**  Yeah,
+**[14:20:29 --> 14:20:35]** **6-A:**  or tricks of your style. So if you have an actual file, it's kind of like you're just in the right place. If you copy it out, it could get too long, and you don't want to do it.
+**[14:20:35 --> 14:20:37]** **6-A:**  So, but it's cool.
+**[14:20:37 --> 14:20:42]** **6-F:**  But I had to do this. Let me ask this. It's like the complete opposite of adventurer it was.
+**[14:20:42 --> 14:20:43]** **6-I:**  Oh, perfect.
+**[14:20:43 --> 14:20:43]** **6-F:** 
+**[14:20:44 --> 14:20:46]** **6-H:**  So I didn't really see how you could put that in a good time.
+**[14:20:46 --> 14:20:48]** **6-I:**  People who use the internet are cyber
+**[14:20:48 --> 14:20:48]** **6-H:**  Yeah.
+**[14:20:48 --> 14:20:49]** **6-I:**  using the internet now,
+**[14:20:49 --> 14:20:50]** **6-H:**  Yeah.
+**[14:20:50 --> 14:20:50]** **6-I:**  I think.
+**[14:20:50 --> 14:20:50]** **6-H:** 
+**[14:20:50 --> 14:20:50]** **6-H:**  Yeah, of course.
+**[14:20:51 --> 14:20:52]** **6-I:**  There was a very high demand.
+**[14:20:52 --> 14:20:52]** **6-J:**  Yes.
+**[14:20:52 --> 14:20:53]** **6-I:**  We don't have to show the items.
+**[14:20:54 --> 14:20:56]** **6-H:**  So why did you keep on letting people
+**[14:20:56 --> 14:20:58]** **6-I:**  I have so many people I
+**[14:20:58 --> 14:20:58]** **6-H:**  Is
+**[14:20:58 --> 14:21:00]** **6-I:**  didn't let in front of the computer and I didn't get to
+**[14:21:00 --> 14:21:00]** **6-H:**  you all there?
+**[14:21:00 --> 14:21:04]** **6-I:**  put everything out on the two pages double-paged.
+**[14:21:16 --> 14:21:16]** **6-A:**  Okay.
+**[14:21:18 --> 14:21:40]** **6-A:**  So let's do some basic operations on some of these files just to kind of make sure that it's working for us. One one initial thing we can do I I mentioned we can change um the model. Harvard's paying for this, uh and so we may as well use a good model. Uh you might go over the limit if you use the maximum model like all day and all night. Uh it it
+**[14:21:40 --> 14:21:49]** **6-A:**  initially you are never gonna go over the limit if you're in one single chat talking to to Claude, especially in that chat. You could use the highest model with this four point eight all day long.
+**[14:21:49 --> 14:22:05]** **6-A:**  We're gonna show you how to start running many many many operations at once when you have big jobs to do. That's when you could go over the limit and you should think about what model you use. Uh I'm gonna change right now from Sonnet four point six to Opus four point eight. That's the best model. It's high reasoning right now. I actually
+**[14:22:06 --> 14:22:19]** **6-A:**  Maybe I want it to go a little faster just 'cause I'm doing a demo today and I don't want it to think all day long. And so I'm actually gonna change the effort level from high to low because I want it to be fast. So that's what I'm gonna do.
+**[14:22:19 --> 14:22:19]** **6-H:**  So
+**[14:22:19 --> 14:22:26]** **6-A:**  And then my first question is just gonna be what do you see in this folder? Let's see what happens.
+**[14:22:26 --> 14:22:35]** **6-A:**  So everyone give that a shot, just ask it, what do you see in the folder? You can say else stay on sonnet. If you wanna just practice changing models, it's a good thing to get the hang of.
+**[14:22:36 --> 14:22:40]** **6-A:**  So the key thing with Opus 4.8 is it is the best model, the most expensive model,
+**[14:22:40 --> 14:22:40]** **6-F:**  Yes,
+**[14:22:40 --> 14:22:40]** **6-A:**  it's
+**[14:22:40 --> 14:22:41]** **6-K:**  Right.
+**[14:22:41 --> 14:22:41]** **6-F:**  the
+**[14:22:41 --> 14:22:41]** **6-A:**  a little
+**[14:22:41 --> 14:22:41]** **6-F:**  high end.
+**[14:22:41 --> 14:22:44]** **6-A:**  it's a little slower to keep it at maximum thinking,
+**[14:22:44 --> 14:22:44]** **6-F:**  It's like the
+**[14:22:44 --> 14:22:45]** **6-A:**  high thinking.
+**[14:22:45 --> 14:22:47]** **6-F:**  higher models are the better.
+**[14:22:48 --> 14:22:49]** **6-A:**  And here we go, it tells me something about it.
+**[14:22:52 --> 14:22:52]** **6-A:**  Yeah.
+**[14:22:57 --> 14:23:17]** **6-A:**  Yes, so on a on a Mac yeah, the this is the quirky thing is on a Mac you'll get this system-wide pop-up, right, that says hey can I have access to your desktop? And that's 'cause you're accessing one folder on your desktop. And so it's not gaining access to your full desktop, that warning, but that warning is confusing. It's only gonna be working in that in that folder. Um but because that warning
+**[14:23:17 --> 14:23:17]** **6-H:**  Okay, so
+**[14:23:17 --> 14:23:23]** **6-A:**  creeps me out, what I tend to do is create another folder somewhere else like in downloads or
+**[14:23:23 --> 14:23:27]** **6-A:**  um and in like we're gonna show you how to create it in your home directory um to tomorrow, but
+**[14:23:27 --> 14:23:28]** **6-H:**  Right.
+**[14:23:28 --> 14:23:29]** **6-A:**  it's we're doing the formal thing.
+**[14:23:29 --> 14:23:29]** **6-I:**  Okay.
+**[14:23:29 --> 14:23:41]** **6-A:**  It's it's not gonna access your full desktop, it's only accessing the tablet folder. It just asks you whenever you know, you you you get access to the single file on the desktop, you'll see it it came down like this size, all right.
+**[14:23:41 --> 14:23:41]** **6-I:**  Okay.
+**[14:23:41 --> 14:23:41]** **6-A:** 
+**[14:23:41 --> 14:23:43]** **6-F:**  Is there something that we don't know?
+**[14:23:43 --> 14:23:43]** **6-I:**  Does it make sense that concept?
+**[14:23:43 --> 14:23:49]** **6-A:**  If you put it document, it's gonna say it can access documents, it's only gonna access in that one thing. Um
+**[14:23:49 --> 14:23:50]** **6-I:**  Is it only accessed
+**[14:23:50 --> 14:23:51]** **6-F:**  It's an example of another task.
+**[14:23:52 --> 14:23:59]** **6-A:**  Exactly. Exactly. And until you turn it off, it won't. Um, you close that. If you close it, it's no longer accessing that.
+**[14:23:59 --> 14:23:59]** **6-F:**  It shouldn't.
+**[14:23:59 --> 14:24:21]** **6-A:**  Now that that's said, what's what's a little bit stressful is when if you've ever accidentally gave it access to the full desktop, you'd see the same warning. And so even though 'cause we've been very careful and you're saying hey only look at this folder, we're getting the same warning in either case. And that's why I would kinda ultimately create a special folder somewhere where it's not asking me that. 'Cause what what thing that would become a real pain is this kind of
+**[14:24:21 --> 14:24:49]** **6-A:**  Um, yes fatigue, this the where a plot's gonna keep asking you without permission to do this, without permission to do this, and even though you you really think you're always gonna say no when appropriate, you will eventually wear down like another data reference. I don't know if anyone's seen The Simpsons where Homer was in charge of um taking care of the power plant and had to keep any yes, and he got this little bird to keep pecking on the uh yes or no. Got tired of it. It's easy to fall into that mode because once you're moving quickly with this plot's gonna be asking you for permission.
+**[14:24:49 --> 14:24:50]** **6-A:**  constantly at ninety nine
 
 ## Chunk 7
 
-**[15:25:15 --> 15:25:18]** **7-A:**  They're the see-throughs, yeah. This is just low-fires on high.
-**[15:25:24 --> 15:25:27]** **7-A:**  they just when they didn't see it. I was like what are you doing in the class?
-**[15:25:28 --> 15:25:29]** **7-A:**  My great mass,
-**[15:25:29 --> 15:25:29]** **7-B:**  Yeah.
-**[15:25:29 --> 15:25:30]** **7-A:**  come on now,
-**[15:25:30 --> 15:25:30]** **7-B:**  Yeah,
-**[15:25:30 --> 15:25:30]** **7-A:**  you can
-**[15:25:30 --> 15:25:30]** **7-B:**  I like
-**[15:25:30 --> 15:25:31]** **7-A:**  teach me
-**[15:25:31 --> 15:25:31]** **7-B:**  it.
-**[15:25:31 --> 15:25:31]** **7-A:**  now.
-**[15:25:31 --> 15:25:31]** **7-B:** 
-**[15:25:31 --> 15:25:33]** **7-B:**  If you click on this, you can
-**[15:25:33 --> 15:25:34]** **7-C:**  I'm just trying to I'm just trying to
-**[15:25:34 --> 15:25:35]** **7-B:**  look at the password to
-**[15:25:35 --> 15:25:35]** **7-C:**  Well,
-**[15:25:35 --> 15:25:35]** **7-B:**  it.
-**[15:25:35 --> 15:25:36]** **7-C:**  that's kind of interesting.
-**[15:25:36 --> 15:25:38]** **7-B:**  If you look at the folder above your recents,
-**[15:25:38 --> 15:25:39]** **7-C:**  Where's my little tab?
-**[15:25:39 --> 15:25:43]** **7-B:**  uh and f c uh you backspace.
-**[15:25:43 --> 15:25:45]** **7-C:**  Where's my tab?
-**[15:25:48 --> 15:25:48]** **7-B:**  Okay, yeah, yeah.
-**[15:25:50 --> 15:25:51]** **7-A:**  But it's okay, we
-**[15:25:51 --> 15:25:51]** **7-B:**  it's
-**[15:25:51 --> 15:25:52]** **7-A:**  have it in a nifty design.
-**[15:25:52 --> 15:25:53]** **7-D:**  Oh, I slept well.
-**[15:25:55 --> 15:25:56]** **7-B:**  So it was sort of maybe I can just
-**[15:25:57 --> 15:25:57]** **7-D:**  Oh.
-**[15:25:58 --> 15:25:59]** **7-A:**  You can pop up a mine.
-**[15:26:00 --> 15:26:06]** **7-A:**  This one, you use it and I see some interesting people people notice as they're looking at their files without even asking.
-**[15:26:06 --> 15:26:08]** **7-D:**  Is that true for some of you?
-**[15:26:08 --> 15:26:10]** **7-A:**  You can check files in a nice
-**[15:26:18 --> 15:26:27]** **7-A:**  um they already already see it, so go back over here. You don't even have to line and see that, and see that in this problem, this little character down here,
-**[15:26:27 --> 15:26:32]** **7-A:**  that's a W_ that this session you're in already. There we go. It's our lot of files.
-**[15:26:32 --> 15:26:33]** **7-A:**  See right.
-**[15:26:33 --> 15:26:36]** **7-D:**  Alright so we all renamed those files,
-**[15:26:36 --> 15:26:37]** **7-D:**  set the email address, then
-**[15:26:38 --> 15:26:39]** **7-D:**  we don't have much of some of them.
-**[15:26:40 --> 15:26:42]** **7-A:**  You gotta keep them on your machine. Yeah, 'cause again
-**[15:26:42 --> 15:26:44]** **7-D:**  Let me just show you a couple things about the interface.
-**[15:26:45 --> 15:26:46]** **7-A:**  Okay. But you can't sit up here.
-**[15:26:47 --> 15:26:48]** **7-A:**  It's just for the demo.
-**[15:26:49 --> 15:26:49]** **7-A:**  Yeah.
-**[15:26:50 --> 15:26:51]** **7-A:**  It's basically
-**[15:26:51 --> 15:26:53]** **7-D:**  What you'll see is that there's a folder
-**[15:26:54 --> 15:26:56]** **7-B:**  Yeah, in our library, this is just sitting here.
-**[15:26:56 --> 15:26:59]** **7-B:**  You're asked some people and they do this, don't get all of the
-**[15:26:59 --> 15:27:01]** **7-D:**  They only get the things that it seems is
-**[15:27:01 --> 15:27:02]** **7-B:**  Yes. Okay, that doesn't happen.
-**[15:27:02 --> 15:27:02]** **7-A:**  Yeah.
-**[15:27:02 --> 15:27:05]** **7-D:**  Then that is gonna be something that I'm gonna hope is right.
-**[15:27:06 --> 15:27:07]** **7-A:**  So you Alright, should see
-**[15:27:07 --> 15:27:07]** **7-D:**  so
-**[15:27:07 --> 15:27:08]** **7-A:**  it in the folder.
-**[15:27:08 --> 15:27:09]** **7-D:**  It's
-**[15:27:09 --> 15:27:09]** **7-A:**  Y
-**[15:27:09 --> 15:27:17]** **7-D:**  you're probably seeing a sidebar to the side that has the files that it has worked with in its context.
-**[15:27:17 --> 15:27:18]** **7-A:**  work with.
-**[15:27:18 --> 15:27:18]** **7-D:** 
-**[15:27:19 --> 15:27:33]** **7-D:**  Once it works with a file, it gets it into the context and when it writes a file so that file is part of the context because it wrote it. Again remember Madeline's awesome context window diagram. If it's making the file it's actually writing it as part of that context window and then turns it into a file.
-**[15:27:34 --> 15:27:35]** **7-D:**  That's gonna show up in that folder.
-**[15:27:36 --> 15:28:01]** **7-D:**  That's not everyth it's not everything that exists in the root folder, it's just the ones that are in context within this particular chat. That's why some of us are seeing different things there, because some of us have just we you know we did have different things that ended up in that context because of the way we processed it. But we probably will see the new files that created. If you see something that's a text file um and you click on it whoops, that's not that one. Um
-**[15:28:02 --> 15:28:19]** **7-D:**  peanut butter fudge. I can see that it actually did create my recipe. So you should click on one of those that is the supposed recipe, you just confirm that it actually made that thing for you. I will note that um that Beckett noted a couple people ended up having it rename the photos on them without even
-**[15:28:20 --> 15:28:40]** **7-D:**  I'm telling you it was doing it, which is another point surprising. Um it's a this a something we should be aware of and watch out for. It should be asking for these things, and so it could be that we gave it right permissions and it just decided to go crazy. Okay, this is why we are using this with our recipe cards rather than your really really important research data.
-**[15:28:42 --> 15:28:44]** **7-D:**  Now let's ask one more thing.
-**[15:28:45 --> 15:28:57]** **7-D:**  Um what thing that's becoming quite pobl popular for folks working in co-working code is in addition to asking for outputs of simple text files, asking for outputs of HTML files,
-**[15:28:57 --> 15:28:57]** **7-B:**  Uh-huh. because
-**[15:28:57 --> 15:29:11]** **7-D:**  because that way we can import images into the that HTML files, and and and we can s uh we can style it as well. So what I'm gonna do is I'm gonna ask for an HTML output that has all the recipes with the images embedded, and let's see what happens.
-**[15:29:11 --> 15:29:14]** **7-D:**  happens okay, so you can watch me type it or you can type it yourself.
-**[15:29:16 --> 15:29:24]** **7-D:**  Can you give me an HTML file with all the images and the recipe text
-**[15:29:26 --> 15:29:27]** **7-D:**  while you're at it.
-**[15:29:29 --> 15:29:33]** **7-D:**  Add some commentary on the recipe
-**[15:29:34 --> 15:29:39]** **7-D:**  like historical context on the dish and why
-**[15:29:40 --> 15:29:46]** **7-D:**  this iteration is interesting. And let's let it churn away on something like that, okay?
-**[15:29:52 --> 15:30:04]** **7-D:**  Let's give this a try. And so for those of you that are not familiar with the lingo, um HTML uh is hypertext markup language. It's what the internet's kind of made out of. And this would be a good time um
-**[15:30:05 --> 15:30:11]** **7-D:**  I don't know who on our team has the handouts, the the um the text file handouts. This would be a good time to hand out the
-**[15:30:13 --> 15:30:13]** **7-B:**  Yes.
-**[15:30:13 --> 15:30:15]** **7-D:**  Natalie, do you know where the new your the text file handouts
-**[15:30:15 --> 15:30:15]** **7-A:**  Um
-**[15:30:15 --> 15:30:15]** **7-D:**  is?
-**[15:30:15 --> 15:30:18]** **7-A:**  they're back there.
-**[15:30:21 --> 15:30:34]** **7-D:**  We have a cheat sheet for you, 'cause I know that we're saying a bunch of uh filing extensions that are very jargony, like H_T_M_L_ T_X_T_ so um we're gonna come around with a cheat sheet that help see you with it.
-**[15:30:35 --> 15:30:39]** **7-D:**  No, all the different types of files that could contain text and why we might want to use them.
-**[15:30:39 --> 15:30:40]** **7-B:**  Oh I'd love to teach.
-**[15:30:42 --> 15:30:42]** **7-A:**  Oh.
-**[15:30:43 --> 15:31:02]** **7-D:**  How many of you have heard of a markdown for instance? And who's heard of markdown? A certain number of us, yeah? Markdown is kind of all the rage, uh uh it's it's a markup language that was created to make it easier to write things that can become HTML. It was usually rendered into HTML. But um it's kind of all over the internet. A lot of documentation for
-**[15:31:02 --> 15:31:08]** **7-D:**  a development project, s coding projects isn't in mark-down. So these models work very very well with it.
-**[15:31:13 --> 15:31:15]** **7-D:**  So you're getting that sheet, we have like
-**[15:31:15 --> 15:31:15]** **7-B:**  Hmm.
-**[15:31:15 --> 15:31:17]** **7-D:**  a list. Some things are just plain text,
-**[15:31:17 --> 15:31:25]** **7-D:**  like T_X_T_ R_T_F_ a rich text format, mark-down or dot M_D_ are all those text files. And those could be
-**[15:31:26 --> 15:31:32]** **7-D:**  If you're going in a balance context window, those could involve literary texts. If you know Project Gutenberg, if you're in the humanities,
-**[15:31:32 --> 15:31:36]** **7-D:**  they have like tons and tons and tons of files in txt format.
-**[15:31:36 --> 15:31:46]** **7-D:**  In our folder here we gave you all of Shakespeare's plays under um literature. Shakespeare's complete works is all there. Should be there.
-**[15:31:47 --> 15:31:48]** **7-A:**  I think so.
-**[15:31:48 --> 15:31:49]** **7-D:**  Oops.
-**[15:31:49 --> 15:31:50]** **7-D:**  I think we disappeared.
-**[15:31:50 --> 15:31:52]** **7-E:**  I can feel a Carlos in here.
-**[15:31:53 --> 15:31:56]** **7-D:**  So it's the dead end. Let's check just the triple sugar in the Shakespeare.
-**[15:31:56 --> 15:31:56]** **7-A:**  So it's really
-**[15:31:56 --> 15:31:59]** **7-D:**  Okay. In the Shakespeare. Uh but trust me,
-**[15:31:59 --> 15:32:00]** **7-A:**  He can.
-**[15:32:00 --> 15:32:07]** **7-D:**  if they were there and we stole them from I think we stole them actually from the MIT Shakespeare project uh where we stole them from the Project Gutenberg BBTX key files.
-**[15:32:07 --> 15:32:07]** **7-E:**  How appropriate.
-**[15:32:07 --> 15:32:16]** **7-D:**  And then you'll see that there are files that are all still text, but they have more structure to them. So H_T_M_L_ has more structure than just simple bark down.
-**[15:32:16 --> 15:32:21]** **7-D:**  And then C_S_V_ jason and coding files have yet more structure.
-**[15:32:21 --> 15:32:22]** **7-A:**  So the public website is
-**[15:32:22 --> 15:32:22]** **7-D:**  And
-**[15:32:22 --> 15:32:22]** **7-A:**  the
-**[15:32:22 --> 15:32:33]** **7-D:**  this is a the wonderful, again, killer cheat sheet that Madeleine made today. And it kind of shows you all the different forms of text that might go into the context window and that also might come out of the context window as as output.
-**[15:32:33 --> 15:32:34]** **7-B:**  How much of this is for the public?
-**[15:32:36 --> 15:32:41]** **7-A:**  How are there any of the participants, so they might not have finished talking what was.
-**[15:32:43 --> 15:32:43]** **7-D:**  Got it.
-**[15:32:43 --> 15:32:44]** **7-D:**  Okay, there there, that's good.
-**[15:32:44 --> 15:32:44]** **7-A:**  Okay.
-**[15:32:49 --> 15:32:49]** **7-B:**  Let's check it.
-**[15:32:51 --> 15:32:51]** **7-E:**  Yes.
-**[15:32:52 --> 15:32:52]** **7-D:**  Yes.
-**[15:32:53 --> 15:32:56]** **7-B:**  So to create a text file with html and then I go
-**[15:32:56 --> 15:32:56]** **7-E:**  it in Yeah.
-**[15:32:56 --> 15:32:57]** **7-B:**  and edit it?
-**[15:32:57 --> 15:32:57]** **7-E:**  Yeah.
-**[15:32:57 --> 15:32:59]** **7-B:**  Well it wouldn't have any idea that I had edited it.
-**[15:32:59 --> 15:32:59]** **7-E:**  Exactly.
-**[15:32:59 --> 15:32:59]** **7-B:**  How
-**[15:32:59 --> 15:33:00]** **7-E:**  Yeah.
-**[15:33:00 --> 15:33:00]** **7-B:**  that would be supposed to happen.
-**[15:33:00 --> 15:33:13]** **7-D:**  It won't know until you tell it. That's really good. So yeah. So we got a fantastic question from John, which is that so let's imagine I've made all these recipe files, these T_X_T_ recipe files. If I go and edit them, does Claude magically know that I did that edit?
-**[15:33:14 --> 15:33:19]** **7-D:**  And it doesn't, it doesn't it's not watching you. You have to kind of tell it to then go look at the file again.
-**[15:33:19 --> 15:33:23]** **7-D:**  Um th now there are ways that we're seeing this in Cloudfoot where I could automate that. I
-**[15:33:23 --> 15:33:23]** **7-A:**  Yeah.
-**[15:33:23 --> 15:33:46]** **7-D:**  could say at certain intervals, just so we don't have to pause again and see what happens. Or for those of you that are coders that use this git thing for version history, um Beko will probably show you something where as I'm committing a new version of my entire repository, I could perform certain operations. Like tell Cloud hey go every time I commit a new version or push a new version to GitHub I'll always perform these operations.
-**[15:33:46 --> 15:33:46]** **7-A:**  stuff in the
-**[15:33:46 --> 15:33:46]** **7-D:**  Move
-**[15:33:46 --> 15:33:46]** **7-A:**  presentation.
-**[15:33:46 --> 15:33:48]** **7-D:**  to say something in your context or something like that.
-**[15:33:48 --> 15:33:48]** **7-A:**  It
-**[15:33:48 --> 15:33:52]** **7-D:**  But it doesn't magically move. It's not it's not watching you do these things.
-**[15:33:52 --> 15:33:56]** **7-A:**  No, it's just making it up to save it for us, not everybody.
-**[15:33:57 --> 15:33:58]** **7-A:**  It's kind of so loud,
-**[15:33:58 --> 15:33:58]** **7-A:**  I don't know.
-**[15:33:58 --> 15:34:06]** **7-D:**  Alright, so here is my website where I ended up with my ingredients and also context and history
-**[15:34:07 --> 15:34:09]** **7-D:**  on my recipe.
-**[15:34:10 --> 15:34:11]** **7-D:**  I realize this isn't the world's
-**[15:34:12 --> 15:34:39]** **7-E:**  It's the most amazing website of all time, but again we went from recipe cards, just handwriting on paper, to a a website that has you know good transcriptions and everything and a little bit of research in what I think was about ten seconds of human labour for me typing those two prompts. And I guess what we're hoping is you can extrapolate from this to your use cases where again a lot of your using data that can be captured through through photos, um and then uh definitely student writing is the epic show of that stuff
-**[15:34:39 --> 15:34:45]** **7-E:**  that's homework evaluator, homework checker. Uh the student writing is, you know, that's something that you can capture in terms of photos.
-**[15:34:45 --> 15:34:47]** **7-E:**  Other examples from the teaching learning world,
-**[15:34:47 --> 15:35:04]** **7-E:**  taking a couple of pictures of the board every day, I know I often think, oh man, like five weeks ago I had this just killer thing I explained on the board that day, I wish I could go back and find that. If I just took a picture every single day on the way out of class and shoved that in a file somewhere, got quant to describe it, it would be way more searchable and easy for me to find.
-**[15:35:04 --> 15:35:06]** **7-E:**  Oh, and then I get many many other uh
-**[15:35:06 --> 15:35:06]** **7-A:**  Place
-**[15:35:06 --> 15:35:11]** **7-E:**  a few uh you know reasons why I think there's lots of this work on manuscripts or data that you can photograph in
+**[14:24:51 --> 14:25:19]** **7-A:**  At the end of the talk you're gonna say yes, so this is the thing to be wary of. But for today you can give access to this folder, um and we're gonna send it at a different project later. Uh if we ask what's in the folder, we'll see here are some things in the folder. And the very first thing I thought it might be fun to do is uh reorganise some images. So if I go to my desktop and I show you what's inside of this folder, you'll see that in recipe photos there are a bunch of photos of recipe cards that have really weird names.
+**[14:25:19 --> 14:25:41]** **7-A:**  they're inappropriate. Uh and what I might actually wanted to do is rename these photos according to whatever they were a recipe of and then actually why not actually get it to create a text or a markdown document, as Madeline called it, that actually has the recipe in it. So here we go, I'm gonna hop back into Claude, and I'm gonna say for the recipe photos,
+**[14:25:42 --> 14:25:44]** **7-A:**  can you rename them all
+**[14:25:46 --> 14:26:12]** **7-A:**  appropriately given the recipe, and then also create, I gonna say markdown doc of the actual recipe on the card. Also give me some historical context on the two-dish and what makes this the recipe interesting.
+**[14:26:12 --> 14:26:14]** **7-A:**  Cool version of it.
+**[14:26:17 --> 14:26:36]** **7-A:**  So let's give that a try. And I'm doing this because it condenses a lot of things the product can do. So one, it can work on many many files at once, it can change file names, it can read images, it can write text docs, it can just transcribe what's on the image, but then also it can think for itself a little bit and create the some kind of content.
+**[14:26:36 --> 14:26:36]** **7-A:**  If
+**[14:26:36 --> 14:26:37]** **7-B:**  Okay.
+**[14:26:37 --> 14:26:42]** **7-A:**  I were an art historian, maybe I'd wanted to actually give me some interpretation of a work.
+**[14:26:42 --> 14:26:45]** **7-A:**  If I was a literary scholar working on manuscripts,
+**[14:26:45 --> 14:26:53]** **7-A:**  I might want it to give me the content of the manuscript, or maybe a marginalia on the document. So let's all give this a try and just see what happens.
+**[14:26:55 --> 14:27:02]** **7-C:**  And then Marlon, is the only way to see what's in the folders and how they're being changed going to the Finder and
+**[14:27:02 --> 14:27:03]** **7-A:**  No,
+**[14:27:03 --> 14:27:03]** **7-C:**  no?
+**[14:27:03 --> 14:27:05]** **7-A:**  as of as of this week yeah.
+**[14:27:05 --> 14:27:06]** **7-C:**  That was just sold on yesterday evening.
+**[14:27:06 --> 14:27:07]** **7-D:**  This is
+**[14:27:07 --> 14:27:07]** **7-A:**  This
+**[14:27:07 --> 14:27:07]** **7-D:**  different
+**[14:27:07 --> 14:27:07]** **7-A:**  happens
+**[14:27:07 --> 14:27:07]** **7-D:**  to
+**[14:27:07 --> 14:27:08]** **7-A:**  this.
+**[14:27:08 --> 14:27:08]** **7-D:**  what you do have in iTunes.
+**[14:27:08 --> 14:27:17]** **7-A:**  Just that happens constantly surprising us. And so now co-work actually does allow me to get in here. Um actually no, but before it was there, it was in context, in context.
+**[14:27:19 --> 14:27:21]** **7-A:**  If I click this, now they've gone away again.
+**[14:27:23 --> 14:27:25]** **7-A:**  Okay, never mind, never mind.
+**[14:27:25 --> 14:27:25]** **7-C:**  To the chain.
+**[14:27:25 --> 14:27:34]** **7-A:**  Initially initially they were all there. There's a little bit of quirkiness about about what shows up in this panel. Um it's gonna show me all of the files and folders that are in context right now.
+**[14:27:35 --> 14:27:39]** **7-A:**  It's a little uneven in what it what it shows here to be totally honest.
+**[14:27:40 --> 14:27:47]** **7-A:**  Alright, so it's plugging away, it continues to move here. You can hit any of these little disclosure triangles to see what it's doing.
+**[14:27:49 --> 14:27:51]** **7-A:**  It's kind of interesting to see
+**[14:27:52 --> 14:27:52]** **7-A:**  How it's working.
+**[14:27:52 --> 14:27:56]** **7-C:**  I think there's a script above Marlin too that might be more interesting.
+**[14:27:59 --> 14:28:01]** **7-C:**  Yeah, so here's it's moving
+**[14:28:02 --> 14:28:02]** **7-E:**  And you've
+**[14:28:02 --> 14:28:28]** **7-A:**  Yeah, for any for any um people that do no one needs to know how to code, but for anyone that that codes and wants to kind of understand how it's doing this, um the the magic is that uh CLAW can generate text, but it can generate commands that can run in the terminal or shell. And in this case what it's done is it's generated new names for the files and then it generated the shell script for moving the files to those new locations. So M_V_
+**[14:28:28 --> 14:28:31]** **7-A:**  this doc oh god you disagree with me?
+**[14:28:31 --> 14:28:54]** **7-A:**  In any case, it's writing the shell script that will move the file from its old location to the new file name location. Uh and that's kind of uh how Claude performs those operations. So I'm gonna hop back over to um my explorer again, I apologise, I'm not actually a Windows person, I'm just doing my best. Um and what we see is it has renamed everything to Christmas fruitcake cookies, to dumplings,
+**[14:28:55 --> 14:29:02]** **7-A:**  um to Eagle brand ice cream, to French toast cupcakes. So everything has a brand new name, and then also
+**[14:29:04 --> 14:29:18]** **7-A:**  it has a document next to it that has the ingredients list, has the directions, has a little history of French toast cupcakes and what makes this an interesting recipe. So that worked for me. Everyone again so everyone give it a try and just see if it
+**[14:29:18 --> 14:29:24]** **7-A:**  If it's working for you and our helpers will come around to make sure that's it's working out okay, yes.
+**[14:29:24 --> 14:29:25]** **7-C:**  A markdown of what app do you open that?
+**[14:29:26 --> 14:29:29]** **7-A:**  So it's gonna work in the this app tomorrow.
+**[14:29:29 --> 14:29:29]** **7-C:**  That's great.
+**[14:29:29 --> 14:29:30]** **7-A:** 
+**[14:29:30 --> 14:29:30]** **7-F:**  Okay.
+**[14:29:30 --> 14:29:35]** **7-A:**  Uh but you have to be on the Mac. So Even though I said I would not do this
+**[14:29:37 --> 14:29:39]** **7-A:**  for people that wanna like look ahead for tomorrow,
+**[14:29:39 --> 14:29:39]** **7-F:**  Yeah.
+**[14:29:41 --> 14:29:43]** **7-A:**  if you were to if you actually open up
+**[14:29:46 --> 14:29:48]** **7-A:**  This same folder in quad code,
+**[14:29:48 --> 14:29:49]** **7-A:**  my
+**[14:29:51 --> 14:29:53]** **7-A:**  quad projects, this one.
+**[14:29:54 --> 14:29:58]** **7-A:**  Trust workspace, this is just a sneak preview of what's
+**[14:29:58 --> 14:29:58]** **7-C:**  You got
+**[14:29:58 --> 14:29:58]** **7-A:**  gonna happen
+**[14:29:58 --> 14:29:58]** **7-C:**  a yellow
+**[14:29:58 --> 14:29:58]** **7-A:**  tomorrow.
+**[14:29:58 --> 14:29:59]** **7-C:**  chat though.
+**[14:30:00 --> 14:30:07]** **7-A:**  Um you have to say one thing in here, we're gonna be able to see the files in here um and in my uh
+**[14:30:13 --> 14:30:41]** **7-A:**  I can look at any of my documents inside of Claude code. Um the reason I'm doing this is because most people who if you're if you have a development background, you're gonna look at this in V_S_ code or uh or or it you know some tool you use for writing code. Um we're gonna get you all working within the Claude app to do this. So that it's all gonna work just fine. Uh again, the only reason we're not jumping ahead to this is because there's a couple quirks with getting this working for Windows folks. Um but for for right now you can just go ahead and open it up.
+**[14:30:41 --> 14:30:45]** **7-A:**  up on whatever app it defaults to in your Explorer Finder.
+**[14:30:46 --> 14:30:48]** **7-A:**  So alright, so but back to co-work.
+**[14:30:49 --> 14:31:15]** **7-A:**  So we've all created a task. It read some images, it generated some content, um and we can imagine how this could apply to a lot of different types of data. Uh already Becca showed you that s a lot of student work is coming in on papers, the ability to take photos of things that students do in class, another cool use case is if you are someone that does a lot of board work, you could at the end of every single class just go up and take shots of the board that day, um you could even record yourself talking quickly into your phone,
+**[14:31:15 --> 14:31:28]** **7-A:**  You could shove all those files into a folder, um and Claude can help you keep track of a kind of teaching journal so you can find your way back to those documents, um you'd work on manuscripts you were saying, any of th you you work on a lot of the photos of things, you've done some
+**[14:31:28 --> 14:31:28]** **7-C:**  Lots
+**[14:31:28 --> 14:31:28]** **7-A:**  examples.
+**[14:31:28 --> 14:31:39]** **7-C:**  of photos. Uh we've had people annotate syllabi, annotate translations, uh so it it's also good at not just picking out the text for its own sake, uh but if you have some kind of source text
+**[14:31:39 --> 14:31:57]** **7-C:**  text or source document that then people are marking up in some way. Uh there's some prompting you probably want to do uh to really make sure that goes well, but it it picks up pretty well on um student annotations. And then you can put those all together across a huge amount of students, uh and yes you can do it at the individual student level,
+**[14:31:57 --> 14:32:06]** **7-C:**  but you can see very quickly, almost in real time in the same class, what the patterns are across your students of what they're annotating, where they're stumbling, what
+**[14:32:06 --> 14:32:14]** **7-C:**  but you know questions they've written down, etcetera. So sometimes we compare this to a old um are they clicker the kind of A_ B_ C_ D_ uh buttons students
+**[14:32:14 --> 14:32:15]** **7-G:**  Yes, see clickers.
+**[14:32:15 --> 14:32:15]** **7-C:**  so we get.
+**[14:32:15 --> 14:32:16]** **7-G:**  Clickers.
+**[14:32:16 --> 14:32:34]** **7-C:**  Um clicker is it clickers? Yes. Uh now imagine if you do that on paper and you're not even taking photos, but maybe they're all uploading it to Slack or Canvas uh and eventually you're able to w and we'll show you how to connect to those tools, automatically pull those images down, loop through and then suddenly have it essentially a data set.
+**[14:32:34 --> 14:32:39]** **7-C:**  that's of information to to look at or query. That's like this at scale.
+**[14:32:39 --> 14:32:59]** **7-A:**  And so so we've processed a whole bunch of like inputs that have come in and now what we'll do is create just a little taste of an output. We're gonna give you tons of ideas of cool things you can build with this, but just to get the ball rolling why don't we ask it to create a web page that embeds all these recipes. Um and so what I'm gonna type in is uh can you create
+**[14:33:02 --> 14:33:22]** **7-A:**  An HTML doc that embeds all of these recipes, both the images and the text about them you created, one single stylish HTML file.
+**[14:33:25 --> 14:33:29]** **7-A:**  And so for those of you that have seen some faculty start to use Quadcode, this is something a lot of folks are doing.
+**[14:33:29 --> 14:33:32]** **7-A:**  Matthew Schwartz in physics, I don't know if anyone knows him,
+**[14:33:32 --> 14:33:44]** **7-A:**  but has taken his whole course and created a really interesting online interactive physics textbook. And this pattern of doing a lot of thinking and analysis as you know a faculty member, whether it's for research or planning or teaching,
+**[14:33:45 --> 14:33:52]** **7-A:**  but then using HTML or something web-based to present that to students can be really powerful because there's so much freedom for you.
+**[14:33:52 --> 14:34:12]** **7-A:**  view um over over what the output will end up looking like. And while clot it's hard to actually create Word docs and PowerPoint presentations that look really great, it's insanely easy for clot to work with H_T_M_L_ and C_S_S_ 'cause it knows code. You don't need to know code at all, you just need to know to ask for an H_T_M_L_ doc.
+**[14:34:12 --> 14:34:13]** **7-C:**  Yep, and then test it. So like
+**[14:34:13 --> 14:34:14]** **7-A:**  Clot's
+**[14:34:14 --> 14:34:14]** **7-C:**  Becca's
+**[14:34:14 --> 14:34:14]** **7-A:**  gonna
+**[14:34:14 --> 14:34:20]** **7-C:**  example also was uh an example of making a web page kind of interactive that then was I framed.
+**[14:34:21 --> 14:34:22]** **7-C:**  The Sergeant of Armory.
+**[14:34:22 --> 14:34:24]** **7-A:**  So here it goes, it's doing its thing.
+**[14:34:24 --> 14:34:25]** **7-C:**  The zipper's not ready.
+**[14:34:25 --> 14:34:30]** **7-A:**  So close. Everyone give this a try and then um we'll see who who wins.
+**[14:34:33 --> 14:34:35]** **7-A:**  Okay, I'm gonna let it go ahead and do it.
+**[14:34:38 --> 14:34:42]** **7-C:**  Uh do we wanna talk about the other uh examples? So there's a few other oh, perfect, never mind.
+**[14:34:43 --> 14:34:47]** **7-A:**  So just in time I have it here, I can say that I wanna open up Microsoft Edge.
+**[14:34:49 --> 14:34:50]** **7-A:**  And then I'll have my recipe card collection.
 
 ## Chunk 8
 
-**[15:35:12 --> 15:35:12]** **8-A:**  What is time?
-**[15:35:13 --> 15:35:15]** **8-B:**  What about the last meeting? Um, would you like
-**[15:35:15 --> 15:35:15]** **8-A:**  Yes.
-**[15:35:15 --> 15:35:17]** **8-B:**  us three or do you wanna save it for a casual conversation?
-**[15:35:17 --> 15:35:21]** **8-A:**  I think it's time to introduce everyone to each other. So
-**[15:35:21 --> 15:35:22]** **8-B:**  That's a pretty short conversation.
-**[15:35:24 --> 15:35:24]** **8-C:**  Mm-hmm.
-**[15:35:26 --> 15:35:52]** **8-A:**  All right, we're gonna set you up for one last activity here. Um we're we're gonna show you where there's the course the next few days, we're gonna give you lots and lots of different examples. This recipe collection is just one example. We're gonna extend the recipe metaphor for a second just to set you up for an activity we hope you'll humour us with 'cause we're gonna do some homework based on you next day. So when I when I made the this um set of recipe photos, I kind of was following my own recipe as I m uh made Madeline's uh
-**[15:35:52 --> 15:35:53]** **8-A:**  It's a context window.
-**[15:35:54 --> 15:35:54]** **8-A:**  Um
-**[15:35:54 --> 15:35:55]** **8-B:**  It's here it's here.
-**[15:35:55 --> 15:35:56]** **8-A:**  yeah, the context window.
-**[15:35:57 --> 15:35:58]** **8-B:**  Oh the context window.
-**[15:35:58 --> 15:35:58]** **8-A:**  Yeah.
-**[15:35:59 --> 15:36:28]** **8-A:**  Well, what I did is I took the photos and the descriptions, I took the text which was the transcription of that, I then got Claude to go and find me uh to generate its own uh context around each of these recipes and tell me why it was valuable. I could have put in a template with an H_T_M_L_ file if I wanted it to look better than this, I probably should have done that. So I was making my own kind of recipe of all this context that went into the front of the window. And out of that I got my my dish, I suppose, which was my my final website.
-**[15:36:28 --> 15:36:52]** **8-A:**  Uh and this is the kind of metaphor we're gonna extend a little bit, and try to get you all to think about these um what rec recipes you might wanna construct under the various ingredients you have in your lives as as teachers uh or or academics. Often these are the primary sources you're working on or the data that's coming off of your telescope or, you know, who knows what. And then uh Madeline's got some other ways for us to think about that here. So this is a handout. Can I give it to them all that, or we already
-**[15:36:52 --> 15:36:54]** **8-B:**  Yeah, we're we're handing it out right now.
-**[15:36:54 --> 15:37:18]** **8-B:**  Cool. Alright so we are we want this to be as applicable for you all as possible. So yes this is a bit of fun but genuinely this is often how we're thinking through these things. It tends to feel like some kind of artisanal craft or solving a puzzle where it's just a system of input and output. Uh so we're gonna have you guys think of a project you'd like to do tomorrow uh with code.
-**[15:37:19 --> 15:37:35]** **8-B:**  Uh first is just ingredients, your inputs. Um and it might be helpful first to think about your recipe. So what do you what do you wanna make? And really think through what that thing is. Is it some sort of greeting work flow like Becca has? Is it a website?
-**[15:37:36 --> 15:37:45]** **8-B:**  Is it really well-structured data coming out of your telescope? Is it uh a new database? Is it a map with different pins on it?
-**[15:37:45 --> 15:37:45]** **8-A:**  Oh.
-**[15:37:45 --> 15:37:58]** **8-B:**  Like truly sky's the limit with um all of the different uh fields you guys work with. And then to think through what are my ingredients and uh instructions I need in order to produce that final output.
-**[15:37:59 --> 15:38:26]** **8-B:**  Um so let's say one of our examples, um we have some examples in there, we asked the professors, we had uh P_S_ Sorensen who teaches science and cooking um last week uh or the first workshop she came in uh and you'll be able to print that out like Marlin has the files. So for example, she has to wrangle a ton of different chefs to come in and be speakers for her course. So an example output was hey, one of those speaker's emails and says I have to reschedule.
-**[15:38:26 --> 15:38:53]** **8-B:**  Can you please find the time uh where I can shift everyone else uh to make it work in the flow of my uh longer syllabus and for that for inputs you would need the syllabus, you would need the schedule, um you would need all of these different inputs here and you might need the email that initially the chef sent saying I can't come these times, but I can come this time and this time. Maybe all the other emails of all the other chefs and speakers that gave you in
-**[15:38:54 --> 15:38:56]** **8-B:**  That would be your ingredients.
-**[15:38:56 --> 15:39:09]** **8-B:**  And then your instructions might just be in your prompt, uh but it also might be a text file of how you eventually want your new schedule to look like, your new syllabus to look like. Uh and then you finally get your output.
-**[15:39:10 --> 15:39:19]** **8-B:**  Uh it might be, hey I have uh Becca has this great frequently, um yep? Oh, Becca yeah has the example, please come up, Becca.
-**[15:39:19 --> 15:39:22]** **8-B:**  Yay. I gave the sheet earlier in that guy's sheet.
-**[15:39:22 --> 15:39:28]** **8-D:**  Yeah, you're you all are gonna think I'm completely obsessed with grading, but this is another grading example. So
-**[15:39:30 --> 15:39:56]** **8-D:**  I I was on the very last day and I had not finished all of my grades from this semester uh for reasons you might imagine. Um so I I did a my final grade tabulation in this way. So my ingredients were uh the raw grades exports from uh Canvas or in my case from Gradescope. Um I also had an attendance tracking thing from the tool that uh D_C_E_ has for tracking attendance in Zoom.
-**[15:39:56 --> 15:40:22]** **8-D:**  them. Uh and I got the templates from my.harvard and from the Extension School for how you have to upload the grades uh i in the right format. Those are my inputs. Um then I did I prompted to uh interactively create uh my grading policy. I paste cut and pasted my weights for the different assignments and uh then I helped to figure out which of my assignments were the in-class assignments that count towards participation,
-**[15:40:22 --> 15:40:46]** **8-D:**  participation and how to deal with the people who didn't take the final and the way that I wanted to account the late days and what happens if you went over your number of late days and all this kind of stuff I kind of went back and forth with it to create this grading policy document and uh there's even this change log that you can see the steps I went through prompting it. Uh that prompt uh
-**[15:40:45 --> 15:41:13]** **8-D:**  uh for processor prompting ended up with three additional inputs. So new things that then I put back in the input bucket were the this grading policy, a lateness report for each student, how min much you know how many late days they use, and then a kind of a raw grade tabulation sheets in markdown formats, so not in the format that I would upload to My.Harvard. My outputs then were the completed spreadsheets that I could upload directly to My.Harvard. And
-**[15:41:12 --> 15:41:35]** **8-D:**  written to the T_C_E_ um portal and all of this took thirty minutes instead of the like four hours that I have sometimes in the past spent futzing with the macros and my Excel spreadsheets to get the late days right or whatever else it is. Um so just an example of how you might map something out on one of these recipes.
-**[15:41:36 --> 15:42:04]** **8-A:**  one mental model that sometimes works for people as well, it's almost like you were you were designing a course pack for a course that's teaching Claude to do this work for you. I don't know if anyone makes course packs for their course or something like that. You could think of it, it's like the the guy Memento or like a student like a really smart student who hasn't done the reading. Uh and if you could just give that student the best possible course pack and prompt, they can they create, you know, good results. And that's kind of w sort of what we're asking for on here, but on the thing that would be valuable for you. So if you're willing to fill these things out, that would be amazing. We're gonna then do homework, right?
-**[15:42:04 --> 15:42:25]** **8-A:**  quickly picture each of these and try to generate some stuff uh for the world to kind of get the ball rolling with whatever you come up with. So I know some folks probably have to take off in four minutes, but if you're willing to, talk to the partner, write a little bit on these things, we're gonna take pictures of all of them, um and then Madeline and I and a bunch of A_I_ bots are gonna try to get some stuff ready for you to wrap some work.
+**[14:34:51 --> 14:34:58]** **8-A:**  But what's another way that you can open up HTMLs by just clicking through? Or I know we're not doing the paths right now, but um
+**[14:34:59 --> 14:35:00]** **8-B:**  Yeah, well in here, so I have um
+**[14:35:00 --> 14:35:01]** **8-A:**  Okay.
+**[14:35:01 --> 14:35:04]** **8-B:**  open an edge, I can show in folder.
+**[14:35:06 --> 14:35:17]** **8-B:**  It's c sometimes it will open up automatically. Um sometimes I'll have to, you know, it it should prompt you to open in your browser or choice. Uh if it's not your browser or choice then we can help you change your default browser.
+**[14:35:17 --> 14:35:33]** **8-A:**  But you'll see up here, it's not an actual web site. Like if you sent this to someone they wouldn't be able to open it. This is just the path on your computer. So it's just rendering what's locally on your computer. If however you made something and you make something in the course of this class that then you'd wanna share it with your students
+**[14:35:33 --> 14:35:48]** **8-A:**  Yes, there are a ton of easy ways to immediately and for free get those up, and feel free to talk to us and we'll help you through it. So, if you did wanna turn this into something shareable we can but right now this is just local. But here we go. So here is your stylish
+**[14:35:48 --> 14:35:53]** **8-A:**  or stylised website, as you call that. Uh here you go.
+**[14:35:54 --> 14:35:54]** **8-B:**  Cool.
+**[14:35:54 --> 14:36:20]** **8-A:**  And so we have a few more examples in this folder. Uh you'll we're gonna continue this motif throughout the workshop. So every single day uh we're going to present to you all another GitHub repo which is just a bunch of folders with examples uh that hopefully you can play with. We're just trying to give you a sandbox with some structure. Uh but eventually you'll be making your own folders. So uh there's a few other examples. Again we have uh
+**[14:36:20 --> 14:36:50]** **8-A:**  Some context research, so the research documents we were initially talking about um that have kind of the context rot etcetera, that's in here. You could point it there and say hey, could you please summarise these articles for me or let me know what one of the most important figures are just to get that experience for instance. So there Marlin goes uh with with that. Um that's a really quick example, we could ask like turn these into a web page, it doesn't just have to be a summary.
+**[14:36:50 --> 14:36:53]** **8-A:**  Um yeah, there you go.
+**[14:36:55 --> 14:37:13]** **8-A:**  Nice. Uh what else do we have Marilyn, if we get back into the folder, uh we also have yeah, we we're gonna have a glossary, different sheets, we have handouts, there's more uh there's kind of a literature example, I think we have all of
+**[14:37:13 --> 14:37:20]** **8-A:**  Or no, never mind. I'm sure I'll go through that." Uh, population data, a recipe. We also our first
+**[14:37:21 --> 14:37:30]** **8-A:**  version of this workshop, we had Pia Sorenson from Science of Cooking came in and she was very kind to let us kind of borrow things from that course. That course has been running for a really long time.
+**[14:37:30 --> 14:37:31]** **8-A:**  So she has a lot of great structured content.
+**[14:37:32 --> 14:37:46]** **8-A:**  So if for instance you wanted to play with what would it be like if I downloaded my canvas and all of my previous course materials and see what that's like. Uh we have for midterms, for syllabus, for course schedule, so you could also play later with what does it feel like to ask
+**[14:37:46 --> 14:38:12]** **8-A:**  Hey, I have a guest speaker scheduled for October 8th. If now she can't come, uh so I have to schedule this doctor to come in no you know November twenty first. What are the four different ways or several different ways I could restructure my class and the assignments in order to make this work? See how that feels. Or if Becca talks about this in some of her other examples, uh you've given a midterm and suddenly many students have come down with the stomach flu.
+**[14:38:12 --> 14:38:39]** **8-A:**  And you're gonna have to come up with a multiple different alternative exams. Uh how can you do that with some prompting, uh is another example. So we've got some mid-terms in there if you wanted to make a practice exam or a checklist. Uh those are the sorts of activities it's really good at. Again, because you're providing it with so much context that's yours, that you have vetted that you know is high quality, and you're pointing it at a small discrete task just based on that information.
+**[14:38:40 --> 14:39:02]** **8-A:**  Uh so yeah, there's Marlin kind of going with these examples. So the last thing we'll hang out and then um hand out and then we'll answer questions, we're not going anywhere and again we're always here early tomorrow if you're struggling, uh but building off the recipe example, behold homework, um if you wish. Uh so
+**[14:39:03 --> 14:39:23]** **8-A:**  One of the uh kind of like a nice heuristic way to plan projects that you might wanna do in your course that might be a good thing um totally up to you. Everything we're gonna do is self-contained in these classes, but if you have specific project in mind that you can work on a little bit every single day as we teach you new things, this can be a really good guide for that.
+**[14:39:23 --> 14:39:31]** **8-A:**  Thank you Jenna. Uh so if everything are just strings in strings out, think of it like a recipe.
+**[14:39:31 --> 14:40:00]** **8-A:**  So what are the ingredients, what are the inputs you need in terms of context? So what is the information? Time, reorganizing my class or um coming up with a script for a new lecture. I probably want all my course material. I want my syllabus, all of my readings, all of my P-sets, those could all be ingredients. Uh then of course you're probably thinking of an output. Kind of what is your ultimate output? But be more specific. Do you want it in a new file?
+**[14:40:01 --> 14:40:20]** **8-A:**  Do you want it split out across, uh maybe ideas for slides plus a lecture? Uh and then the instructions to get there. So these are your prompts and you'll see a few things here, skills, scripts, tools. We haven't gotten there yet, that's what the next few days are for. Uh but all of this, what will teach you are just
+**[14:40:20 --> 14:40:28]** **8-A:**  Ways of improving that context flow. How can you more quickly build up context as you build up context about you, yourself,
+**[14:40:28 --> 14:40:29]** **8-A:**  your working style,
+**[14:40:29 --> 14:40:32]** **8-A:**  as well as your specific discrete projects?
+**[14:40:32 --> 14:40:35]** **8-A:**  And then as you continue to work with AI,
+**[14:40:35 --> 14:40:39]** **8-A:**  if you find you're doing the same sorts of operations again and again,
+**[14:40:39 --> 14:40:47]** **8-A:**  and you're tired of copying and pasting the same prompt for please make me slides, please make me a new set of tests, how can you
+**[14:40:48 --> 14:41:13]** **8-A:**  capture and package those operations um all of that information into these sorts of uh buckets before you get to your outputs. Um so again this is just kind of a little analogy. Uh but if you wanted to fill this out feel free to stick around today. Um if you have a really clear idea of what you'd like to do, um we will also you don't necessarily have to fill out the sheet, uh but let us know.
+**[14:41:13 --> 14:41:37]** **8-A:**  Because we can set up the examples beforehand. We want this to be as applied and as useful for you guys as possible in your own context. So we're gonna hang around afterwards. If you have an idea for a project, let us know and we'll try to build that out beforehand. And if we have your permission, even go hunt down some of your own materials to show as an example tomorrow in the next few days.
+**[14:41:37 --> 14:41:40]** **8-B:**  If you want you could look y like so last week's repository is just up
+**[14:41:40 --> 14:42:09]** **8-B:**  stop there right now. And you'll see tomorrow when you come in, we're gonna have a folder called recipes that will have um some samples from us but some samples from from you all if you're interested. For instance last week um some of the faculty wanted to have uh a r a resource for T_F_s that are learning to teach chemistry and their idea is that you would have a resource that models the errors that certain sorts of students make. And so what we did is generated for them out of that context and some research
+**[14:42:09 --> 14:42:19]** **8-B:**  search um on uh I mean Jean Yun are you here? What is the re you jump in, this your your baby. So your research was on different sorts of modes of um mistakes that people make in stem courses essentially.
+**[14:42:20 --> 14:42:32]** **8-C:**  So we populate our context with a little bit more research on um you know stuff on chemistry education, whereas in the common failure modes and mistakes and misunderstandings that arise at, you know, college level chemistry education.
+**[14:42:32 --> 14:42:43]** **8-C:**  So with that and with the prompt that we were or the recipe we were provided we were able to mock up some prompts that you would put into Clause so we can simulate the role of a student for T_F_ training.
+**[14:42:45 --> 14:42:58]** **8-B:**  So I any of you checked this out last time. But uh if people wanna feel this out right now, then we will as our homework get a little bit of a template ready for you for next time that you can fork. Again, no obligation to do this, but if anyone wants to, we're excited to get you started.
+**[14:42:58 --> 14:42:59]** **8-A:**  And then I've got yeah.
+**[14:43:13 --> 14:43:26]** **8-A:**  So we have the prompts and every single different uh kind of project, and we can share last week's project tonight over email, so that you could peek through them. Uh and what you're describing is pretty common, it's called like a prompt.
+**[14:43:26 --> 14:43:37]** **8-A:**  library, many places kind of slowly develop prompt libraries. And people tend to share in to libraries, but people also keep their own separate kind of prompt libraries or um personal context
+**[14:43:37 --> 14:43:38]** **8-C:**  I just need to specify.
+**[14:43:38 --> 14:43:38]** **8-A:**  things.
+**[14:43:38 --> 14:43:41]** **8-C:**  So I'm looking at, for example, the population data folder.
+**[14:43:41 --> 14:43:41]** **8-A:**  Yeah.
+**[14:43:41 --> 14:43:47]** **8-C:**  So I can imagine you could probably do like an infinite number of things with this, but I just was curious.
+**[14:43:47 --> 14:43:52]** **8-A:**  Kind of prompts, I think in like would I find that somewhere, some learning lab examples.
+**[14:43:53 --> 14:43:54]** **8-C:**  It's
+**[14:43:54 --> 14:43:54]** **8-A:**  It's that.
+**[14:43:54 --> 14:43:54]** **8-C:** 
+**[14:43:54 --> 14:43:55]** **8-A:**  You got it.
+**[14:43:56 --> 14:43:56]** **8-A:**  Oh, here.
+**[14:43:56 --> 14:44:09]** **8-B:**  But so we have we do have these for for some of them. We didn't have it for that one. But for the class schedule conflict I just did for um Pia Sorenson's class, that's in there. Um and last week we did the same thing. Uh Joanne Chang can't can't come that that week.
+**[14:44:09 --> 14:44:09]** **8-A:**  I think
+**[14:44:09 --> 14:44:09]** **8-B:**  Can you
+**[14:44:09 --> 14:44:10]** **8-A:**  the resources
+**[14:44:10 --> 14:44:10]** **8-B:**  can you fix it?
+**[14:44:10 --> 14:44:14]** **8-A:**  is Marlin under day one, now that I remember this, but
+**[14:44:14 --> 14:44:15]** **8-B:**  Resources
+**[14:44:15 --> 14:44:16]** **8-A:**  Day one recap.
+**[14:44:16 --> 14:44:17]** **8-B:**  day one recap. Activities, yes.
+**[14:44:17 --> 14:44:19]** **8-A:**  Activities, population pyramids, operations
+**[14:44:19 --> 14:44:20]** **8-B:**  Operations
+**[14:44:20 --> 14:44:20]** **8-A:**  True's
+**[14:44:20 --> 14:44:20]** **8-B:**  tool commands.
+**[14:44:20 --> 14:44:20]** **8-A:**  okay.
+**[14:44:20 --> 14:44:22]** **8-B:**  Analyse data prompt. There we go.
+**[14:44:25 --> 14:44:27]** **8-B:**  So we are gonna overshare today.
+**[14:44:27 --> 14:44:50]** **8-B:**  Um uh uh every day we're gonna share every single thing that we do with you and it's gonna be too much information, but that's 'cause we're gonna help you understand how you can actually ask Claude um to give you the amount of information you want. We are gonna have our entire transcript of every single thing Madeline and I say. We're gonna have screen-shots of everything, we're gonna have every single example we show you. You're never gonna look at all of that with your human eyes ever, but here's the thing, you can ask Claude to look
+
+## Chunk 9
+
+**[14:44:51 --> 14:45:16]** **9-B:**  for you, so you'll get the repo for tomorrow and you can ask, hey what are the ten top tips from yesterday, um and we hope this is a model of what faculty might think about doing in their courses going forward where you can vert present students with a lot of information that they can then query and you're grounding their learning in high quality context that you curate and we're asserting everything we've said, go ahead and use that, every example we get give you we approve of it um but then you will use Clod to actually find the parts of that that are valuable to you.
+**[14:45:17 --> 14:45:17]** **9-C:**  Yeah.
+**[14:45:18 --> 14:45:21]** **9-C:**  And Claude can help you develop prompts as well.
+**[14:45:21 --> 14:45:21]** **9-C:**  Sorry, yeah.
+**[14:45:21 --> 14:45:24]** **9-D:**  I was actually just going off off of all that
+**[14:45:25 --> 14:45:40]** **9-D:**  Right here. What are the keys to a good quality prompt so that you don't make the mistakes that you need to be and get the kind of output that you want. Um is there like a like a list of things that every prompt that should have, I guess, I just I don't I don't
+**[14:45:40 --> 14:45:40]** **9-B:**  We
+**[14:45:40 --> 14:45:40]** **9-D:**  know.
+**[14:45:40 --> 14:45:51]** **9-B:**  should. I mean, when you get papered, it is the the the big thing we've sent so far today is the context going into grounded is essential. I think back to that Corolla honest example, if it's just going on the average of the internet,
+**[14:45:51 --> 14:46:04]** **9-B:**  that just is training data, it's really sure going to get important academic ideas wrong. And so giving it enough context to have all the information it needs to have to be factually accurate is just totally insanely important.
+**[14:46:04 --> 14:46:19]** **9-B:**  And that that's kind of the context engineering part of it. The so-called prompt engineering part of it um is what Madeline's going to talk about now and there's kind of a neat way of thinking about the different coordinates of that prompting that she has a very elegant drawing of now. This is great, this is your v the best one ever.
+**[14:46:19 --> 14:46:19]** **9-B:**  Never.
+**[14:46:19 --> 14:46:20]** **9-C:**  It's been so long. Um
+**[14:46:21 --> 14:46:50]** **9-C:**  Uh, so you're gonna see a lot of, like, people try to sell programmes of like how to prompt, best way to prompt. Uh Marlon and I have sacrificed ourselves uh to X, formerly known as Twitter, um in order to kind of scrape uh what the people who are working in development in these companies are constantly posting about how to prompt. But in essence there's a lot of hype around it but it's just this is gonna sound strange but the best prompt for your output is the best prompt that comes from you.
+**[14:46:50 --> 14:47:01]** **9-C:**  from you. You have to kind of put yourself and your own departmental context in it. So if you look up online the way some people structure prompts, may not be correct for you very specifically.
+**[14:47:01 --> 14:47:16]** **9-C:**  But if we're just gonna think of like a list of four things, uh you can think of it like the structure of an utterance uh for those of you who are from fields uh that kind of cover this. And it's really weird 'cause normally uh when you kind of cover the structure of an utterance you're thinking of yourself as the speaker and you as
+**[14:47:16 --> 14:47:16]** **9-A:**  uh
+**[14:47:16 --> 14:47:42]** **9-C:**  was audience members when we put this workshop together. I'm thinking of myself a speaker. Uh but it's almost like working with an L_L_M_ is interaction zero instead of interaction one. You have to go back in time and hear the L_L_M_ is the speaker, you are the audience, and then you're requesting form and content. Uh so very commonly in prompts you'll see these four different components. And many of these prompts will begin with
+**[14:47:42 --> 14:47:47]** **9-C:**  You are. So the most famous version of this is the ChatGPT original system prompt.
+**[14:47:48 --> 14:47:57]** **9-C:**  You are a helpful assistant is literally like the first thing that ever came out of a large language model company to help structure its thing.
+**[14:47:58 --> 14:48:09]** **9-C:**  So in this case, if you're building a data visualization, you might say you are a specialist in data visualization and you are particularly good at using D3.
+**[14:48:09 --> 14:48:21]** **9-C:**  Or something of that sort. You are building, uh for a faculty member doing X_Y_ and Z_ but maybe who comes from uh a more ethnographic field.
+**[14:48:21 --> 14:48:28]** **9-C:**  So uh the ways in which you're gonna structure data has to have a a bit more texture as opposed to being more technical. Something of that sort.
+**[14:48:29 --> 14:48:55]** **9-C:**  And then you're talking about the form and content. So I would like a uh population pyramid uh using this CSV. Uh but this is how I would like it to look. Uh this is how I would like it to be formatted and I would like it in this folder please. That's the basis of a really good prompt. Um and how that eventually kind of fits into your longer context window uh is again, you can't get away from the basics.
+**[14:48:55 --> 14:49:21]** **9-C:**  Uh but just think of it as your system prompt, your memory. There will later be other um whoo, this is your like stick around. Um and eventually we'll get to other dock types that get inserted automatically in the conversation that you yourself can brew up that might and often relate to who you are as a person that will always be true in every single project for example. Uh but then you have your prompt.
+**[14:49:22 --> 14:49:26]** **9-C:**  Um and this is just this little little guy. And if you really
+**[14:49:27 --> 14:49:54]** **9-C:**  hit um the ball out of the park with this first prompt, then the A_I_ output is probably gonna be better. So then your whole context window is just stronger and healthier. If you have a really short prompt and you say uh make this and it makes something really bad, well then you've kind of uh poisoned your whole context window. This is also why you wanna start new chats. Um 'cause you might be saying, hey uh this recipe, I'm out of this ingredient, what
+**[14:49:54 --> 14:50:02]** **9-C:**  and what could I replace it with. And then if you're still in that chat context window and then you go, also please summarise this article for me in the same chat.
+**[14:50:02 --> 14:50:09]** **9-C:**  All of that context is going in. So that's why we're having you guys think of like clean new context windows every single time for your prompts.
+**[14:50:10 --> 14:50:20]** **9-B:**  And I know we got to let you go, but then the one other little thing on the on the prompting is having a chain of things sometimes works better. There are lots of research on this that we can share with you. But even just saying getting output and then asking it all right, whether
+**[14:50:20 --> 14:50:22]** **9-B:**  What are the top five things I should change about that?
+**[14:50:22 --> 14:50:39]** **9-B:**  And then passing both of those on to the model will yield better better results. We've done this with translation courses here where you get initial translation, then you submit that translation to the LLM again, say find the top five problems with this, now go fix that, and you inevitably end up with better results just as you as a human do when you think critically about
+**[14:50:39 --> 14:50:39]** **9-C:**  Or
+**[14:50:39 --> 14:50:40]** **9-B:**  your with initial
+**[14:50:40 --> 14:50:40]** **9-C:**  prompting,
+**[14:50:40 --> 14:50:40]** **9-B:**  draft or something.
+**[14:50:40 --> 14:50:46]** **9-C:**  I'll usually draft my prompt with one large language model and then say use this prompt and edit it and build it out.
+**[14:50:46 --> 14:51:04]** **9-C:**  out in these ways, and it'll make me a much long longer prompt and and I'll say maybe involving the language from these two P_D_F_s or readings or articles. And then I'll go and start a new chat with this like super prompt that I've grown in partnership with another large language model that I see a question. Yeah.
+**[14:51:05 --> 14:51:09]** **9-E:**  unrelated to this. From your experience, what you found
+**[14:51:10 --> 14:51:12]** **9-E:**  to be the biggest limitations
+**[14:51:12 --> 14:51:14]** **9-E:**  Then what can't Claude eventually answer?
+**[14:51:15 --> 14:51:16]** **9-E:**  So what type of task?
+**[14:51:20 --> 14:51:37]** **9-B:**  So, but I have pretty amazing, again this is the factual knowledge when you don't ground it in actual data. Like that's the key thing. That's still a real problem. Thank goodness for humans that you know we're doing this. And then I would say is that like um that we'll show you how to build these larger and larger systems that can acquire do more complex operations.
+**[14:51:38 --> 14:51:47]** **9-B:**  But a kind of like next level problem I see which I think is still exciting for humans is the more of those summary and compaction activities that has to go through to create larger projects,
+**[14:51:47 --> 14:51:57]** **9-B:**  The more it kind of like sands off the rough edges of ideas and the less in alignment with your original vision as a human it will end up being. And again, I think that's great for academics,
+**[14:51:57 --> 14:52:03]** **9-B:**  it's great for artists, it's great for creative folks of all sorts, um because I think it's it's really really good at performing large scale
+**[14:52:04 --> 14:52:11]** **9-B:**  average um high quality ideas, but it's less good at sticking in alignment with your um with your vision basically.
+**[14:52:11 --> 14:52:13]** **9-C:**  It's also still really bad at like 3D space.
+**[14:52:13 --> 14:52:39]** **9-C:**  base and spatial things. So if I'm making a front end website where I really need components to be arranged in a certain way on the X_Y_ let alone Z_ it it it can vibes based do it, like it knows oh it's kind of this quadrant is where this should be, this component should be. But I normally even still with how far it's come in terms of vibe coding and coding, which is one of the things it's best at, I still have to go into the actual like paged
+**[14:52:39 --> 14:52:49]** **9-C:**  that it's made and I have to myself adjust the X_Y_ coordinates and the size of the box to get it correct. So it's still not there in in that.
+**[14:52:50 --> 14:52:51]** **9-B:**  All right, we have to let everyone
+**[14:52:51 --> 14:52:51]** **9-C:**  We
+**[14:52:51 --> 14:52:51]** **9-B:**  go. Please,
+**[14:52:51 --> 14:52:51]** **9-C:**  but there's
+**[14:52:51 --> 14:52:52]** **9-B:**  please,
+**[14:52:52 --> 14:52:52]** **9-C:**  one question.
+**[14:52:52 --> 14:52:53]** **9-B:**  we're going to stick we're going to stick
+**[14:52:53 --> 14:52:53]** **9-C:**  Yeah,
+**[14:52:53 --> 14:52:55]** **9-B:**  around, but I just want but some people have
+**[14:52:55 --> 14:52:55]** **9-D:**  But
+**[14:52:55 --> 14:52:55]** **9-B:**  to
+**[14:52:55 --> 14:52:55]** **9-D:**  free,
+**[14:52:55 --> 14:52:56]** **9-B:**  run. I yeah, want to make everyone sure they
+**[14:52:56 --> 14:52:56]** **9-D:**  be
+**[14:52:56 --> 14:52:56]** **9-B:**  feel
+**[14:52:56 --> 14:52:56]** **9-D:**  free.
+**[14:52:56 --> 14:52:57]** **9-B:**  comfy going.
+**[14:52:57 --> 14:52:57]** **9-C:**  Yeah.
+**[14:52:57 --> 14:52:58]** **9-B:**  But but again,
+**[14:52:58 --> 14:52:58]** **9-D:**  Yeah,
+**[14:52:58 --> 14:52:58]** **9-B:**  we're not going anywhere.
+**[14:52:58 --> 14:52:59]** **9-D:**  we can write
+**[14:52:59 --> 14:53:00]** **9-B:**  We're delighted to stick around
+**[14:53:00 --> 14:53:00]** **9-D:**  yes.
+**[14:53:00 --> 14:53:00]** **9-E:**  Yeah.
+**[14:53:00 --> 14:53:01]** **9-B:**  and answer answer
+**[14:53:01 --> 14:53:01]** **9-D:**  Tomorrow.
+**[14:53:01 --> 14:53:08]** **9-B:**  questions. And we hope that you guys will come back tomorrow too. And we're going to continue with the next tabs in the system going on to Claude code.
+**[14:53:08 --> 14:53:08]** **9-C:**  Uh okay.
+**[14:53:08 --> 14:53:16]** **9-B:**  Again, show up early if you want any help, especially on Windows machines with that. Uh but again, every day you were welcome to stay till four. We're not going anywhere. And we were delighted
+**[14:53:16 --> 14:53:16]** **9-D:**  Yeah.
+**[14:53:16 --> 14:53:17]** **9-B:**  to to answer more questions.
+**[14:53:17 --> 14:53:17]** **9-C:**  Ha ha.
+**[14:53:17 --> 14:53:18]** **9-C:**  Ah,
+**[14:53:18 --> 14:53:18]** **9-D:**  Okay.
+**[14:53:18 --> 14:53:18]** **9-C:**  ha.
+**[14:53:18 --> 14:53:18]** **9-D:** 
+**[14:53:18 --> 14:53:20]** **9-C:**  Nice, and we got our first recipe. So if anyone wants to donate,
+**[14:53:20 --> 14:53:21]** **9-D:**  Oh my god, it was
+**[14:53:21 --> 14:53:21]** **9-C:**  um
+**[14:53:21 --> 14:53:21]** **9-D:**  so much fun.
+**[14:53:21 --> 14:53:23]** **9-C:**  we're gonna build some.

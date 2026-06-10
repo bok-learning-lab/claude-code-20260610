@@ -18,7 +18,7 @@ Session transcripts. One markdown file per day, with speaker tags.
 
 - [operations/key-takeaways-prompt.md](operations/key-takeaways-prompt.md) — the reusable distillation prompt. Forces exactly 10 takeaways with bold one-sentence headlines, an italic provenance opening, and a secondary-points section. Voice: tight, concrete, faculty-facing, favoring the instructors' own language
 - operations/skills/
-  - [md-to-deepthoughts-html/](operations/skills/md-to-deepthoughts-html/) — converts a markdown takeaways doc into a self-contained "Deep thoughts" style HTML page (cream/serif Dario layout, Newsreader font, screen + mobile + print styles, Print and Copy MD buttons)
+  - [handout-house-style/](operations/skills/handout-house-style/) — renders a markdown takeaways doc as a self-contained, print-ready HTML page in the Learning Lab house style (Inter, white background, red #c8102e accent, 11x17 tabloid portrait). A small, no-script project copy of the global house-style skill
 
 ## outputs/
 
@@ -29,4 +29,4 @@ One markdown and one HTML per session.
 
 ---
 
-*To run on a new session: drop the transcript at `inputs/day_N_transcript.md`, invoke the prompt at [operations/key-takeaways-prompt.md](operations/key-takeaways-prompt.md), then run the `md-to-deepthoughts-html` skill on the resulting markdown to produce the portable HTML companion.*
+*To run on a new session: drop the transcript at `inputs/day_N_transcript.md`, invoke the prompt at [operations/key-takeaways-prompt.md](operations/key-takeaways-prompt.md), then run the `handout-house-style` skill on the resulting markdown to produce the portable HTML companion.*

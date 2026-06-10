@@ -2,7 +2,7 @@
 
 A worked example of turning a long session transcript into a **Top 10 Key Takeaways** doc faculty can read in five minutes. The project hands Claude a markdown transcript of a workshop session and asks it to distill the substance into ten numbered takeaways, each leading with a bold one-sentence headline (the mantra or claim itself) and grounded in what *actually happened* in the room — the demos used, the analogies the instructors reached for, the memorable turns of phrase, quoted directly. A separate "secondary points" section catches the smaller details that did not make the top 10.
 
-The project also ships the `md-to-deepthoughts-html` skill, used to convert each markdown takeaways doc into a printable, portable HTML page styled in the workshop's reading layout.
+The project also ships the `handout-house-style` skill, used to render each markdown takeaways doc as a printable, portable HTML page in the Learning Lab house style.
 
 ---
 
@@ -16,7 +16,7 @@ One prompt, one HTML-rendering skill, two transcripts processed.
 
 - **The prompt** at [operations/key-takeaways-prompt.md](operations/key-takeaways-prompt.md) — the reusable distillation prompt. Reconstructed from the Day 1 output, designed to be pointed at any session's transcript. Specifies the doc's title shape, an italic provenance opening (what was distilled from, chunk/time range covered, instructors present), exactly 10 numbered takeaways with bold one-sentence headlines, a secondary-points section, and a voice constraint: tight, concrete, faculty-facing, favoring the instructors' own language over generic AI-explainer prose.
 
-- **The rendering skill** at [operations/skills/md-to-deepthoughts-html/](operations/skills/md-to-deepthoughts-html/) — converts a markdown file into a self-contained HTML page styled like the "Deep thoughts" essay layout (cream/serif Dario-style, Newsreader font, scoped to the article view, with screen + mobile + print styles plus Print and Copy MD buttons). The skill is invoked after each takeaways markdown is produced.
+- **The rendering skill** at [operations/skills/handout-house-style/](operations/skills/handout-house-style/) — renders a markdown file as a single, self-contained HTML page in the Learning Lab house style (Inter typeface, white background, red #c8102e as the only accent, on an 11x17 tabloid portrait sheet). A small, no-script, project-scoped copy of the global handout-house-style skill: the font and CSS are inlined by hand. The skill is invoked after each takeaways markdown is produced.
 
 - **The outputs** (in `outputs/`):
   - [day-1-key-takeaways.md](outputs/day-1-key-takeaways.md) / [.html](outputs/day-1-key-takeaways.html)
@@ -41,7 +41,7 @@ The build is the prompt and the skill, applied per session.
 1. Capture the session transcript as markdown and drop it in `inputs/`.
 2. Invoke the prompt at `operations/key-takeaways-prompt.md`, pointing it at the day's transcript.
 3. Claude writes `outputs/<day>-key-takeaways.md` directly — title shape, italic provenance, ten numbered takeaways with bold headlines, secondary points.
-4. Invoke the `md-to-deepthoughts-html` skill to produce the HTML companion at `outputs/<day>-key-takeaways.html`.
+4. Invoke the `handout-house-style` skill to produce the HTML companion at `outputs/<day>-key-takeaways.html`.
 
 **The discipline the prompt enforces:**
 
