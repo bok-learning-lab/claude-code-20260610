@@ -20,7 +20,7 @@ Each example is a standalone project sharing the same structure — `inputs/` (r
 | Example | The move it demonstrates |
 |---|---|
 | [class-processor](examples/class-processor/) | Live course materials (transcripts, board work, audio, papers) processed into teaching artifacts (key takeaways, handouts, outlines) in one house style. Folds in the former `class-summarizer` (transcript → Top 10 Key Takeaways → portable HTML) as its first worked path |
-| [course-preparation](examples/course-preparation/) | *(scaffolded — coming)* |
+| [course-preparation](examples/course-preparation/) | The **before-class** counterpart: sharpening syllabi, assignments, and curricula before you teach. Folds in the former `recentering-academics` — run a draft syllabus or a concentration profile through the Bok Recentering Academics framework (plus Harvard grade data and the grading research) for source-grounded recommendations |
 
 **[more-examples/](examples/more-examples/)** — the gallery of single-purpose examples:
 
@@ -29,7 +29,6 @@ Each example is a standalone project sharing the same structure — `inputs/` (r
 | [interview-coding](examples/more-examples/interview-coding/) | Mary-Waters-aligned flexible coding of qualitative interview transcripts at scale |
 | [paper-to-teaching-materials](examples/more-examples/paper-to-teaching-materials/) | Skill toolkit (`/teaching-case`, `/discussion-plan`, `/objection-audit`, `/quiz`) built around a single defining paper |
 | [physics-interactives](examples/more-examples/physics-interactives/) | PhET-style single-file HTML simulations a faculty member can build and ship without a build step |
-| [recentering-academics](examples/more-examples/recentering-academics/) | Discipline-specific curricular recommendations grounded in Bok guidance, Harvard data, and the grading research |
 | [research-helper](examples/more-examples/research-helper/) | Faithful research-paper summaries with an explicit "pedagogical bridge" interpretive layer |
 | [smart-text-search](examples/more-examples/smart-text-search/) | LLM as close reader at scale — naming every writer cited in 538 Dylan songs |
 | [smart-text-search-joyce](examples/more-examples/smart-text-search-joyce/) | Parallel close-reading subagents finding Fionn in *Finnegans Wake* |
