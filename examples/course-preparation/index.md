@@ -35,6 +35,7 @@ Four shared **reference layers** plus the **target** you're improving.
 - [outputs/cs20-syllabus-redesign.md](outputs/cs20-syllabus-redesign.md) — syllabus worked example (from the skill)
 - [outputs/gened1074-syllabus-redesign.md](outputs/gened1074-syllabus-redesign.md) — canonical calibration example the skill matches (keep it)
 - [outputs/french40-syllabus-redesign.pdf](outputs/french40-syllabus-redesign.pdf) — real participant course (FREN 40), used with permission
+- [outputs/bioe53-syllabus-redesign.pdf](outputs/bioe53-syllabus-redesign.pdf) — real participant course (BioE 53), used with permission
 - [outputs/lecture-notes/](outputs/lecture-notes/) — *(lecture-notes operation)* `slides.md`/`.pdf` (transcribed board) and `notes.md`/`.pdf` (three-layer deliverable)
 
 ---

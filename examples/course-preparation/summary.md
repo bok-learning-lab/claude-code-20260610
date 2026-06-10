@@ -37,7 +37,7 @@ Four **reference layers** that ground every recommendation, plus the **target** 
 - [linguistics-concentration-recommendations.md](outputs/linguistics-concentration-recommendations.md) — the concentration-level worked example.
 - [cs20-syllabus-redesign.md](outputs/cs20-syllabus-redesign.md) — the syllabus-level worked example, produced by the skill.
 - [gened1074-syllabus-redesign.md](outputs/gened1074-syllabus-redesign.md) — the canonical example the skill is calibrated to match (structure, table, altitude, voice). The skill reads it; keep it.
-- [french40-syllabus-redesign.pdf](outputs/french40-syllabus-redesign.pdf) — a real participant course (FREN 40), run through the skill and shared with the instructor's permission.
+- [french40-syllabus-redesign.pdf](outputs/french40-syllabus-redesign.pdf) and [bioe53-syllabus-redesign.pdf](outputs/bioe53-syllabus-redesign.pdf) — real participant courses (FREN 40, BioE 53), run through the skill and shared with their instructors' permission.
 - [lecture-notes/](outputs/lecture-notes/) — the CS 1200 worked lecture: `slides.md`/`.pdf` (transcribed board) and `notes.md`/`.pdf` (the three-layer deliverable).
 
 ### The lecture-notes operation (CS 1200)
