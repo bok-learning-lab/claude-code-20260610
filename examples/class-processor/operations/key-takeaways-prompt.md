@@ -1,17 +1,17 @@
 # Prompt — "Key Takeaways" from a session transcript
 
-_Reconstructed from the Day 1 output ([`day-1-session-1-key-takeaways.md`](../outputs/day-1-session-1-key-takeaways.md)). Reuse it for any session by pointing it at that day's transcript._
+_Reconstructed from the Day 1 output ([`day-1-key-takeaways.md`](../outputs/key-takeaways/day-1-key-takeaways.md)). Reuse it for any session by pointing it at that day's transcript._
 
 ---
 
 I missed this session and want to catch up fast. Read the transcript at
-`inputs/<DAY>_transcript.md` and distill it into a **"Top 10 Key Takeaways"**
+`inputs/transcripts/<DAY>_transcript.md` and distill it into a **"Top 10 Key Takeaways"**
 markdown doc. Write the result to
-`outputs/<day>-session-<n>-key-takeaways.md`.
+`outputs/key-takeaways/<day>-key-takeaways.md`.
 
 Requirements:
 
-- **Title** the doc `# <Day> / Session <n> — Top 10 Key Takeaways`.
+- **Title** the doc `# <Day> (<date>) — Top 10 Key Takeaways`.
 - Open with a one-line **italic provenance note**: what it was distilled from
   (link the transcript file), the chunk/time range covered, and who the
   instructors were (MW = Madeleine, MK = Marlon, plus any faculty/guests).

@@ -1,6 +1,6 @@
 # Day 1 (8 June 2026) — Top 10 Key Takeaways
 
-_Distilled from the diarized session transcript ([`day_1_transcript.md`](../inputs/day_1_transcript.md)), Chunks 1–9 (~13:24–14:53). Instructors: Madeleine (MW), Marlon (MK), with the executive-director demo from Becca and questions from Jonah, Ian, Christine, Jordan, and Jungyoon, among others._
+_Distilled from the diarized session transcript ([`day_1_transcript.md`](../../inputs/transcripts/day_1_transcript.md)), Chunks 1–9 (~13:24–14:53). Instructors: Madeleine (MW), Marlon (MK), with the executive-director demo from Becca and questions from Jonah, Ian, Christine, Jordan, and Jungyoon, among others._
 
 ---
 
