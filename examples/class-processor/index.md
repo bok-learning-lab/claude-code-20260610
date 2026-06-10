@@ -18,11 +18,13 @@ Each modality folder has a `README.md` describing what goes there and how it's p
 - [inputs/board-work/](inputs/board-work/) — photos/scans of board work, read with vision *(staged)*
 - [inputs/audio/](inputs/audio/) — raw session recordings, transcribed into `transcripts/` *(staged)*
 - [inputs/papers/](inputs/papers/) — assigned readings that ground generated materials *(staged)*
+- [inputs/zettelkasten/](inputs/zettelkasten/) — slips fetched from the open Luhmann Archiv API (sample: `zk-9-8-sample.json`); used by the APIs-and-vision capstone
 
 ## operations/
 
 - [operations/key-takeaways-prompt.md](operations/key-takeaways-prompt.md) — the reusable distillation prompt. Forces exactly 10 takeaways with bold one-sentence headlines, an italic provenance opening, and a secondary-points section
 - [operations/board-vision-prompt.md](operations/board-vision-prompt.md) — stub: turn a board photo into structured text *(staged)*
+- [operations/apis-and-vision/](operations/apis-and-vision/) — the **APIs capstone**: `fetch_zettels.py` (open Luhmann data API, no key) and `transcribe.py` (image → text via the Gemini and Claude vision APIs, key in `.env`). Its [README](operations/apis-and-vision/README.md) walks the two kinds of API. The only operation that ships scripts
 - operations/skills/
   - [handout-house-style/](operations/skills/handout-house-style/) — renders a markdown artifact as a self-contained, print-ready HTML page in the Learning Lab house style (Inter, white background, red #c8102e accent, 11x17 tabloid). A small, no-script project copy of the global house-style skill
 

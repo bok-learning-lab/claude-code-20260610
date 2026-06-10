@@ -18,8 +18,18 @@ The transcript → key-takeaways pipeline (folded in from the former `class-summ
 | `inputs/board-work/` (images) | [operations/board-vision-prompt.md](operations/board-vision-prompt.md) — vision description | `outputs/board-notes/` *(staged)* |
 | `inputs/audio/` | transcribe (external) → `inputs/transcripts/` | feeds the takeaways path |
 | `inputs/papers/` | ground generated materials in assigned readings | handouts / outlines / study guides *(staged)* |
+| any image (board work, a student exercise, a Zettelkasten scan) | [operations/apis-and-vision/](operations/apis-and-vision/) — call a vision **API** (Gemini or Claude) to read it | text transcription |
 
 Each `inputs/` modality has a `README.md` describing what goes there and how it's processed. Generated artifacts go in `outputs/`, one subfolder per type.
+
+## APIs and vision (the capstone)
+
+Everything above is text and files. The [operations/apis-and-vision/](operations/apis-and-vision/) operation adds the last idea: an **API** — a URL you ask for data or hand a piece of work. It meets two kinds, using Niklas Luhmann's *Zettelkasten* (slip-box) as the vehicle:
+
+1. **An open data API (no key)** — `fetch_zettels.py` fetches scanned slips from the Luhmann Archiv as JSON (metadata + the archive's own transcription + an image id).
+2. **Vision APIs (need a key)** — `transcribe.py` sends an **image** to **Gemini** and/or **Claude** and gets the text back.
+
+The transference: the same `transcribe.py` reads a Luhmann slip, a **blackboard photo**, or a **student's in-class exercise**. Keys live in this example's own `.env` (see [`.env.example`](.env.example)) — folder-scoped, never the repo root, never committed. This is the one operation that ships **scripts** (the rest of the project is prompts and skills); scripts appear here because calling an external API genuinely needs code. See its [README](operations/apis-and-vision/README.md).
 
 ## How to work in this project
 
@@ -34,6 +44,7 @@ For the takeaways pipeline specifically, two passes, in order:
 
 - **Inputs are organized by modality** (`transcripts/`, `board-work/`, `audio/`, `papers/`); **outputs by artifact type** (`key-takeaways/`, `board-notes/`, …).
 - **Skills live in `operations/skills/<skill-name>/`** — project-scoped, so they travel with this folder.
+- **Scripts only where genuinely needed.** Most work here is prompts and skills (no code). The one exception is [operations/apis-and-vision/](operations/apis-and-vision/), whose scripts call external APIs. Its API keys live in a folder-scoped `.env` (this example's folder, not the repo root); `.env` is git-ignored, `.env.example` is the tracked template.
 - **Source materials in `inputs/` are read-only.** Don't modify them. Generated artifacts go in `outputs/`.
 - **One house style for everything rendered.** The [handout-house-style](operations/skills/handout-house-style/) skill (Inter / white / red `#c8102e` accent, 11x17 tabloid) is the single formatting layer — no second visual vocabulary.
 - **No emojis** in any file (workshop-wide convention).

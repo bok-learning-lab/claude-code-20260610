@@ -26,6 +26,10 @@ Inputs organized by **modality**, operations that process them, outputs organize
   - [key-takeaways/](outputs/key-takeaways/) — `day-1-key-takeaways.md` / `.html` and `day-2-key-takeaways.md` / `.html`.
   - `board-notes/`, session outlines, study guides — *coming as more inputs arrive.*
 
+### The capstone: APIs and vision
+
+The final operation, [apis-and-vision/](operations/apis-and-vision/), introduces the concept of an **API** — a URL you ask for data or hand a piece of work — using Niklas Luhmann's *Zettelkasten* as the vehicle. Two kinds: an **open data API** (`fetch_zettels.py` pulls scanned slips from the Luhmann Archiv as JSON — no key) and **vision APIs** (`transcribe.py` sends an image to **Gemini** and/or **Claude** and gets the text back — key in a folder-scoped `.env`). The transference is the point: the same image-to-text move reads a Luhmann slip, a blackboard photo, or a student's in-class exercise. This is the one operation that ships **scripts** — they appear only because calling an external API needs code; the rest of the project is prompts and a no-script skill.
+
 ### The move worth noticing
 
 The instruction *"capture the teaching point, not just the fact — why it mattered to faculty"* is what turns this from a transcript summary into a teaching artifact. A generic LLM summary produces accurate but inert prose: "the instructors discussed prompt engineering, CLAUDE.md files, and the use of skills." That summary is *true* and *useless*. The prompts here are structured to force the second layer — the headline mantra, the analogy that landed, the demo, the line worth quoting. The artifact is meant to *re-create* the room, not describe it.
