@@ -12,6 +12,20 @@ making explicit what each level of quality is and grading to it. Criterion-based
 have the best track record; numeric mean caps work but are costly; and publishing grade data
 to students can backfire.
 
+This overview is the front door to the research layer. Three focused syntheses extend it on
+the specific questions raised in the [director's advice](../director-advice/grading-for-the-full-range.md),
+each marking explicitly which claims survived adversarial verification and which are gaps:
+
+- [full-range-task-design.md](full-range-task-design.md) — how to design tasks with a low
+  floor and high ceiling (productive failure, optional-extension self-selection, the limits
+  of "low-threshold/high-ceiling" as a motivational claim).
+- [discriminating-at-the-top.md](discriminating-at-the-top.md) — the measurement properties
+  (item difficulty/discrimination, ceiling effects, test information, comparative judgement)
+  that give *advance* confidence a test will spread grades and distinguish the best work.
+- [rubrics-differentiation.md](rubrics-differentiation.md) — why additive criterion scoring
+  compresses the top and binds graders, and how to use rubrics (and alternatives) so they
+  differentiate excellence instead.
+
 ---
 
 ## Part 1 — Validated practices for grading across the full range
@@ -71,7 +85,11 @@ A full range is only possible if the assessment can elicit a range. Tasks with a
 synthesis, transfer to a new case, or defended judgment spread performance out and give the
 rubric something to discriminate. This connects directly to the Bok assignment-design
 guidance in [../bok-advice/designing-assignments.md](../bok-advice/designing-assignments.md):
-assess mastery rather than completion, and make end-of-term work cumulative.
+assess mastery rather than completion, and make end-of-term work cumulative. For the
+*how* — building tasks that elicit a range without discouraging the modal student, and
+choosing assessments whose measurement properties spread scores — see
+[full-range-task-design.md](full-range-task-design.md) and
+[discriminating-at-the-top.md](discriminating-at-the-top.md).
 
 ---
 
