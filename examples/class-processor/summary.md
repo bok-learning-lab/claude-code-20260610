@@ -20,7 +20,7 @@ Inputs organized by **modality**, operations that process them, outputs organize
   - [key-takeaways-prompt.md](operations/key-takeaways-prompt.md) — the reusable distillation prompt. Forces exactly 10 takeaways with bold one-sentence headlines, an italic provenance opening, and a secondary-points section. Voice: tight, concrete, faculty-facing.
   - [board-vision-prompt.md](operations/board-vision-prompt.md) — a stub for turning a board photo into structured text (transcribe equations and labels, describe the teaching sequence). *To be refined when board images arrive.*
   - skills/
-    - [handout-house-style/](operations/skills/handout-house-style/) — renders any markdown artifact as a self-contained, print-ready HTML page in the Learning Lab house style (Inter, white background, red `#c8102e` accent, 11x17 tabloid). A small, no-script, project-scoped copy of the global house-style skill: font and CSS are inlined by hand.
+    - [handout-house-style/](.claude/skills/handout-house-style/) — renders any markdown artifact as a self-contained, print-ready HTML page in the Learning Lab house style (Inter, white background, red `#c8102e` accent, 11x17 tabloid). A small, no-script, project-scoped copy of the global house-style skill: font and CSS are inlined by hand.
 
 - **The outputs** (in `outputs/`, one folder per artifact type):
   - [key-takeaways/](outputs/key-takeaways/) — `day-1-key-takeaways.md` / `.html` and `day-2-key-takeaways.md` / `.html`.

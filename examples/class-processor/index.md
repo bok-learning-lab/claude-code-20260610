@@ -25,8 +25,8 @@ Each modality folder has a `README.md` describing what goes there and how it's p
 - [operations/key-takeaways-prompt.md](operations/key-takeaways-prompt.md) — the reusable distillation prompt. Forces exactly 10 takeaways with bold one-sentence headlines, an italic provenance opening, and a secondary-points section
 - [operations/board-vision-prompt.md](operations/board-vision-prompt.md) — stub: turn a board photo into structured text *(staged)*
 - [operations/apis-and-vision/](operations/apis-and-vision/) — the **APIs capstone**: `fetch_zettels.py` (open Luhmann data API, no key) and `transcribe.py` (image → text via the Gemini and Claude vision APIs, key in `.env`). Its [README](operations/apis-and-vision/README.md) walks the two kinds of API. The only operation that ships scripts
-- operations/skills/
-  - [handout-house-style/](operations/skills/handout-house-style/) — renders a markdown artifact as a self-contained, print-ready HTML page in the Learning Lab house style (Inter, white background, red #c8102e accent, 11x17 tabloid). A small, no-script project copy of the global house-style skill
+- .claude/skills/
+  - [handout-house-style/](.claude/skills/handout-house-style/) — renders a markdown artifact as a self-contained, print-ready HTML page in the Learning Lab house style (Inter, white background, red #c8102e accent, 11x17 tabloid). A small, no-script project copy of the global house-style skill
 
 ## outputs/ — by artifact type
 

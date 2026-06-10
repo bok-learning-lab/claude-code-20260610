@@ -40,7 +40,7 @@ Every example follows the same structure so faculty can move between them withou
 
 - **`CLAUDE.md`** at the root of each example — project-level instructions loaded on session start.
 - **`inputs/`** — read-only source material. Don't modify it.
-- **`operations/`** — the prompt(s) and/or skills that drive the work. Skills, when used, live at `operations/skills/<skill-name>/`, project-scoped so they travel with the example.
+- **`operations/`** — the prompt(s) and/or skills that drive the work. Skills, when used, live at `.claude/skills/<skill-name>/`, project-scoped so they travel with the example.
 - **`outputs/`** — generated artifacts. Regenerating overwrites.
 - **`summary.md`** — what the project is, how it was built, what you can translate it to.
 - **`index.md` / `index.html`** — a map of the folder.

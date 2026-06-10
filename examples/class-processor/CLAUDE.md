@@ -14,7 +14,7 @@ The transcript → key-takeaways pipeline (folded in from the former `class-summ
 
 | Input modality | Operation | Output |
 |---|---|---|
-| `inputs/transcripts/` | [operations/key-takeaways-prompt.md](operations/key-takeaways-prompt.md) → [handout-house-style](operations/skills/handout-house-style/) skill | `outputs/key-takeaways/<day>-key-takeaways.md` + `.html` |
+| `inputs/transcripts/` | [operations/key-takeaways-prompt.md](operations/key-takeaways-prompt.md) → [handout-house-style](.claude/skills/handout-house-style/) skill | `outputs/key-takeaways/<day>-key-takeaways.md` + `.html` |
 | `inputs/board-work/` (images) | [operations/board-vision-prompt.md](operations/board-vision-prompt.md) — vision description | `outputs/board-notes/` *(staged)* |
 | `inputs/audio/` | transcribe (external) → `inputs/transcripts/` | feeds the takeaways path |
 | `inputs/papers/` | ground generated materials in assigned readings | handouts / outlines / study guides *(staged)* |
@@ -43,10 +43,10 @@ For the takeaways pipeline specifically, two passes, in order:
 ## Conventions
 
 - **Inputs are organized by modality** (`transcripts/`, `board-work/`, `audio/`, `papers/`); **outputs by artifact type** (`key-takeaways/`, `board-notes/`, …).
-- **Skills live in `operations/skills/<skill-name>/`** — project-scoped, so they travel with this folder.
+- **Skills live in `.claude/skills/<skill-name>/`** — project-scoped, so they travel with this folder.
 - **Scripts only where genuinely needed.** Most work here is prompts and skills (no code). The one exception is [operations/apis-and-vision/](operations/apis-and-vision/), whose scripts call external APIs. Its API keys live in a folder-scoped `.env` (this example's folder, not the repo root); `.env` is git-ignored, `.env.example` is the tracked template.
 - **Source materials in `inputs/` are read-only.** Don't modify them. Generated artifacts go in `outputs/`.
-- **One house style for everything rendered.** The [handout-house-style](operations/skills/handout-house-style/) skill (Inter / white / red `#c8102e` accent, 11x17 tabloid) is the single formatting layer — no second visual vocabulary.
+- **One house style for everything rendered.** The [handout-house-style](.claude/skills/handout-house-style/) skill (Inter / white / red `#c8102e` accent, 11x17 tabloid) is the single formatting layer — no second visual vocabulary.
 - **No emojis** in any file (workshop-wide convention).
 - **Markdown link syntax** for file references — `[Day 1](inputs/transcripts/day_1_transcript.md)`.
 - **Speaker initials are stable** — `MW = Madeleine`, `MK = Marlon`, plus any faculty/guests named in the source. Preserve them in the provenance opening.

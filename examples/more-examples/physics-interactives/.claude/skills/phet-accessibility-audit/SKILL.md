@@ -162,4 +162,4 @@ Anything that requires *understanding the simulation* (color-only information, c
 - The temptation will be to expand this skill into a general accessibility linter. Resist. Its value is in being tightly tuned to the shape of artifacts this project produces.
 - The contrast computation should be done from the source CSS, not by guessing. If a CSS variable is overridden in a media query (`prefers-color-scheme: dark`), audit both branches.
 - For the `aria-live` density check, the deciding question is *how often the text inside the live region actually changes*, not just how often the surrounding code runs. A render function that writes the same value every frame won't actually trigger announcements in most screen readers — but relying on that is fragile. Recommend throttling regardless.
-- This skill is project-scoped at `operations/skills/phet-accessibility-audit/`. Its rubric, v2-ideas roadmap, and SKILL.md are bundled here so the whole audit travels with the project.
+- This skill is project-scoped at `.claude/skills/phet-accessibility-audit/`. Its rubric, v2-ideas roadmap, and SKILL.md are bundled here so the whole audit travels with the project.
